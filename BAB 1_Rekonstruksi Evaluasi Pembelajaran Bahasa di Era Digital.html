@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modul Digital — Transformasi Evaluasi Pembelajaran Bahasa di Era Digital</title>
+<style>
+:root{
+ --ink:#172554;--muted:#526079;--paper:#f6f8ff;--white:#fff;
+ --blue:#2563eb;--cyan:#06b6d4;--violet:#7c3aed;--pink:#ec4899;
+ --gold:#f59e0b;--green:#059669;--line:#dce5f5;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.7;color:var(--ink);background:var(--paper)}
+.hero{background:radial-gradient(circle at 85% 20%,#60a5fa 0,transparent 26%),linear-gradient(125deg,#172554 0%,#3730a3 48%,#7c3aed 100%);color:white;padding:64px 22px 58px;overflow:hidden;position:relative}
+.hero:after{content:"";position:absolute;width:300px;height:300px;border:1px solid #ffffff33;border-radius:50%;right:-90px;bottom:-160px;box-shadow:0 0 0 35px #ffffff0b,0 0 0 70px #ffffff0b}
+.hero-inner,.layout{max-width:1120px;margin:auto}
+.eyebrow{text-transform:uppercase;letter-spacing:.15em;font-size:.76rem;font-weight:800;color:#bfdbfe}
+h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.12;max-width:850px;margin:15px 0 18px}
+.hero p{font-size:1.08rem;max-width:760px;color:#e0e7ff}
+.author{font-weight:800;font-size:1.08rem!important;color:#ffffff!important;margin:0 0 12px;letter-spacing:.02em}
+.hero-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
+.hero-tags span{border:1px solid #ffffff55;background:#ffffff16;border-radius:999px;padding:6px 12px;font-size:.86rem}
+.layout{display:grid;grid-template-columns:250px minmax(0,1fr);gap:28px;padding:30px 20px 70px}
+nav{align-self:start;position:sticky;top:18px;background:white;border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 8px 28px #1725540a}
+nav h2{font-size:.9rem;margin:0 0 10px;color:#64748b;text-transform:uppercase;letter-spacing:.08em}
+nav a{display:block;text-decoration:none;color:#334155;padding:8px 10px;border-radius:9px;font-size:.93rem}
+nav a:hover{background:#eff6ff;color:var(--blue)}
+main{min-width:0}
+section{background:white;border:1px solid var(--line);border-radius:20px;padding:clamp(20px,4vw,34px);margin-bottom:22px;box-shadow:0 10px 30px #17255408}
+h2{font-size:1.55rem;line-height:1.3;margin:0 0 16px}
+h3{font-size:1.13rem;margin:25px 0 8px;color:#312e81}
+p{margin:10px 0;color:#334155}
+.lead{font-size:1.08rem;color:#334155}
+.kicker{color:var(--blue);font-size:.76rem;letter-spacing:.12em;font-weight:800;text-transform:uppercase;margin-bottom:7px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:18px 0}
+.card{border-radius:15px;padding:18px;border:1px solid var(--line);background:#f8faff}
+.card h3{margin:0 0 7px}
+.card p{margin:0;font-size:.96rem}
+.card.blue{background:#eff6ff;border-color:#bfdbfe}.card.purple{background:#f5f3ff;border-color:#ddd6fe}
+.card.teal{background:#ecfeff;border-color:#a5f3fc}.card.gold{background:#fffbeb;border-color:#fde68a}
+.callout{border-left:5px solid var(--cyan);background:#ecfeff;padding:16px 18px;border-radius:0 12px 12px 0;margin:18px 0;color:#164e63}
+.callout strong{color:#155e75}
+.pill{display:inline-block;font-size:.8rem;font-weight:750;border-radius:999px;padding:4px 10px;background:#dbeafe;color:#1d4ed8;margin:2px 4px 2px 0}
+table{width:100%;border-collapse:separate;border-spacing:0;margin:18px 0;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+th,td{text-align:left;vertical-align:top;padding:13px 14px;border-bottom:1px solid var(--line)}
+th{background:#eef2ff;color:#312e81;font-size:.9rem}
+tr:last-child td{border-bottom:0}
+td{color:#334155}
+ul,ol{padding-left:23px;color:#334155}
+li{margin:6px 0}
+.steps{counter-reset:step;list-style:none;padding:0}
+.steps li{counter-increment:step;display:flex;gap:13px;margin:13px 0}
+.steps li:before{content:counter(step);flex:0 0 30px;height:30px;border-radius:10px;display:grid;place-items:center;background:#ede9fe;color:#6d28d9;font-weight:800}
+.term{font-weight:800;color:#4338ca}
+.quiz-item{border:1px solid var(--line);border-radius:14px;padding:16px;margin:12px 0;background:#fbfcff}
+.quiz-item p{font-weight:700;margin-top:0}
+.quiz-item label{display:block;padding:5px 8px;border-radius:8px;cursor:pointer;color:#334155}
+.quiz-item label:hover{background:#eef2ff}
+button{border:0;border-radius:10px;background:linear-gradient(110deg,var(--blue),var(--violet));color:white;font-weight:750;padding:11px 17px;cursor:pointer;font-size:.95rem}
+button:hover{filter:brightness(1.07)}
+#quiz-result{font-weight:750;margin-top:14px}
+.footer{text-align:center;color:#64748b;font-size:.88rem;padding:0 20px 35px}
+.small{font-size:.9rem;color:#64748b}
+@media(max-width:820px){.layout{grid-template-columns:1fr;padding:18px 13px 45px}nav{position:static}.grid{grid-template-columns:1fr}.hero{padding:46px 20px}.hero:after{opacity:.5}}
+@media print{body{background:white}.hero{padding:30px;background:#3730a3!important;print-color-adjust:exact}.layout{display:block;padding:15px}nav{display:none}section{box-shadow:none;break-inside:avoid}.quiz-item{break-inside:avoid}button{display:none}}
+</style>
+</head>
+<body>
+<header class="hero">
+ <div class="hero-inner">
+  <div class="eyebrow">Modul Digital • Asesmen Bahasa Lanjut</div>
+  <h1>Transformasi Evaluasi Pembelajaran Bahasa di Era Digital</h1>
+  <p class="author">Dr. Sri Wahyuni, M.Pd</p>
+  <p>Ringkasan terstruktur tentang alasan evaluasi bahasa perlu direkonstruksi, perubahan ekosistem pembelajaran abad ke-21, serta keterbatasan pendekatan konvensional.</p>
+  <div class="hero-tags"><span>Bab 1</span><span>Learning analytics</span><span>Asesmen autentik</span><span>Kompetensi komunikatif</span></div>
+ </div>
+</header>
+<div class="layout">
+<nav aria-label="Navigasi modul">
+ <h2>Isi modul</h2>
+ <a href="#tujuan">Tujuan belajar</a>
+ <a href="#gagasan">Gagasan utama</a>
+ <a href="#ekosistem">1.1 Ekosistem digital</a>
+ <a href="#peran">Peran guru dan peserta didik</a>
+ <a href="#data">Pembelajaran berbasis data</a>
+ <a href="#konvensional">1.2 Evaluasi konvensional</a>
+ <a href="#tantangan">1.3 Tantangan era digital</a>
+ <a href="#advanced">1.4 Advanced Language Assessment</a>
+ <a href="#paradigma">1.5 Paradigma baru</a>
+ <a href="#ringkasan">Ringkasan inti</a>
+ <a href="#glosarium">Glosarium</a>
+ <a href="#refleksi">Latihan dan refleksi</a>
+</nav>
+<main>
+<section id="tujuan">
+ <div class="kicker">Orientasi pembelajaran</div>
+ <h2>Tujuan Belajar</h2>
+ <p>Setelah mempelajari modul ini, pembaca diharapkan mampu:</p>
+ <ol>
+  <li>Menjelaskan alasan evaluasi pembelajaran bahasa perlu direkonstruksi di era digital.</li>
+  <li>Membedakan paradigma evaluasi konvensional dan paradigma evaluasi digital.</li>
+  <li>Menguraikan perubahan peran guru dan peserta didik dalam proses asesmen.</li>
+  <li>Menjelaskan fungsi learning analytics dan teknologi analisis bahasa dalam evaluasi.</li>
+  <li>Mengidentifikasi keterbatasan tes tertulis, penilaian yang kurang autentik, dan pengukuran kompetensi komunikatif.</li>
+ </ol>
+</section>
+<section id="gagasan">
+ <div class="kicker">Peta konsep</div>
+ <h2>Gagasan Utama Bab</h2>
+ <p class="lead">Evaluasi bahasa tidak cukup dipahami sebagai kegiatan memberi skor pada hasil tes. Evaluasi perlu menghasilkan informasi yang berguna untuk memahami proses belajar, memetakan perkembangan kompetensi, mengenali kebutuhan peserta didik, dan memperbaiki pembelajaran.</p>
+ <div class="grid">
+  <div class="card blue"><h3>Autentik</h3><p>Tugas penilaian mendekati penggunaan bahasa dalam situasi yang bermakna dan nyata.</p></div>
+  <div class="card purple"><h3>Adaptif dan berkelanjutan</h3><p>Informasi asesmen dikumpulkan selama proses belajar, bukan hanya di akhir pembelajaran.</p></div>
+  <div class="card teal"><h3>Berbasis data</h3><p>Beragam bukti belajar dimanfaatkan untuk memahami perkembangan dan kebutuhan peserta didik.</p></div>
+  <div class="card gold"><h3>Partisipatif</h3><p>Peserta didik ikut menilai, memberi umpan balik, dan merefleksikan perkembangan dirinya.</p></div>
+ </div>
+ <div class="callout"><strong>Inti rekonstruksi:</strong> perubahan bukan sekadar memindahkan tes kertas ke layar. Yang perlu dibangun adalah paradigma evaluasi yang lebih autentik, adaptif, berbasis data, dan sesuai dengan karakter komunikasi abad ke-21.</div>
+</section>
+<section id="ekosistem">
+ <div class="kicker">Subbab 1.1.1</div>
+ <h2>Dari Pembelajaran Konvensional ke Ekosistem Pembelajaran Digital</h2>
+ <p>Pembelajaran bahasa semakin berlangsung di ruang yang terbuka dan terhubung, seperti <em>Learning Management System</em> (LMS), aplikasi bahasa, media sosial, video interaktif, konferensi daring, dan platform berbasis kecerdasan buatan. Karena lingkungan belajar berubah, rancangan evaluasi juga perlu berubah.</p>
+ <p>Dalam pendekatan tradisional, evaluasi umumnya dilakukan setelah pembelajaran melalui tes sumatif. Dalam <em>digital learning ecosystem</em>, asesmen dapat terintegrasi dan berlangsung sepanjang proses belajar. Aktivitas peserta didik di platform digital menyediakan informasi untuk memberi umpan balik dan memperbaiki pembelajaran.</p>
+ <h3>Perubahan paradigma</h3>
+ <table>
+  <thead><tr><th>Aspek</th><th>Paradigma lama</th><th>Paradigma digital</th></tr></thead>
+  <tbody>
+   <tr><td>Waktu evaluasi</td><td>Umumnya setelah pembelajaran</td><td>Berlangsung sepanjang proses belajar</td></tr>
+   <tr><td>Orientasi</td><td>Hasil akhir</td><td>Proses dan perkembangan</td></tr>
+   <tr><td>Bukti</td><td>Tes yang relatif terbatas</td><td>Berbagai sumber data pembelajaran</td></tr>
+   <tr><td>Peran guru</td><td>Evaluator utama</td><td>Pengelola dan interpretator data</td></tr>
+   <tr><td>Informasi utama</td><td>Skor</td><td>Profil kompetensi peserta didik</td></tr>
+  </tbody>
+ </table>
+ <p>Digitalisasi bukan hanya mengganti media evaluasi. Teknologi turut memengaruhi cara evaluasi dirancang, dilaksanakan, dan digunakan untuk mendukung proses belajar.</p>
+</section>
+<section id="peran">
+ <div class="kicker">Subbab 1.1.2</div>
+ <h2>Pergeseran Peran Guru dan Peserta Didik</h2>
+ <p>Dalam pendekatan konvensional, guru biasanya menetapkan standar, menyusun instrumen, memberi nilai, dan mengambil keputusan akhir. Peserta didik lebih sering menjadi penerima hasil. Pendekatan modern membuka ruang partisipasi aktif peserta didik dalam proses asesmen.</p>
+ <div class="grid">
+  <div class="card blue"><h3><span class="term">Self-assessment</span></h3><p>Peserta didik menilai dan memahami kemampuan dirinya, kemudian mengenali aspek yang perlu dikembangkan.</p></div>
+  <div class="card purple"><h3><span class="term">Peer assessment</span></h3><p>Peserta didik memberikan dan menerima umpan balik dari teman untuk mendukung pembelajaran.</p></div>
+  <div class="card teal"><h3>Refleksi pembelajaran</h3><p>Peserta didik meninjau pengalaman, strategi, kemajuan, dan kesulitan selama belajar.</p></div>
+  <div class="card gold"><h3>Evaluasi berbasis proyek</h3><p>Kinerja atau produk bahasa menjadi bagian dari bukti capaian pembelajaran.</p></div>
+ </div>
+ <p>Keterlibatan dalam penilaian dapat membantu peserta didik membangun kesadaran belajar dan regulasi diri. Guru tetap penting, tetapi perannya meluas: bukan hanya menilai, melainkan juga memfasilitasi, menafsirkan bukti, memberi umpan balik, dan mendukung perkembangan kemampuan.</p>
+ <div class="callout"><strong>Perubahan relasi:</strong><br>Dari: guru menilai → peserta didik menerima hasil.<br>Menuju: guru memfasilitasi → peserta didik memahami, merefleksi, dan mengembangkan kemampuan.</div>
+ <p>Perubahan ini menuntut guru memiliki <em>assessment literacy</em> (literasi asesmen) serta kemampuan menggunakan teknologi evaluasi. Keyakinan guru terhadap e-assessment juga disebut sebagai faktor penting dalam implementasinya.</p>
+</section>
+<section id="data">
+ <div class="kicker">Subbab 1.1.3</div>
+ <h2>Munculnya Pembelajaran Berbasis Data</h2>
+ <p>Aktivitas digital dapat menghasilkan data yang membantu guru memahami proses belajar dengan lebih terperinci. Contohnya meliputi:</p>
+ <div class="grid">
+  <div class="card"><h3>Aktivitas</h3><p>Waktu penyelesaian tugas dan pola interaksi peserta didik dalam platform.</p></div>
+  <div class="card"><h3>Perkembangan</h3><p>Perubahan kemampuan dari waktu ke waktu dan pola kesalahan penggunaan bahasa.</p></div>
+  <div class="card"><h3>Respons belajar</h3><p>Respons peserta didik terhadap umpan balik dan dukungan pembelajaran.</p></div>
+  <div class="card"><h3>Analisis bahasa</h3><p>Respons terbuka dapat dianalisis dengan teknologi pemrosesan bahasa.</p></div>
+ </div>
+ <h3>Konsep penting</h3>
+ <p><span class="term">Learning analytics</span> adalah penggunaan data pembelajaran untuk memahami dan meningkatkan proses belajar. Dalam evaluasi bahasa, data dapat membantu membangun gambaran yang lebih personal tentang perkembangan peserta didik, bukan hanya menunjukkan benar atau salah.</p>
+ <p><span class="term">Natural Language Processing (NLP)</span> merupakan teknologi pemrosesan bahasa alami yang dapat digunakan untuk menganalisis respons terbuka peserta didik dan mendukung proses evaluasi. Visualisasi data asesmen juga dapat membantu analisis kebutuhan pembelajaran.</p>
+ <div class="callout"><strong>Prinsip penggunaan data:</strong> data sebaiknya dipahami sebagai bahan untuk menafsirkan perkembangan dan menentukan tindak lanjut pembelajaran—bukan sekadar kumpulan angka atau jejak aktivitas.</div>
+</section>
+<section id="konvensional">
+ <div class="kicker">Subbab 1.2</div>
+ <h2>Permasalahan Evaluasi Bahasa Konvensional</h2>
+ <p>Evaluasi tradisional tetap memiliki kegunaan, tetapi sering berfokus pada aspek yang relatif mudah diukur, seperti kosakata, tata bahasa, dan pemahaman teks. Padahal, kemampuan berbahasa juga melibatkan pemahaman konteks, interaksi, pembentukan makna, dan penggunaan bahasa secara efektif dalam situasi yang beragam.</p>
+ <h3>1. Dominasi tes tertulis</h3>
+ <p>Tes pilihan ganda, isian, dan pemahaman bacaan relatif mudah diadministrasikan, efisien, dan praktis untuk penskoran. Namun, tes tersebut dapat lebih banyak mengukur keterampilan bahasa secara terpisah (<em>discrete language skills</em>) daripada kemampuan berkomunikasi secara utuh.</p>
+ <p>Skor akhir juga tidak selalu menjelaskan bagaimana peserta didik mencapai hasil, strategi yang digunakan, atau aspek yang masih perlu dikembangkan. Diskusi daring, produksi konten digital, komunikasi multimodal, dan kolaborasi virtual merupakan aktivitas yang tidak seluruhnya terwakili oleh tes tertulis.</p>
+ <h3>2. Penilaian yang kurang autentik</h3>
+ <p>Mengetahui aturan bahasa atau menjawab soal tidak selalu berarti peserta didik mampu menggunakan bahasa secara efektif dalam situasi nyata. Penilaian perlu menghubungkan kompetensi yang diukur dengan penggunaan bahasa yang bermakna.</p>
+ <p>Contoh tugas autentik yang dapat digunakan dalam pembelajaran bahasa:</p>
+ <div><span class="pill">Presentasi</span><span class="pill">Diskusi</span><span class="pill">Proyek bahasa</span><span class="pill">Portofolio digital</span><span class="pill">Produksi teks</span><span class="pill">Komunikasi digital</span><span class="pill">Video</span><span class="pill">Blog</span><span class="pill">Podcast</span><span class="pill">Proyek kolaboratif</span></div>
+ <p>Portofolio memungkinkan perkembangan kemampuan direkam secara berkelanjutan, bukan hanya melalui satu kali pengukuran. Produk digital dan karya multimodal dapat memberi gambaran lebih kaya tentang kemampuan bahasa peserta didik.</p>
+ <h3>3. Keterbatasan mengukur kompetensi komunikatif</h3>
+ <p>Kompetensi komunikatif bukan hanya ketepatan tata bahasa, melainkan juga kemampuan menyampaikan gagasan, berinteraksi, memahami konteks sosial-budaya, dan menggunakan strategi komunikasi. Penilaian berbicara, misalnya, perlu memperhatikan kelancaran, pengucapan, interaksi, dan keberhasilan penyampaian makna.</p>
+ <p>Teknologi seperti <em>speech recognition</em>, analisis ujaran, dan kecerdasan buatan membuka peluang untuk mendukung penilaian kemampuan berbicara. Pendekatan komputasional dan <em>machine learning</em> juga mulai dimanfaatkan dalam pengembangan penilaian pengucapan otomatis. Namun, gagasan utama bab ini adalah perlunya mengintegrasikan beragam sumber informasi agar kompetensi komunikatif dapat dipahami secara lebih menyeluruh.</p>
+ <table>
+  <thead><tr><th>Keterbatasan</th><th>Dampak terhadap informasi hasil belajar</th><th>Arah pengembangan</th></tr></thead>
+  <tbody>
+   <tr><td>Dominasi tes tertulis</td><td>Kompetensi yang terukur dapat terbatas pada aspek tertentu.</td><td>Gabungkan beragam bukti belajar dan kinerja.</td></tr>
+   <tr><td>Tugas kurang autentik</td><td>Skor belum tentu menggambarkan penggunaan bahasa dalam kehidupan nyata.</td><td>Gunakan tugas bermakna dan produk autentik.</td></tr>
+   <tr><td>Pengukuran komunikatif terbatas</td><td>Interaksi, konteks, kelancaran, dan penyampaian makna sulit terwakili oleh tes tertulis saja.</td><td>Manfaatkan kinerja lisan, interaksi, dan dukungan teknologi secara tepat.</td></tr>
+  </tbody>
+ </table>
+</section>
+
+<section id="tantangan">
+ <div class="kicker">Subbab 1.3</div>
+ <h2>Tantangan Evaluasi Bahasa di Era Digital</h2>
+ <p class="lead">Digitalisasi evaluasi bahasa membuka peluang untuk mengembangkan asesmen yang fleksibel dan kaya informasi, tetapi juga menghadirkan tantangan terkait kesiapan teknologi, kompetensi pendidik, ketepatan desain instrumen, dan etika.</p>
+ <section class="card blue" style="margin:16px 0;padding:18px;box-shadow:none">
+  <h3>1.3.1 Pembelajaran Hybrid dan Online</h3>
+  <p>Pembelajaran hybrid dan online memadukan ruang kelas fisik dengan lingkungan digital. Model ini memberi fleksibilitas, tetapi menuntut evaluasi yang mampu menjaga validitas, keterlibatan peserta didik, efektivitas umpan balik, serta kesetaraan akses teknologi.</p>
+  <ul><li>Memastikan bahwa instrumen benar-benar mengukur kompetensi yang dituju.</li><li>Menjaga partisipasi peserta didik dalam aktivitas daring.</li><li>Memberikan umpan balik yang tepat waktu dan dapat ditindaklanjuti.</li><li>Mempertimbangkan perbedaan perangkat, koneksi, dan akses digital.</li></ul>
+  <p>Materi sumber menyebut Al-Awawdeh (2022) tentang potensi evaluasi berbasis e-learning di pendidikan tinggi dan Akbulut (2024) mengenai kebutuhan evaluasi yang sesuai dengan karakteristik blended learning. Oleh karena itu, evaluasi online bukan sekadar memindahkan ujian ke platform digital, melainkan membutuhkan desain pedagogis yang sesuai.</p>
+ </section>
+ <section class="card purple" style="margin:16px 0;padding:18px;box-shadow:none">
+  <h3>1.3.2 Multimodal Communication</h3>
+  <p>Komunikasi digital menggabungkan berbagai mode, tidak hanya teks tertulis, tetapi juga bahasa verbal, gambar, suara, video, dan simbol digital. Fenomena ini disebut <em>multimodal communication</em>.</p>
+  <p>Evaluasi bahasa perlu memperhatikan kemampuan peserta didik dalam memahami dan menghasilkan komunikasi multimodal, misalnya:</p>
+  <ul><li>Menyusun presentasi digital.</li><li>Menjelaskan gagasan melalui video.</li><li>Berkomunikasi melalui media sosial.</li><li>Memahami teks digital yang memadukan teks, gambar, suara, atau video.</li></ul>
+  <p>Pashev (2025), sebagaimana disebut dalam materi sumber, dikaitkan dengan peluang evaluasi multimodal melalui integrasi <em>speech-to-speech translation</em> dan <em>multimodal learning analytics</em>.</p>
+ </section>
+ <section class="card teal" style="margin:16px 0;padding:18px;box-shadow:none">
+  <h3>1.3.3 Artificial Intelligence dalam Pendidikan</h3>
+  <p>Kecerdasan buatan (<em>Artificial Intelligence</em>/AI) membuka peluang untuk mengembangkan evaluasi tulisan otomatis, analisis kemampuan berbicara, umpan balik otomatis, dan asesmen adaptif.</p>
+  <p>Materi sumber mengaitkan Jiang (2023) dengan potensi AI dalam evaluasi tulisan bahasa kedua melalui analisis teks dan umpan balik, serta Chen (2025) dengan perkembangan <em>AI-based assessment</em> dalam desain, implementasi, dan efektivitas evaluasi. Jang (2025) ditekankan dalam konteks perlunya keseimbangan inovasi teknologi dan prinsip pedagogis.</p>
+  <p>Namun, pemanfaatan AI perlu memperhatikan tantangan berikut:</p>
+  <ul><li>Validitas dan ketepatan keputusan algoritma.</li><li>Transparansi cara kerja sistem.</li><li>Perlindungan data pribadi peserta didik.</li><li>Integritas akademik dan keaslian karya.</li></ul>
+  <div class="callout"><strong>Prinsip penting:</strong> AI sebaiknya menjadi pendukung keputusan pedagogis, bukan pengganti pertimbangan profesional guru.</div>
+ </section>
+ <section class="card gold" style="margin:16px 0;padding:18px;box-shadow:none">
+  <h3>1.3.4 Big Data dan Learning Analytics</h3>
+  <p><em>Big data</em> merujuk pada jumlah data pembelajaran yang besar dan beragam. Dalam evaluasi bahasa, data dapat bersumber dari aktivitas di LMS, hasil tugas digital, rekaman interaksi, pola kesalahan bahasa, dan respons terhadap umpan balik.</p>
+  <p>Data dapat dianalisis untuk memahami proses belajar secara lebih mendalam. Materi sumber menyebut Liu (2024) terkait model evaluasi daring dinamis yang dapat memberi informasi mengenai perkembangan hasil belajar dan beban kognitif. NLP juga dapat digunakan untuk menganalisis produk bahasa, termasuk jawaban terbuka; Almeida (2025) disebut dalam konteks ini.</p>
+  <p>Big data dan <em>learning analytics</em> membuka peluang bagi evaluasi yang lebih personal dan prediktif. Meski demikian, data perlu ditafsirkan secara hati-hati dan dikaitkan dengan tujuan pembelajaran, bukan dianggap sebagai gambaran lengkap kemampuan peserta didik dengan sendirinya.</p>
+ </section>
+</section>
+<section id="advanced">
+ <div class="kicker">Subbab 1.4</div>
+ <h2>Mengapa Dibutuhkan <em>Advanced Language Assessment</em>?</h2>
+ <p class="lead"><em>Advanced Language Assessment</em> bukan semata-mata penggunaan teknologi terbaru, melainkan perubahan paradigma mengenai fungsi evaluasi dalam pendidikan bahasa. Evaluasi tidak hanya digunakan untuk mengetahui hasil belajar, tetapi juga untuk mendukung, membimbing, dan meningkatkan proses belajar.</p>
+ <div class="grid">
+  <div class="card blue"><h3>1.4.1 Assessment of Learning</h3><p><em>Assessment of learning</em> bertujuan mengetahui capaian peserta didik setelah pembelajaran. Hasilnya dapat digunakan untuk menentukan pencapaian kompetensi, memberikan nilai, dan menetapkan keberhasilan belajar. Pendekatan ini tetap penting, tetapi tidak cukup untuk memenuhi seluruh kebutuhan pembelajaran bahasa modern.</p></div>
+  <div class="card teal"><h3>1.4.2 Assessment for Learning</h3><p><em>Assessment for learning</em> menjadikan evaluasi bagian dari proses pembelajaran. Informasi asesmen membantu peserta didik berkembang. Muho (2022), menurut materi sumber, menunjukkan pengaruh asesmen formatif terhadap motivasi dan keterlibatan peserta didik dalam pembelajaran bahasa Inggris.</p><p>Dalam lingkungan digital, asesmen formatif dapat berbentuk umpan balik otomatis, kuis digital, refleksi daring, dan analisis perkembangan belajar.</p></div>
+  <div class="card purple" style="grid-column:1/-1"><h3>1.4.3 Assessment as Learning</h3><p><em>Assessment as learning</em> menempatkan peserta didik sebagai individu aktif yang merefleksikan proses belajarnya. Penilaian diri (<em>self-assessment</em>), penilaian teman sejawat (<em>peer assessment</em>), dan refleksi digital membantu peserta didik mengenali kekuatan serta aspek yang perlu ditingkatkan. Butler (2024) dan Bernard (2025), sebagaimana dicantumkan dalam materi, dikaitkan dengan manfaat keterlibatan peserta didik dalam evaluasi diri dan evaluasi teman sejawat untuk mendukung kemandirian belajar bahasa.</p></div>
+ </div>
+ <h3>Perbandingan tiga orientasi asesmen</h3>
+ <table><thead><tr><th>Orientasi</th><th>Fokus utama</th><th>Contoh pemanfaatan</th></tr></thead><tbody>
+ <tr><td><strong>Assessment of learning</strong></td><td>Mengetahui capaian setelah pembelajaran</td><td>Nilai akhir, ujian, keputusan capaian kompetensi</td></tr>
+ <tr><td><strong>Assessment for learning</strong></td><td>Menggunakan bukti untuk memperbaiki pembelajaran</td><td>Kuis formatif, umpan balik, tindak lanjut belajar</td></tr>
+ <tr><td><strong>Assessment as learning</strong></td><td>Mengembangkan refleksi dan regulasi diri</td><td>Penilaian diri, penilaian teman, jurnal refleksi</td></tr>
+ </tbody></table>
+</section>
+<section id="paradigma">
+ <div class="kicker">Subbab 1.5</div>
+ <h2>Paradigma Baru Evaluasi Bahasa</h2>
+ <p>Transformasi digital mendorong perubahan mendasar dalam cara evaluasi bahasa dipahami dan dilaksanakan. Pergeseran berikut merangkum arah perubahan yang diuraikan dalam materi.</p>
+ <table><thead><tr><th>Pergeseran</th><th>Makna perubahan</th><th>Implikasi</th></tr></thead><tbody>
+ <tr><td><strong>Testing → Assessment</strong></td><td>Dari pengukuran hasil melalui tes menuju proses pengumpulan dan penggunaan informasi untuk mendukung pembelajaran.</td><td>Gunakan bukti yang beragam dan hubungkan hasil dengan tindak lanjut.</td></tr>
+ <tr><td><strong>Produk → Proses</strong></td><td>Dari fokus pada hasil akhir menuju perhatian terhadap perjalanan dan perkembangan belajar.</td><td>Dokumentasikan kemajuan, strategi, dan respons terhadap umpan balik.</td></tr>
+ <tr><td><strong>Skor → Profil Kompetensi</strong></td><td>Angka bukan satu-satunya indikator; evaluasi berupaya menggambarkan kemampuan, perkembangan, kebutuhan, dan strategi belajar.</td><td>Sajikan deskripsi kompetensi yang lebih menyeluruh.</td></tr>
+ <tr><td><strong>Manual → Digital</strong></td><td>Instrumen manual berkembang ke sistem digital yang mendukung otomatisasi, analisis data, dan umpan balik cepat.</td><td>Pilih teknologi sesuai tujuan, akses, dan kualitas instrumen.</td></tr>
+ <tr><td><strong>Seragam → Personalized Assessment</strong></td><td>Dari instrumen yang sama bagi semua peserta didik menuju asesmen yang dapat menyesuaikan kemampuan dan kebutuhan individu.</td><td>Manfaatkan AI dan learning analytics secara bertanggung jawab.</td></tr>
+ </tbody></table>
+ <p>Materi sumber menyebut Chen (2025) dan Wolf (2025) dalam kaitannya dengan peluang AI untuk mengembangkan evaluasi yang lebih adaptif dan sesuai karakteristik individu. Secara keseluruhan, <em>Advanced Language Assessment</em> menjadi kebutuhan strategis pendidikan bahasa di era digital: bukan hanya mengukur kemampuan, melainkan membangun sistem yang memahami, mendukung, dan mengembangkan kemampuan bahasa secara berkelanjutan.</p>
+ <div class="callout"><strong>Pesan kunci:</strong> evaluasi yang maju menggabungkan tujuan pedagogis yang jelas, tugas yang bermakna, bukti belajar yang beragam, umpan balik yang berguna, dan teknologi yang digunakan secara bertanggung jawab.</div>
+</section>
+
+<section id="ringkasan">
+ <div class="kicker">Sintesis</div>
+ <h2>Ringkasan Inti Bab 1</h2>
+ <ol class="steps">
+  <li><div><strong>Lingkungan belajar berubah.</strong><br>Bahasa dipelajari melalui ruang digital yang beragam, sehingga evaluasi perlu terhubung dengan aktivitas belajar.</div></li>
+  <li><div><strong>Evaluasi harus berkelanjutan.</strong><br>Informasi formatif selama proses belajar dapat membantu umpan balik dan perbaikan pembelajaran.</div></li>
+  <li><div><strong>Peserta didik perlu terlibat.</strong><br>Penilaian diri, penilaian teman, refleksi, dan proyek memperluas peran peserta didik.</div></li>
+  <li><div><strong>Data memperkaya pemahaman.</strong><br>Learning analytics, visualisasi data, NLP, dan teknologi ujaran dapat mendukung interpretasi hasil belajar.</div></li>
+  <li><div><strong>Tantangan digital perlu dikelola.</strong><br>Hybrid/online, komunikasi multimodal, AI, dan big data membutuhkan desain yang valid, akses yang adil, serta perhatian pada etika.</div></li>
+  <li><div><strong>Asesmen memiliki fungsi yang berbeda.</strong><br>Assessment of learning mengukur capaian, assessment for learning mendukung perbaikan, dan assessment as learning mengembangkan refleksi peserta didik.</div></li>
+  <li><div><strong>Paradigma evaluasi berkembang.</strong><br>Perubahan bergerak dari testing ke assessment, produk ke proses, skor ke profil kompetensi, manual ke digital, dan seragam ke asesmen personal.</div></li>
+  <li><div><strong>Skor bukan satu-satunya bukti.</strong><br>Profil kompetensi dan beragam produk atau kinerja dapat menjelaskan kemampuan secara lebih kaya.</div></li>
+  <li><div><strong>Autentisitas dan komunikasi perlu diperhatikan.</strong><br>Evaluasi idealnya menilai penggunaan bahasa sesuai tujuan, konteks, dan situasi komunikasi.</div></li>
+ </ol>
+ <p class="small">Catatan sumber: ringkasan ini disusun berdasarkan materi yang diberikan, khususnya Bagian I, Bab 1. Rujukan nama-tahun dipertahankan sebagai sitasi sebagaimana tercantum dalam materi sumber; rincian bibliografi tidak tersedia di dalam teks yang diberikan.</p>
+</section>
+<section id="glosarium">
+ <div class="kicker">Kamus mini</div>
+ <h2>Glosarium</h2>
+ <table>
+  <thead><tr><th>Istilah</th><th>Makna dalam konteks modul</th></tr></thead>
+  <tbody>
+   <tr><td><strong>Evaluasi pembelajaran bahasa</strong></td><td>Proses mengumpulkan dan menggunakan informasi untuk memahami capaian serta perkembangan kemampuan bahasa.</td></tr>
+   <tr><td><strong>Digital learning ecosystem</strong></td><td>Lingkungan pembelajaran yang terhubung melalui platform dan teknologi digital.</td></tr>
+   <tr><td><strong>Asesmen formatif</strong></td><td>Asesmen yang menyertai proses belajar dan memberi informasi untuk memperbaiki pembelajaran.</td></tr>
+   <tr><td><strong>Self-assessment</strong></td><td>Penilaian yang dilakukan peserta didik terhadap kemampuan atau pekerjaannya sendiri.</td></tr>
+   <tr><td><strong>Peer assessment</strong></td><td>Penilaian atau pemberian umpan balik antarpeserta didik.</td></tr>
+   <tr><td><strong>Assessment literacy</strong></td><td>Pengetahuan dan keterampilan untuk merancang, menggunakan, dan menafsirkan asesmen.</td></tr>
+   <tr><td><strong>Learning analytics</strong></td><td>Pemanfaatan data pembelajaran untuk memahami dan meningkatkan proses belajar.</td></tr>
+   <tr><td><strong>Authentic assessment</strong></td><td>Penilaian melalui tugas yang mendekati penggunaan bahasa dalam konteks bermakna.</td></tr>
+   <tr><td><strong>Kompetensi komunikatif</strong></td><td>Kemampuan menggunakan bahasa secara tepat dan efektif sesuai tujuan, konteks, dan situasi komunikasi.</td></tr>
+   <tr><td><strong>NLP</strong></td><td>Natural Language Processing atau pemrosesan bahasa alami, yang dapat membantu analisis respons bahasa.</td></tr>
+  </tbody>
+ </table>
+</section>
+<section id="refleksi">
+ <div class="kicker">Cek pemahaman</div>
+ <h2>Latihan Formatif</h2>
+ <p>Pilih satu jawaban yang paling tepat untuk setiap pertanyaan, lalu tekan <strong>Periksa jawaban</strong>.</p>
+ <form id="quiz">
+  <div class="quiz-item">
+   <p>1. Apa makna utama rekonstruksi evaluasi bahasa di era digital?</p>
+   <label><input type="radio" name="q1" value="a"> Mengubah seluruh tes menjadi pilihan ganda daring.</label>
+   <label><input type="radio" name="q1" value="b"> Membangun evaluasi yang autentik, adaptif, berbasis data, dan sesuai komunikasi abad ke-21.</label>
+   <label><input type="radio" name="q1" value="c"> Menghapus peran guru dalam penilaian.</label>
+  </div>
+  <div class="quiz-item">
+   <p>2. Yang paling sesuai dengan konsep learning analytics adalah …</p>
+   <label><input type="radio" name="q2" value="a"> Menggunakan data aktivitas dan perkembangan belajar untuk memahami serta meningkatkan pembelajaran.</label>
+   <label><input type="radio" name="q2" value="b"> Memberikan nilai akhir tanpa umpan balik.</label>
+   <label><input type="radio" name="q2" value="c"> Mengganti semua tugas dengan tes tertulis.</label>
+  </div>
+  <div class="quiz-item">
+   <p>3. Manakah contoh penilaian bahasa yang lebih autentik?</p>
+   <label><input type="radio" name="q3" value="a"> Menghafal daftar istilah tanpa konteks.</label>
+   <label><input type="radio" name="q3" value="b"> Menjawab soal tata bahasa saja.</label>
+   <label><input type="radio" name="q3" value="c"> Membuat podcast atau presentasi untuk menyampaikan gagasan kepada audiens.</label>
+  </div>
+  <div class="quiz-item">
+   <p>4. Mengapa tes tertulis saja belum cukup untuk mengukur kompetensi komunikatif?</p>
+   <label><input type="radio" name="q4" value="a"> Karena tes tertulis tidak pernah berguna.</label>
+   <label><input type="radio" name="q4" value="b"> Karena interaksi, konteks, kelancaran, dan penyampaian makna tidak selalu terwakili.</label>
+   <label><input type="radio" name="q4" value="c"> Karena semua penilaian harus dilakukan dengan AI.</label>
+  </div>
+  <div class="quiz-item">
+   <p>5. Dalam paradigma digital, peran peserta didik dapat diperluas melalui …</p>
+   <label><input type="radio" name="q5" value="a"> Penilaian diri, penilaian teman, refleksi, dan proyek.</label>
+   <label><input type="radio" name="q5" value="b"> Penerimaan skor tanpa keterlibatan.</label>
+   <label><input type="radio" name="q5" value="c"> Penghapusan umpan balik.</label>
+  </div>
+  <button type="button" onclick="checkQuiz()">Periksa jawaban</button>
+  <button type="reset" style="background:#64748b;margin-left:7px">Ulangi</button>
+  <div id="quiz-result" role="status" aria-live="polite"></div>
+ </form>
+ <h3>Pertanyaan refleksi</h3>
+ <ol>
+  <li>Aspek kemampuan berbahasa apa yang sulit diukur jika hanya menggunakan tes tertulis?</li>
+  <li>Bagaimana penilaian diri dan penilaian teman dapat diterapkan dalam tugas menulis atau berbicara?</li>
+  <li>Data apa yang relevan untuk membantu guru memahami perkembangan kemampuan bahasa peserta didik, dan bagaimana data tersebut dapat ditindaklanjuti?</li>
+ </ol>
+</section>
+</main>
+</div>
+<div class="footer">Modul digital pembelajaran • Transformasi Evaluasi Pembelajaran Bahasa di Era Digital</div>
+<script>
+function checkQuiz(){
+ const answers={q1:"b",q2:"a",q3:"c",q4:"b",q5:"a"};
+ let score=0,answered=0;
+ for(const [q,a] of Object.entries(answers)){
+  const chosen=document.querySelector('input[name="'+q+'"]:checked');
+  if(chosen){answered++;if(chosen.value===a)score++;}
+ }
+ const result=document.getElementById("quiz-result");
+ if(answered<5){result.textContent="Anda baru menjawab "+answered+" dari 5 soal. Lengkapi semua jawaban untuk melihat hasil.";return;}
+ result.textContent="Skor Anda: "+score+"/5. "+(score===5?"Sangat baik! Anda memahami gagasan inti bab.":score>=3?"Baik. Tinjau kembali bagian yang belum dikuasai.":"Silakan baca kembali ringkasan inti dan materi terkait, lalu coba lagi.");
+}
+document.getElementById("quiz").addEventListener("reset",()=>{document.getElementById("quiz-result").textContent="";});
+</script>
+</body>
+</html>

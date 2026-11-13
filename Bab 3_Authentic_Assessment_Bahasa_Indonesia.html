@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#172554">
+<title>Authentic Assessment dalam Pembelajaran Bahasa Indonesia</title>
+<style>
+:root{--navy:#172554;--blue:#3157d5;--cyan:#27c2c9;--purple:#7757d6;--orange:#ff9b54;--pink:#f06a9b;--green:#149b78;--ink:#172033;--muted:#65708a;--paper:#f5f7fc;--card:#fff;--line:#e4e8f2;--shadow:0 14px 38px rgba(28,43,91,.09);--side:284px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:94px}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.72 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:var(--blue)}button,input{font:inherit}button{cursor:pointer}
+.sidebar{position:fixed;inset:0 auto 0 0;width:var(--side);background:linear-gradient(175deg,#172554 0%,#202d67 58%,#31245f 100%);color:#fff;z-index:50;display:flex;flex-direction:column;padding:22px 16px 16px;overflow-y:auto;transition:transform .25s}
+.brand{display:flex;align-items:center;gap:12px;padding:4px 8px 20px;border-bottom:1px solid #ffffff22}.brandmark{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--cyan),#9be6e3);display:grid;place-items:center;color:#142650;font-size:23px;font-weight:900;box-shadow:0 7px 18px #10b7b544}.brand strong{display:block;font-size:14px;line-height:1.3}.brand small{display:block;color:#c5cde9;font-size:11px;margin-top:4px}
+.nav-label{font-size:10px;text-transform:uppercase;letter-spacing:1.6px;color:#9faed9;font-weight:800;padding:22px 12px 8px}.nav{display:grid;gap:4px}.nav a{display:flex;gap:11px;align-items:center;text-decoration:none;color:#dce3ff;padding:10px 12px;border-radius:12px;font-size:13px;line-height:1.35;transition:.18s}.nav a .num{width:25px;height:25px;display:grid;place-items:center;border-radius:8px;background:#ffffff12;color:#b8c7ff;font-size:11px;font-weight:800;flex-shrink:0}.nav a:hover,.nav a.active{background:#ffffff18;color:#fff}.nav a.active{box-shadow:inset 3px 0 var(--cyan);background:linear-gradient(90deg,#ffffff1c,#ffffff08)}.nav a.active .num{background:var(--cyan);color:#10224d}
+.side-bottom{margin-top:auto;padding:16px 8px 2px;color:#bdc8ec;font-size:11px}.progress-track{height:5px;background:#ffffff20;border-radius:9px;overflow:hidden;margin:9px 0}.progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--cyan),#9be6e3);transition:width .25s}
+.main{margin-left:var(--side);min-height:100vh}.topbar{height:68px;position:sticky;top:0;z-index:30;background:#f5f7fceF;backdrop-filter:blur(16px);border-bottom:1px solid #e3e8f3;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(18px,4vw,56px);gap:16px}.crumb{font-size:12px;color:var(--muted)}.crumb strong{color:var(--ink)}.top-actions{display:flex;align-items:center;gap:8px}.icon-btn{border:1px solid var(--line);background:white;color:var(--ink);border-radius:11px;padding:8px 11px;font-size:13px}.icon-btn:hover{border-color:#b7c5f5}.menu-btn{display:none}
+.content{max-width:1180px;padding:32px clamp(18px,4vw,56px) 80px;margin:0 auto}
+.hero{position:relative;overflow:hidden;border-radius:28px;background:linear-gradient(120deg,#172554 0%,#263d91 54%,#6647bd 100%);padding:clamp(28px,5vw,58px);color:white;box-shadow:0 20px 50px #243b8b26}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;pointer-events:none}.hero:before{width:350px;height:350px;background:#2dd4bf1c;right:-80px;top:-170px}.hero:after{width:250px;height:250px;border:1px solid #ffffff20;right:95px;bottom:-170px;box-shadow:0 0 0 28px #ffffff08,0 0 0 56px #ffffff05}
+.eyebrow{font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:800;color:#7de6dc}.hero h1{font-size:clamp(32px,4.5vw,56px);line-height:1.08;letter-spacing:-1.8px;max-width:760px;margin:18px 0}.hero p{max-width:650px;color:#e1e8ff;font-size:16px}.hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:27px}.pill{padding:8px 12px;border-radius:999px;background:#ffffff14;border:1px solid #ffffff2b;font-size:12px;color:#fff}.hero-bottom{display:flex;align-items:end;justify-content:space-between;gap:24px;position:relative;z-index:1}.hero-mark{font-size:72px;opacity:.95;filter:drop-shadow(0 12px 20px #101b4a66)}
+.section{padding-top:44px}.section-head{display:flex;gap:15px;align-items:flex-start;margin-bottom:20px}.section-num{display:grid;place-items:center;width:44px;height:44px;flex-shrink:0;border-radius:14px;color:#fff;font-weight:900;background:linear-gradient(135deg,var(--blue),var(--purple));box-shadow:0 8px 18px #3157d526}.section h2{font-size:clamp(24px,3vw,34px);line-height:1.2;letter-spacing:-.7px;margin:0 0 8px}.section-head p{color:var(--muted);margin:0;max-width:780px}.section h3{font-size:20px;line-height:1.35;margin:28px 0 10px;letter-spacing:-.3px}.section h4{font-size:16px;margin:18px 0 7px}.section p{margin:10px 0}.lead{font-size:18px;color:#3e4b66}
+.card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin:22px 0}.mini-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 6px 20px #26396b08}.mini-card .emoji{font-size:26px}.mini-card h3{margin:10px 0 5px;font-size:16px}.mini-card p{font-size:13px;color:var(--muted);margin:0}.accent-card{border-top:4px solid var(--cyan)}
+.callout{margin:20px 0;padding:18px 20px;border-radius:16px;background:#e9fbf8;border:1px solid #bdeee5;color:#174b4b}.callout strong{display:block;margin-bottom:4px}.callout.blue{background:#edf2ff;border-color:#d5dfff;color:#263c81}.callout.orange{background:#fff4e9;border-color:#ffdfbf;color:#754015}.callout.pink{background:#fff0f5;border-color:#ffd0df;color:#7a2847}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:15px;background:white;margin:16px 0 22px}table{width:100%;border-collapse:collapse;min-width:600px;font-size:13px}th{background:#eef2ff;color:#253a78;text-align:left;font-size:12px;letter-spacing:.2px}td,th{padding:13px 15px;vertical-align:top;border-bottom:1px solid #e8ecf5}tr:last-child td{border-bottom:0}tbody tr:hover{background:#fafbff}
+.steps{display:grid;gap:10px;margin:16px 0}.step{display:grid;grid-template-columns:42px 1fr;gap:13px;background:white;border:1px solid var(--line);border-radius:14px;padding:14px 16px}.step .n{width:34px;height:34px;border-radius:11px;display:grid;place-items:center;background:#e8f9f6;color:#087f70;font-weight:900}.step strong{display:block}.step p{margin:3px 0 0;color:var(--muted);font-size:14px}
+details{background:white;border:1px solid var(--line);border-radius:14px;margin:12px 0;overflow:hidden}summary{padding:15px 18px;font-weight:750;cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:14px}summary::-webkit-details-marker{display:none}summary:after{content:"＋";font-size:18px;color:var(--blue)}details[open] summary:after{content:"−"}details .detail-body{padding:0 18px 18px;color:#47536b}
+.rubric-note{font-size:12px;color:var(--muted);margin-top:-8px}
+.quiz{background:linear-gradient(140deg,#172554,#283e89);color:white;border-radius:22px;padding:24px;margin:20px 0;box-shadow:var(--shadow)}.quiz h3{margin:0 0 7px;color:white}.quiz-intro{color:#d7e1ff;font-size:14px}.question{border-top:1px solid #ffffff25;padding:18px 0}.question:first-of-type{margin-top:18px}.qtext{font-weight:750;margin-bottom:12px}.options{display:grid;gap:8px}.option{display:flex;gap:10px;align-items:flex-start;padding:11px 13px;border:1px solid #ffffff32;border-radius:12px;background:#ffffff09;cursor:pointer;font-size:14px}.option:hover{background:#ffffff16}.option input{margin-top:5px;accent-color:#47ded1}.option.correct{border-color:#6ce3b4;background:#0b8b6b38}.option.wrong{border-color:#ff9fbd;background:#b6315b30}.feedback{font-size:13px;margin-top:10px;color:#d5e2ff;min-height:20px}.quiz-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}.primary-btn{border:0;background:var(--cyan);color:#10224d;border-radius:11px;padding:11px 17px;font-weight:850}.secondary-btn{border:1px solid #ffffff4a;color:white;background:#ffffff0d;border-radius:11px;padding:10px 15px}
+.reflect-box{border:1px solid #d9dff4;border-radius:18px;padding:20px;background:linear-gradient(135deg,#fff,#f3f5ff);margin:18px 0}.reflect-box label{display:block;font-weight:750;margin:12px 0 6px}.reflect-box textarea{width:100%;min-height:90px;border:1px solid #d5dced;border-radius:11px;padding:12px;resize:vertical;background:white;color:var(--ink)}.reflect-box button{margin-top:10px}
+.search-wrap{position:relative}.search-wrap input{width:min(250px,26vw);border:1px solid var(--line);background:white;border-radius:11px;padding:8px 12px;font-size:13px;outline:none}.search-wrap input:focus{border-color:#8da4ff;box-shadow:0 0 0 3px #3157d51a}.search-results{display:none;position:absolute;top:44px;right:0;width:min(340px,85vw);max-height:320px;overflow:auto;background:white;border:1px solid var(--line);border-radius:13px;box-shadow:var(--shadow);padding:8px}.search-results a{display:block;padding:9px 10px;text-decoration:none;border-radius:8px;font-size:13px;color:var(--ink)}.search-results a:hover{background:#eef2ff}
+.footer{border-top:1px solid var(--line);margin-top:50px;padding-top:25px;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.reading-wide{max-width:850px}.tag{display:inline-block;border-radius:8px;background:#edf2ff;color:#3450a3;padding:4px 8px;font-size:11px;font-weight:800;margin:0 5px 5px 0}
+body.dark{--paper:#101629;--card:#19223a;--ink:#edf1ff;--muted:#aab5d0;--line:#2b3653;background:var(--paper);color:var(--ink)}body.dark .topbar{background:#101629ed;border-color:#2b3653}body.dark .icon-btn,body.dark .mini-card,body.dark details,body.dark .table-wrap,body.dark .step,body.dark .reflect-box,body.dark .search-results{background:#19223a;color:var(--ink);border-color:#2b3653}body.dark th{background:#263253;color:#dce4ff}body.dark td{border-color:#2b3653}body.dark .callout{background:#173b3b;color:#c9f7ed;border-color:#285d5a}body.dark .callout.blue{background:#202d52;color:#dce5ff;border-color:#344878}body.dark .callout.orange{background:#422f22;color:#ffe2c4;border-color:#6e4b30}body.dark .callout.pink{background:#402538;color:#ffdce8;border-color:#714057}body.dark .reflect-box{background:#19223a}body.dark .reflect-box textarea{background:#101629;color:var(--ink);border-color:#36415d}body.dark .search-wrap input{background:#19223a;color:var(--ink);border-color:#2b3653}body.dark .search-results a{color:var(--ink)}body.dark .search-results a:hover{background:#263253}body.dark tbody tr:hover{background:#202b46}
+@media(max-width:1050px){:root{--side:250px}.card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.sidebar{transform:translateX(-100%);width:280px}.sidebar.open{transform:translateX(0);box-shadow:20px 0 60px #0d173966}.main{margin-left:0}.menu-btn{display:inline-flex}.topbar{padding:0 15px}.crumb{display:none}.search-wrap input{width:145px}.content{padding:20px 15px 60px}.hero{border-radius:22px}.hero-mark{display:none}.card-grid{grid-template-columns:1fr}.section{padding-top:34px}.hero h1{letter-spacing:-1px}.section-head{gap:11px}.section-num{width:38px;height:38px}.table-wrap{margin-left:-2px;margin-right:-2px}}
+@media print{.sidebar,.topbar,.quiz-actions,.reflect-box button{display:none!important}.main{margin:0}.content{max-width:none;padding:0}.hero{print-color-adjust:exact}.section{break-inside:avoid}.quiz{print-color-adjust:exact}body{background:white}}
+</style>
+</head>
+<body>
+<aside class="sidebar" id="sidebar">
+  <div class="brand"><div class="brandmark">Aa</div><div><strong>BAHASA INDONESIA</strong><small>MODUL DIGITAL · BAB 3</small></div></div>
+  <div class="nav-label">Navigasi pembelajaran</div>
+  <nav class="nav" id="nav">
+    <a href="#beranda" class="active"><span class="num">⌂</span>Beranda modul</a>
+    <a href="#tujuan"><span class="num">◎</span>Capaian & peta konsep</a>
+    <a href="#konsep"><span class="num">01</span>Konsep Authentic Assessment</a>
+    <a href="#portofolio"><span class="num">02</span>Portfolio Assessment</a>
+    <a href="#proyek"><span class="num">03</span>Project-Based Assessment</a>
+    <a href="#kinerja"><span class="num">04</span>Performance Assessment</a>
+    <a href="#produk"><span class="num">05</span>Product Assessment</a>
+    <a href="#diri"><span class="num">06</span>Self-Assessment</a>
+    <a href="#teman"><span class="num">07</span>Peer Assessment</a>
+    <a href="#observasi"><span class="num">08</span>Observasi & Jurnal</a>
+    <a href="#tes"><span class="num">09</span>Pertanyaan Terbuka & Tes</a>
+    <a href="#integrasi"><span class="num">↗</span>Integrasi asesmen</a>
+    <a href="#evaluasi"><span class="num">✦</span>Evaluasi</a>
+    <a href="#referensi"><span class="num">≡</span>Referensi</a>
+  </nav>
+  <div class="side-bottom">
+    <div style="display:flex;justify-content:space-between;gap:8px"><span>Progres membaca</span><strong id="progressText">0%</strong></div>
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    <div>Belajar bertahap. Pahami konsep, telaah contoh, lalu uji penerapan.</div>
+  </div>
+</aside>
+<main class="main">
+<header class="topbar">
+  <div style="display:flex;align-items:center;gap:10px"><button class="icon-btn menu-btn" id="menuBtn" aria-label="Buka navigasi">☰</button><div class="crumb">Modul digital / <strong id="crumbCurrent">Beranda modul</strong></div></div>
+  <div class="top-actions">
+    <div class="search-wrap"><input id="searchInput" type="search" placeholder="Cari materi…" aria-label="Cari materi"><div class="search-results" id="searchResults"></div></div>
+    <button class="icon-btn" id="themeBtn" title="Ubah tema">◐ Tema</button>
+    <button class="icon-btn" onclick="window.print()" title="Cetak atau simpan PDF">⇩ PDF</button>
+  </div>
+</header>
+<div class="content">
+<section id="beranda" class="hero">
+  <div class="eyebrow">MODUL PEMBELAJARAN DIGITAL · BAB 03</div>
+  <div class="hero-bottom"><div>
+    <h1>Authentic Assessment dalam Pembelajaran Bahasa Indonesia</h1>
+    <p>Menilai bukan sekadar mengetahui jawaban, tetapi melihat bagaimana siswa menggunakan bahasa untuk memahami dunia, menyampaikan gagasan, dan menghasilkan karya bermakna.</p>
+    <div class="hero-meta"><span class="pill">📘 Modul interaktif</span><span class="pill">🏫 Konteks SMP & SMA</span><span class="pill">💻 Berbasis TIK</span></div>
+  </div><div class="hero-mark" aria-hidden="true">✦</div></div>
+  <div style="position:relative;z-index:1;margin-top:28px;padding-top:18px;border-top:1px solid #ffffff2b;display:flex;flex-wrap:wrap;gap:8px 26px;font-size:13px;color:#e4eaff">
+    <span><strong>Penulis</strong> · Dr. Sri Wahyuni, M.Pd</span>
+    <span><strong>Institusi</strong> · MPBI Program Pascasarjana UNISMA</span>
+  </div>
+</section>
+
+<section id="tujuan" class="section">
+  <div class="section-head"><div class="section-num">◎</div><div><h2>Mulai dari tujuan belajar</h2><p>Kenali hasil belajar yang diharapkan, struktur materi, dan cara menggunakan modul ini.</p></div></div>
+  <p class="lead">Setelah menyelesaikan modul, mahasiswa diharapkan mampu merancang asesmen autentik yang selaras dengan tujuan pembelajaran Bahasa Indonesia di sekolah menengah.</p>
+  <div class="card-grid">
+    <div class="mini-card accent-card"><div class="emoji">🎯</div><h3>Memahami konsep</h3><p>Menjelaskan prinsip, fungsi, dan karakteristik asesmen autentik.</p></div>
+    <div class="mini-card accent-card"><div class="emoji">🧩</div><h3>Merancang instrumen</h3><p>Memilih bukti belajar, menyusun indikator, dan mengembangkan rubrik.</p></div>
+    <div class="mini-card accent-card"><div class="emoji">💡</div><h3>Mengintegrasikan TIK</h3><p>Memanfaatkan teknologi secara inklusif, aman, dan sesuai tujuan.</p></div>
+  </div>
+  <h3>Peta konsep</h3>
+  <div class="table-wrap"><table><thead><tr><th>Kelompok</th><th>Pendekatan</th><th>Bukti belajar</th></tr></thead><tbody>
+    <tr><td>Dokumentasi</td><td>Portofolio</td><td>Karya, draf, revisi, refleksi</td></tr>
+    <tr><td>Proses dan hasil</td><td>Proyek, kinerja, produk</td><td>Proses kerja, unjuk kerja, karya akhir</td></tr>
+    <tr><td>Partisipasi reflektif</td><td>Penilaian diri, teman sebaya, observasi/jurnal</td><td>Refleksi, komentar, catatan sistematis</td></tr>
+    <tr><td>Pemahaman dan penalaran</td><td>Pertanyaan terbuka dan tes kontekstual</td><td>Uraian, interpretasi, argumentasi, solusi</td></tr>
+  </tbody></table></div>
+  <div class="callout blue"><strong>💡 Cara belajar yang disarankan</strong>Baca konsep terlebih dahulu, telaah contoh SMP/SMA, periksa rubrik, lalu kerjakan evaluasi. Gunakan navigasi di sebelah kiri untuk berpindah subbab.</div>
+</section>
+
+<section id="konsep" class="section">
+  <div class="section-head"><div class="section-num">01</div><div><h2>Konsep Authentic Assessment</h2><p>Memahami makna penilaian autentik dan kaitannya dengan praktik berbahasa.</p></div></div>
+  <h3>3.1.1 Pengertian asesmen autentik</h3>
+  <p>Asesmen autentik adalah pendekatan penilaian yang meminta peserta didik menerapkan pengetahuan dan keterampilan melalui tugas bermakna, kontekstual, dan relevan dengan penggunaan kompetensi. Wiggins (1998) menekankan pentingnya tugas yang mengungkap pemahaman melalui penerapan pengetahuan. Villarroel et al. (2018) menyoroti perlunya keselarasan antara tugas autentik, desain pembelajaran, dan capaian yang diharapkan.</p>
+  <p>Dalam pembelajaran Bahasa Indonesia, siswa tidak hanya menyebutkan ciri teks, tetapi juga menggunakan bahasa untuk tujuan komunikasi. Misalnya, siswa kelas VII SMP melakukan wawancara sederhana tentang kegiatan literasi sekolah, memeriksa informasi, menulis berita, lalu membacakannya. Siswa kelas XI SMA dapat menulis teks argumentasi tentang pengurangan sampah plastik di sekolah dengan alasan dan bukti yang relevan.</p>
+  <h3>3.1.2 Landasan dan prinsip</h3>
+  <div class="card-grid">
+    <div class="mini-card"><div class="emoji">🧠</div><h3>Konstruktivisme</h3><p>Siswa membangun pemahaman melalui pengalaman, interaksi, dan refleksi.</p></div>
+    <div class="mini-card"><div class="emoji">🔗</div><h3>Keselarasan</h3><p>Tujuan, aktivitas belajar, dan penilaian harus saling mendukung.</p></div>
+    <div class="mini-card"><div class="emoji">🌱</div><h3>Assessment for Learning</h3><p>Bukti asesmen dipakai untuk memberi umpan balik dan memperbaiki belajar.</p></div>
+  </div>
+  <p>Prinsip penting meliputi validitas, konsistensi penskoran, keadilan, transparansi, kebermaknaan, keberlanjutan, dan integritas akademik. Jika tujuan pembelajaran adalah pidato persuasif, siswa harus memperoleh kesempatan menyusun dan menyampaikan pidato, bukan hanya menjawab soal tentang definisi pidato.</p>
+  <h3>3.1.3 Perbandingan pendekatan</h3>
+  <div class="table-wrap"><table><thead><tr><th>Aspek</th><th>Asesmen konvensional</th><th>Asesmen autentik</th></tr></thead><tbody>
+  <tr><td>Fokus</td><td>Penguasaan pengetahuan atau keterampilan tertentu</td><td>Penerapan kompetensi dalam konteks bermakna</td></tr>
+  <tr><td>Bukti</td><td>Jawaban soal</td><td>Karya, proses, respons, dan unjuk kerja</td></tr>
+  <tr><td>Contoh</td><td>Menentukan unsur 5W+1H</td><td>Menulis berita berdasarkan wawancara</td></tr>
+  <tr><td>Fungsi</td><td>Dapat memeriksa pengetahuan secara efisien</td><td>Memperlihatkan penerapan kompetensi yang lebih luas</td></tr>
+  </tbody></table></div>
+  <div class="callout"><strong>Prinsip penting</strong>Asesmen autentik tidak harus menggantikan tes konvensional. Keduanya dapat digunakan secara terpadu untuk memperoleh gambaran kompetensi yang lebih lengkap.</div>
+  <h3>3.1.4 Peran TIK</h3>
+  <p>LMS atau formulir daring dapat digunakan untuk pengumpulan tugas; dokumen digital untuk menyimpan draf dan revisi; rekaman audio-video untuk meninjau kinerja; sedangkan lembar kerja elektronik membantu merekapitulasi hasil. Teknologi harus mendukung tujuan penilaian, bukan menjadi tujuan itu sendiri. Siswa yang tidak memiliki akses perangkat perlu memperoleh alternatif setara.</p>
+  <details><summary>Contoh kasus untuk dianalisis</summary><div class="detail-body"><p>Guru meminta siswa membuat poster digital tentang budaya membaca. Poster A sangat menarik secara visual, tetapi pesannya tidak jelas. Poster B sederhana, tetapi menggunakan bahasa efektif dan ajakan yang kuat.</p><p><strong>Pertanyaan:</strong> Jika tujuan utamanya adalah kemampuan menyusun pesan persuasif, kriteria apa yang harus memperoleh bobot tertinggi? Jelaskan alasan dan bagaimana guru dapat menjaga keadilan bagi siswa yang tidak memiliki perangkat desain.</p></div></details>
+</section>
+
+<section id="portofolio" class="section">
+  <div class="section-head"><div class="section-num">02</div><div><h2>Portfolio Assessment</h2><p>Melihat perkembangan, bukan hanya hasil akhir.</p></div></div>
+  <h3>3.2.1 Pengertian dan tujuan</h3>
+  <p>Asesmen portofolio menggunakan kumpulan karya dan bukti belajar yang dipilih secara terencana untuk menunjukkan perkembangan atau pencapaian siswa. Portofolio bukan sekadar tumpukan tugas; setiap karya perlu memiliki fungsi dan keterkaitan dengan tujuan belajar.</p>
+  <div class="table-wrap"><table><thead><tr><th>Jenis</th><th>Fokus</th><th>Contoh</th></tr></thead><tbody>
+  <tr><td>Perkembangan</td><td>Perubahan kompetensi</td><td>Draf awal dan akhir teks deskripsi</td></tr><tr><td>Hasil terbaik</td><td>Karya pilihan</td><td>Cerpen terbaik selama satu semester</td></tr><tr><td>Asesmen</td><td>Bukti terhadap kriteria</td><td>Teks, rubrik, refleksi</td></tr><tr><td>Proses</td><td>Tahapan pengerjaan</td><td>Kerangka, draf, komentar, revisi</td></tr><tr><td>Digital</td><td>Dokumentasi elektronik</td><td>Folder karya dan rekaman siswa</td></tr>
+  </tbody></table></div>
+  <h3>3.2.2 Contoh di SMP — Portofolio teks deskripsi kelas VII</h3>
+  <p>Siswa memilih objek di lingkungan sekolah, seperti perpustakaan, taman, atau kantin. Portofolio memuat catatan pengamatan, kerangka teks, draf awal, komentar guru atau teman, teks hasil revisi, dan refleksi. Guru membandingkan karya awal dan akhir untuk menilai perkembangan penggunaan detail, organisasi, dan bahasa.</p>
+  <h3>3.2.3 Contoh di SMA — Portofolio teks argumentasi kelas XI</h3>
+  <p>Siswa mengembangkan teks argumentasi tentang pengurangan sampah plastik di sekolah. Portofolio memuat identifikasi masalah, daftar sumber, kerangka, draf, umpan balik, naskah final, dan refleksi.</p>
+  <h3>Rubrik portofolio</h3>
+  <div class="table-wrap"><table><thead><tr><th>Aspek</th><th>Bobot</th><th>Skor 4</th><th>Skor 3</th><th>Skor 2</th><th>Skor 1</th></tr></thead><tbody>
+  <tr><td>Kualitas karya final</td><td>35%</td><td>Sangat memenuhi kriteria</td><td>Sebagian besar terpenuhi</td><td>Terpenuhi sebagian</td><td>Belum memadai</td></tr>
+  <tr><td>Perkembangan karya</td><td>25%</td><td>Perbaikan substantif</td><td>Perbaikan terlihat</td><td>Perbaikan terbatas</td><td>Bukti minim</td></tr>
+  <tr><td>Pemanfaatan umpan balik</td><td>20%</td><td>Diterapkan tepat</td><td>Sebagian besar diterapkan</td><td>Sedikit diterapkan</td><td>Tidak tampak</td></tr>
+  <tr><td>Refleksi dan dokumentasi</td><td>20%</td><td>Mendalam dan lengkap</td><td>Cukup jelas</td><td>Terbatas</td><td>Tidak memadai</td></tr>
+  </tbody></table></div>
+  <p class="rubric-note">Nilai akhir = Σ (skor ÷ 4 × bobot). Contoh skor 3, 4, 3, 4 menghasilkan nilai 86,25.</p>
+  <div class="callout blue"><strong>💻 Portofolio digital</strong>Gunakan nama berkas yang konsisten, misalnya <em>VIIA_Nama_TeksDeskripsi_Draf1</em> dan <em>VIIA_Nama_TeksDeskripsi_Final</em>. Pastikan akses dokumen dibatasi sesuai kebutuhan dan siswa tidak diminta memublikasikan data pribadi.</div>
+  <details><summary>Periksa pemahaman</summary><div class="detail-body"><p>Seorang siswa memiliki karya final yang bagus, tetapi tidak menyimpan draf atau catatan revisi. Apakah guru dapat menyimpulkan bahwa siswa mengalami perkembangan yang besar? Bukti tambahan apa yang diperlukan?</p></div></details>
+</section>
+
+<section id="proyek" class="section">
+  <div class="section-head"><div class="section-num">03</div><div><h2>Project-Based Assessment</h2><p>Menilai proses penyelesaian proyek dan produk yang dihasilkan.</p></div></div>
+  <h3>3.3.1 Pengertian</h3>
+  <p>Asesmen berbasis proyek menggunakan proses pengerjaan proyek dan produk yang dihasilkan sebagai bukti pencapaian kompetensi. Penilaian dapat mencakup perencanaan, pencarian informasi, pengerjaan, revisi, presentasi, dan kontribusi individu.</p>
+  <p>Project-Based Learning adalah pendekatan pembelajaran melalui proyek, sedangkan Project-Based Assessment menekankan bagaimana proyek digunakan untuk mengumpulkan bukti pencapaian. Keduanya dapat diterapkan secara bersamaan.</p>
+  <h3>3.3.2 Contoh proyek SMP — Majalah dinding literasi kelas VIII</h3>
+  <p>Kelompok membuat majalah dinding bertema “Membaca Membuka Wawasan”. Isi dapat mencakup artikel pendek, resensi buku, puisi, wawancara dengan petugas perpustakaan, dan poster ajakan membaca.</p>
+  <div class="steps">
+    <div class="step"><div class="n">1</div><div><strong>Rencanakan</strong><p>Tentukan audiens, rubrik, pembagian peran, dan jadwal.</p></div></div>
+    <div class="step"><div class="n">2</div><div><strong>Kumpulkan dan tulis</strong><p>Periksa informasi, susun naskah, dan cantumkan sumber jika diperlukan.</p></div></div>
+    <div class="step"><div class="n">3</div><div><strong>Tinjau dan revisi</strong><p>Anggota saling memberi umpan balik berdasarkan rubrik.</p></div></div>
+    <div class="step"><div class="n">4</div><div><strong>Publikasikan dan refleksikan</strong><p>Pasang karya, presentasikan, dan jelaskan kontribusi setiap anggota.</p></div></div>
+  </div>
+  <h3>3.3.3 Contoh proyek SMA — Podcast berita sekolah kelas X</h3>
+  <p>Siswa membuat podcast tiga sampai lima menit berdasarkan informasi kegiatan sekolah yang dapat diverifikasi. Naskah mencakup judul, informasi utama, rincian peristiwa, sumber informasi, dan penutup. Guru menilai akurasi, struktur berita, bahasa, penyampaian lisan, serta tanggung jawab penggunaan sumber.</p>
+  <h3>Rubrik proyek</h3>
+  <div class="table-wrap"><table><thead><tr><th>Aspek</th><th>Bobot</th><th>Bukti yang diperiksa</th></tr></thead><tbody><tr><td>Isi dan akurasi</td><td>25%</td><td>Fakta, sumber, relevansi informasi</td></tr><tr><td>Organisasi dan bahasa</td><td>25%</td><td>Struktur, koherensi, ketepatan bahasa</td></tr><tr><td>Kesesuaian produk</td><td>20%</td><td>Kesesuaian dengan audiens dan tujuan</td></tr><tr><td>Proses dan kontribusi</td><td>20%</td><td>Catatan proses dan bukti kerja individual</td></tr><tr><td>Refleksi dan integritas</td><td>10%</td><td>Refleksi, sumber, kejujuran karya</td></tr></tbody></table></div>
+  <div class="callout orange"><strong>⚖️ Waspadai ketimpangan kontribusi</strong>Produk kelompok yang baik tidak otomatis membuktikan kemampuan setiap anggota. Gunakan catatan pembagian tugas, pengamatan proses, refleksi individual, dan tanya jawab singkat.</div>
+</section>
+
+<section id="kinerja" class="section">
+  <div class="section-head"><div class="section-num">04</div><div><h2>Performance Assessment</h2><p>Mengamati siswa saat menggunakan bahasa secara langsung.</p></div></div>
+  <h3>3.4.1 Pengertian</h3>
+  <p>Asesmen kinerja menilai kompetensi melalui tindakan atau unjuk kerja yang dapat diamati. Dalam pembelajaran Bahasa Indonesia, bentuknya dapat berupa membaca puisi, berpidato, berdiskusi, berdebat, melakukan wawancara, membaca berita, atau mempresentasikan hasil pengamatan.</p>
+  <h3>3.4.2 Contoh SMP — Membaca puisi kelas IX</h3>
+  <p>Siswa membacakan puisi dengan memperhatikan pelafalan, intonasi, jeda, tempo, dan ekspresi. Guru menggunakan rubrik yang dibagikan sebelum kegiatan agar siswa memahami standar kinerja.</p>
+  <div class="table-wrap"><table><thead><tr><th>Aspek</th><th>Bobot</th><th>Indikator utama</th></tr></thead><tbody><tr><td>Pelafalan</td><td>25%</td><td>Kata terdengar jelas dan tepat</td></tr><tr><td>Intonasi dan jeda</td><td>25%</td><td>Jeda dan tekanan mendukung makna</td></tr><tr><td>Tempo dan kelancaran</td><td>20%</td><td>Kecepatan sesuai isi puisi</td></tr><tr><td>Ekspresi</td><td>20%</td><td>Ekspresi mendukung suasana puisi</td></tr><tr><td>Kesiapan</td><td>10%</td><td>Penampilan terencana dan tertib</td></tr></tbody></table></div>
+  <h3>3.4.3 Contoh SMA — Presentasi argumentatif kelas XI</h3>
+  <p>Siswa menyampaikan pendapat tentang pembatasan plastik sekali pakai di sekolah, lalu menjawab pertanyaan teman. Guru menilai argumentasi dan bukti (30%), organisasi (20%), ketepatan bahasa (20%), penyampaian lisan (15%), dan respons terhadap pertanyaan (15%).</p>
+  <h3>Rubrik analitik dan holistik</h3>
+  <p>Rubrik analitik memberi skor pada setiap aspek secara terpisah sehingga umpan balik lebih spesifik. Rubrik holistik memberi satu skor keseluruhan dan lebih ringkas. Untuk pembelajaran bahasa, rubrik analitik sering lebih membantu ketika siswa perlu mengetahui aspek yang harus diperbaiki.</p>
+  <div class="callout"><strong>Catatan keadilan</strong>Kecemasan berbicara, gangguan suara, atau rekaman yang gagal dapat memengaruhi bukti. Sediakan instruksi jelas dan kesempatan yang wajar untuk menunjukkan kompetensi, tanpa mengubah standar yang dinilai.</div>
+</section>
+
+<section id="produk" class="section">
+  <div class="section-head"><div class="section-num">05</div><div><h2>Product Assessment</h2><p>Menilai kualitas karya yang dihasilkan siswa.</p></div></div>
+  <h3>3.5.1 Pengertian</h3>
+  <p>Asesmen produk berfokus pada kualitas hasil karya, misalnya teks deskripsi, cerpen, teks berita, teks argumentasi, poster, podcast, atau video pembelajaran. Asesmen produk berbeda dari asesmen kinerja: produk menilai hasil yang dapat diperiksa, sedangkan kinerja menilai tindakan atau demonstrasi kompetensi.</p>
+  <h3>3.5.2 Contoh SMP — Poster ajakan membaca kelas VII</h3>
+  <p>Siswa membuat poster bertema “Ayo Membaca 15 Menit Setiap Hari”. Poster harus memiliki pesan utama, kalimat ajakan yang efektif, informasi pendukung, dan keterbacaan yang baik. Poster dapat dibuat manual atau digital.</p>
+  <div class="table-wrap"><table><thead><tr><th>Aspek</th><th>Bobot</th></tr></thead><tbody><tr><td>Kejelasan pesan</td><td>30%</td></tr><tr><td>Ketepatan bahasa</td><td>25%</td></tr><tr><td>Kesesuaian dengan audiens</td><td>20%</td></tr><tr><td>Organisasi dan keterbacaan</td><td>15%</td></tr><tr><td>Ketepatan sumber jika digunakan</td><td>10%</td></tr></tbody></table></div>
+  <h3>3.5.3 Contoh SMA — Teks laporan hasil observasi kelas X</h3>
+  <p>Siswa mengamati objek di lingkungan sekolah, seperti taman, perpustakaan, atau kantin. Siswa menulis laporan berdasarkan hasil pengamatan, dengan memperhatikan klasifikasi umum, deskripsi bagian, ketepatan informasi, penggunaan istilah, dan bahasa.</p>
+  <div class="callout blue"><strong>Bedakan kompetensi dan kemasan</strong>Jika tujuan utamanya menulis teks, ketepatan isi, organisasi, dan bahasa harus menjadi fokus utama. Desain visual dapat dinilai jika memang termasuk capaian pembelajaran.</div>
+</section>
+
+<section id="diri" class="section">
+  <div class="section-head"><div class="section-num">06</div><div><h2>Self-Assessment</h2><p>Mengembangkan kemampuan siswa menilai dan memperbaiki karyanya sendiri.</p></div></div>
+  <h3>3.6.1 Pengertian</h3>
+  <p>Penilaian diri adalah proses ketika siswa memeriksa kualitas pekerjaan berdasarkan kriteria, mengidentifikasi kekuatan dan kelemahan, lalu menetapkan langkah perbaikan. Penilaian diri bukan sekadar memberi nilai pada diri sendiri berdasarkan perasaan.</p>
+  <h3>3.6.2 Contoh SMP — Menulis teks eksplanasi kelas VIII</h3>
+  <p>Setelah menulis teks eksplanasi tentang Karhutla (Kebakaran Hutan dan Lahan), siswa mengisi daftar cek berikut.</p>
+  <div class="reflect-box">
+    <strong>Daftar cek refleksi siswa</strong>
+    <label><input type="checkbox"> Saya menjelaskan fenomena dengan jelas.</label>
+    <label><input type="checkbox"> Saya menyusun penjelasan secara runtut.</label>
+    <label><input type="checkbox"> Saya menjelaskan hubungan sebab-akibat.</label>
+    <label><input type="checkbox"> Saya menggunakan informasi yang relevan.</label>
+    <label><input type="checkbox"> Saya memeriksa ejaan dan tanda baca.</label>
+    <label for="reflection1">Bagian apa yang paling perlu saya perbaiki?</label>
+    <textarea id="reflection1" placeholder="Tuliskan bagian yang perlu diperbaiki dan alasannya…"></textarea>
+    <label for="reflection2">Langkah konkret apa yang akan saya lakukan?</label>
+    <textarea id="reflection2" placeholder="Contoh: menata ulang urutan sebab-akibat…"></textarea>
+    <button class="primary-btn" onclick="saveReflection()">Simpan refleksi di perangkat ini</button>
+    <span id="reflectStatus" style="font-size:12px;margin-left:8px;color:var(--green)"></span>
+  </div>
+  <h3>3.6.3 Contoh SMA — Presentasi argumentatif kelas XI</h3>
+  <p>Siswa memeriksa apakah pendapatnya jelas, alasan didukung bukti, bahasa efektif, dan pertanyaan audiens dijawab secara relevan. Siswa lalu menentukan target perbaikan untuk presentasi berikutnya.</p>
+  <div class="callout orange"><strong>Hindari penilaian diri yang dangkal</strong>Mintalah siswa merujuk pada bukti dalam karyanya. Formulir digital dapat memudahkan pengumpulan refleksi, tetapi tidak otomatis membuat refleksi lebih mendalam.</div>
+</section>
+
+<section id="teman" class="section">
+  <div class="section-head"><div class="section-num">07</div><div><h2>Peer Assessment</h2><p>Memberi umpan balik yang spesifik, santun, dan dapat ditindaklanjuti.</p></div></div>
+  <h3>3.7.1 Pengertian</h3>
+  <p>Penilaian teman sebaya adalah proses ketika siswa mengevaluasi karya atau kinerja teman berdasarkan kriteria yang telah ditetapkan. Kegiatan ini membantu siswa memahami standar kualitas dan memperbaiki karya sebelum penilaian guru.</p>
+  <h3>3.7.2 Contoh SMP — Menilai teks deskripsi teman</h3>
+  <div class="table-wrap"><table><thead><tr><th>Pertanyaan peninjauan</th><th>Ya</th><th>Perlu revisi</th><th>Catatan</th></tr></thead><tbody>
+  <tr><td>Objek yang dideskripsikan jelas</td><td>☐</td><td>☐</td><td></td></tr><tr><td>Detail membantu pembaca membayangkan objek</td><td>☐</td><td>☐</td><td></td></tr><tr><td>Paragraf tersusun runtut</td><td>☐</td><td>☐</td><td></td></tr><tr><td>Kalimat mudah dipahami</td><td>☐</td><td>☐</td><td></td></tr>
+  </tbody></table></div>
+  <h3>3.7.3 Contoh SMA — Menilai teks argumentasi</h3>
+  <p>Siswa memeriksa kejelasan pendapat, kekuatan alasan, relevansi bukti, organisasi paragraf, dan penggunaan bahasa. Komentar harus menyebutkan bagian yang ditinjau dan saran yang dapat diterapkan.</p>
+  <div class="callout"><strong>Contoh komentar konstruktif</strong>“Pendapat utama sudah jelas. Namun, alasan pada paragraf kedua belum didukung bukti. Tambahkan data atau contoh yang dapat diperiksa agar argumentasi lebih meyakinkan.”</div>
+  <p>Guru perlu mengawasi proses agar penilaian tidak dipengaruhi kedekatan personal atau konflik. Penilaian teman sebaya sebaiknya menjadi sumber umpan balik, bukan satu-satunya penentu nilai akhir.</p>
+</section>
+
+<section id="observasi" class="section">
+  <div class="section-head"><div class="section-num">08</div><div><h2>Observasi Sistematis dan Jurnal</h2><p>Merekam perilaku belajar secara terencana, faktual, dan konsisten.</p></div></div>
+  <h3>3.8.1 Observasi sistematis</h3>
+  <p>Observasi sistematis adalah pengamatan yang direncanakan dengan indikator dan prosedur yang jelas. Guru dapat menggunakannya untuk menilai partisipasi diskusi, kemampuan menyimak, cara menanggapi pendapat, penggunaan bahasa santun, dan kerja sama.</p>
+  <h3>3.8.2 Contoh lembar observasi SMP — Diskusi teks berita kelas VIII</h3>
+  <div class="table-wrap"><table><thead><tr><th>Indikator</th><th>1</th><th>2</th><th>3</th><th>4</th></tr></thead><tbody><tr><td>Menyampaikan pendapat relevan</td><td>☐</td><td>☐</td><td>☐</td><td>☐</td></tr><tr><td>Memberikan alasan</td><td>☐</td><td>☐</td><td>☐</td><td>☐</td></tr><tr><td>Menyimak pendapat teman</td><td>☐</td><td>☐</td><td>☐</td><td>☐</td></tr><tr><td>Menanggapi dengan santun</td><td>☐</td><td>☐</td><td>☐</td><td>☐</td></tr><tr><td>Mengajukan pertanyaan relevan</td><td>☐</td><td>☐</td><td>☐</td><td>☐</td></tr></tbody></table></div>
+  <p class="rubric-note">Skala: 4 = konsisten; 3 = cukup konsisten; 2 = terbatas; 1 = bukti belum memadai. Jika siswa tidak memperoleh kesempatan menunjukkan perilaku tertentu, catat sebagai bukti belum tersedia.</p>
+  <h3>3.8.3 Contoh jurnal guru SMA — Presentasi laporan hasil observasi</h3>
+  <div class="table-wrap"><table><thead><tr><th>Tanggal/situasi</th><th>Catatan faktual</th><th>Tindak lanjut</th></tr></thead><tbody><tr><td>Presentasi pertama</td><td>Siswa menyampaikan hasil pengamatan secara runtut, tetapi beberapa informasi tidak didukung catatan pengamatan.</td><td>Membimbing siswa membedakan hasil pengamatan dan informasi tambahan.</td></tr><tr><td>Presentasi revisi</td><td>Siswa memperbaiki urutan informasi dan memberi contoh hasil pengamatan yang lebih jelas.</td><td>Melatih penggunaan istilah dan simpulan.</td></tr></tbody></table></div>
+  <h3>3.8.4 Jurnal refleksi siswa</h3>
+  <p>Setelah diskusi, siswa menuliskan hal baru yang dipelajari, pendapat yang membantu pemahaman, kesulitan saat menyampaikan gagasan, cara menanggapi perbedaan, dan target perbaikan.</p>
+  <div class="callout pink"><strong>Catat perilaku, bukan label pribadi</strong>Tulis “siswa belum menanggapi pertanyaan dalam dua kesempatan” alih-alih “siswa pasif”. Catatan faktual lebih mudah ditindaklanjuti dan mengurangi bias.</div>
+</section>
+
+<section id="tes" class="section">
+  <div class="section-head"><div class="section-num">09</div><div><h2>Pertanyaan Terbuka dan Tes Kontekstual</h2><p>Mengungkap pemahaman, penalaran, evaluasi, dan penerapan bahasa.</p></div></div>
+  <h3>3.9.1 Pengertian</h3>
+  <p>Pertanyaan terbuka memungkinkan siswa memberikan jawaban berupa penjelasan, interpretasi, argumentasi, atau solusi. Tes kontekstual menempatkan pertanyaan dalam situasi yang bermakna, misalnya pengumuman, berita, percakapan, artikel, atau poster. Bentuk soal saja tidak menentukan autentisitas; yang penting adalah konteks, tujuan, dan kualitas bukti yang dikumpulkan.</p>
+  <h3>3.9.2 Contoh SMP — Memperbaiki pengumuman kelas VII</h3>
+  <div class="callout blue"><strong>Stimulus</strong>“Besok semua siswa yang ikut kegiatan wajib hadir lebih awal. Jangan terlambat karena acara akan dimulai pagi.” Pengumuman tersebut tidak menyebutkan waktu pasti, tempat berkumpul, atau jenis kegiatan.</div>
+  <ol><li>Informasi apa yang belum dicantumkan?</li><li>Mengapa pengumuman tersebut dapat menimbulkan kesalahpahaman?</li><li>Tulis ulang pengumuman agar lebih jelas. Jangan menambahkan informasi yang belum diketahui.</li><li>Jelaskan perubahan yang kamu lakukan dan alasan kebahasaannya.</li></ol>
+  <h3>3.9.3 Contoh SMA — Menganalisis teks argumentasi kelas XI</h3>
+  <p>Setelah membaca teks opini tentang pengurangan plastik sekali pakai di sekolah, siswa menjawab:</p>
+  <ol><li>Identifikasi pendapat utama dan alasan yang digunakan penulis.</li><li>Evaluasi apakah bukti yang diberikan cukup kuat untuk mendukung klaim.</li><li>Tentukan informasi tambahan yang diperlukan agar argumentasi lebih meyakinkan.</li><li>Tulis tanggapan yang berbeda atau sejalan dengan penulis menggunakan alasan dan bukti.</li></ol>
+  <h3>Rubrik jawaban uraian</h3>
+  <div class="table-wrap"><table><thead><tr><th>Aspek</th><th>Bobot</th><th>Fokus penilaian</th></tr></thead><tbody><tr><td>Ketepatan memahami informasi</td><td>25%</td><td>Interpretasi sesuai stimulus</td></tr><tr><td>Alasan dan penjelasan</td><td>25%</td><td>Logis, relevan, dan dapat ditelusuri</td></tr><tr><td>Solusi atau tanggapan</td><td>30%</td><td>Menjawab persoalan secara tepat</td></tr><tr><td>Penggunaan bahasa</td><td>20%</td><td>Jelas, efektif, sesuai konteks</td></tr></tbody></table></div>
+  <p>Setiap aspek dapat dinilai dengan skala empat tingkat. Guru perlu menyediakan deskripsi tiap tingkat dan memeriksa apakah jawaban didukung bukti, bukan hanya sesuai dengan pendapat pribadi guru.</p>
+</section>
+
+<section id="integrasi" class="section">
+  <div class="section-head"><div class="section-num">↗</div><div><h2>Mengintegrasikan asesmen</h2><p>Menyusun bukti yang saling melengkapi tanpa menghitung hal yang sama berulang kali.</p></div></div>
+  <p>Contoh integrasi untuk kelas VIII SMP adalah proyek literasi dan kebersihan lingkungan. Siswa membaca teks informasi, menyusun argumentasi, membuat poster, dan mempresentasikan pesan kepada kelas.</p>
+  <div class="steps">
+    <div class="step"><div class="n">1</div><div><strong>Pertanyaan terbuka</strong><p>Memeriksa pemahaman terhadap teks informasi dan kualitas penalaran.</p></div></div>
+    <div class="step"><div class="n">2</div><div><strong>Portofolio</strong><p>Menyimpan draf, umpan balik, revisi, dan refleksi.</p></div></div>
+    <div class="step"><div class="n">3</div><div><strong>Proyek dan produk</strong><p>Menilai proses pembuatan poster dan kualitas pesan akhirnya.</p></div></div>
+    <div class="step"><div class="n">4</div><div><strong>Kinerja</strong><p>Menilai presentasi dan kemampuan merespons pertanyaan.</p></div></div>
+    <div class="step"><div class="n">5</div><div><strong>Refleksi dan observasi</strong><p>Mencatat kontribusi, interaksi, serta target perbaikan siswa.</p></div></div>
+  </div>
+  <div class="callout"><strong>Keselarasan adalah kunci</strong>Tentukan lebih dahulu kompetensi yang hendak dinilai. Setiap pendekatan harus memiliki fungsi yang jelas, bukti yang relevan, dan kriteria yang transparan.</div>
+</section>
+
+<section id="evaluasi" class="section">
+  <div class="section-head"><div class="section-num">✦</div><div><h2>Evaluasi interaktif</h2><p>Analisis kasus, evaluasi pilihan, dan rancang solusi. Pilih jawaban terbaik, lalu periksa alasan dan umpan baliknya.</p></div></div>
+  <div class="quiz" id="quiz">
+    <h3>Uji pemahaman</h3><p class="quiz-intro">Soal berfokus pada analisis, evaluasi, dan pengambilan keputusan asesmen. Pilih satu jawaban paling tepat untuk setiap kasus.</p>
+    <div class="question" data-answer="2" data-explain="Rubrik harus memprioritaskan kompetensi yang menjadi tujuan. Jika tujuan utamanya pesan persuasif, kejelasan pesan dan ketepatan bahasa lebih penting daripada kemewahan visual. Sediakan format manual atau digital yang setara.">
+      <div class="qtext">1. Guru menilai poster ajakan membaca. Poster A sangat menarik secara visual, tetapi pesannya tidak jelas; poster B sederhana, tetapi persuasif dan menggunakan bahasa efektif. Jika tujuan utamanya adalah keterampilan menyusun pesan persuasif, keputusan terbaik adalah…</div>
+      <div class="options"><label class="option"><input type="radio" name="q1" value="0"> Memberi nilai tertinggi pada poster A karena tampilannya paling modern.</label><label class="option"><input type="radio" name="q1" value="1"> Memberi nilai sama karena kedua poster sudah selesai dibuat.</label><label class="option"><input type="radio" name="q1" value="2"> Memprioritaskan kejelasan pesan dan bahasa dalam rubrik, serta menilai desain hanya sesuai tujuan.</label><label class="option"><input type="radio" name="q1" value="3"> Menghapus aspek bahasa agar penilaian lebih mudah.</label></div><div class="feedback"></div>
+    </div>
+    <div class="question" data-answer="1" data-explain="Produk kelompok menunjukkan hasil bersama, tetapi belum cukup membuktikan kompetensi setiap anggota. Catatan proses, refleksi, dan tanya jawab individual membantu memeriksa kontribusi serta pemahaman.">
+      <div class="qtext">2. Podcast kelompok memperoleh nilai sangat tinggi. Namun, satu anggota tidak dapat menjelaskan isi naskah dan tidak ada bukti kontribusinya. Apa tindak lanjut paling adil?</div>
+      <div class="options"><label class="option"><input type="radio" name="q2" value="0"> Memberikan nilai identik karena semua tercantum dalam kelompok.</label><label class="option"><input type="radio" name="q2" value="1"> Memeriksa bukti kontribusi dan pemahaman individual sebelum menetapkan nilai individual.</label><label class="option"><input type="radio" name="q2" value="2"> Mengurangi nilai semua anggota tanpa pemeriksaan.</label><label class="option"><input type="radio" name="q2" value="3"> Menilai hanya berdasarkan jumlah waktu hadir.</label></div><div class="feedback"></div>
+    </div>
+    <div class="question" data-answer="3" data-explain="Klaim tentang perkembangan harus didukung bukti yang membandingkan kinerja dari waktu ke waktu. Produk final saja dapat menunjukkan kualitas akhir, tetapi tidak cukup untuk menyimpulkan besarnya perkembangan.">
+      <div class="qtext">3. Guru menyimpulkan bahwa kemampuan menulis seorang siswa meningkat pesat hanya berdasarkan naskah final yang bagus. Kritik metodologis paling tepat adalah…</div>
+      <div class="options"><label class="option"><input type="radio" name="q3" value="0"> Kesimpulan pasti benar karena naskah final berkualitas.</label><label class="option"><input type="radio" name="q3" value="1"> Portofolio tidak dapat digunakan untuk menilai tulisan.</label><label class="option"><input type="radio" name="q3" value="2"> Perkembangan hanya dapat dinilai melalui tes pilihan ganda.</label><label class="option"><input type="radio" name="q3" value="3"> Klaim perkembangan memerlukan bukti pembanding, seperti draf awal, revisi, dan umpan balik.</label></div><div class="feedback"></div>
+    </div>
+    <div class="question" data-answer="0" data-explain="Rubrik yang transparan, bukti yang beragam, dan kesempatan yang setara membantu mengurangi bias. Penilaian teman sebaya sebaiknya menjadi sumber informasi yang ditelaah, bukan satu-satunya dasar nilai.">
+      <div class="qtext">4. Siswa saling memberi penilaian terhadap teks argumentasi. Guru menduga skor dipengaruhi kedekatan pertemanan. Desain tindak lanjut yang paling kuat adalah…</div>
+      <div class="options"><label class="option"><input type="radio" name="q4" value="0"> Melatih penggunaan rubrik, meminta komentar berbasis bukti, memantau pola skor, dan memeriksa sampel karya secara independen.</label><label class="option"><input type="radio" name="q4" value="1"> Membatalkan seluruh umpan balik teman sebaya untuk selamanya.</label><label class="option"><input type="radio" name="q4" value="2"> Menggunakan skor tertinggi agar siswa tetap termotivasi.</label><label class="option"><input type="radio" name="q4" value="3"> Membiarkan siswa menentukan nilai tanpa kriteria.</label></div><div class="feedback"></div>
+    </div>
+    <div class="question" data-answer="2" data-explain="Asesmen harus tetap mengukur kompetensi yang sama, bukan kemampuan mengakses perangkat. Alternatif luring atau manual dapat menjaga keadilan selama standar isi dan bahasa tetap konsisten.">
+      <div class="qtext">5. Sekolah ingin menilai kemampuan menulis teks berita, tetapi sebagian siswa tidak memiliki akses internet di rumah. Kebijakan paling adil adalah…</div>
+      <div class="options"><label class="option"><input type="radio" name="q5" value="0"> Memberi nilai lebih rendah kepada siswa yang tidak mengunggah secara daring.</label><label class="option"><input type="radio" name="q5" value="1"> Mengubah tujuan menjadi keterampilan menggunakan aplikasi.</label><label class="option"><input type="radio" name="q5" value="2"> Menyediakan pilihan pengumpulan luring atau fasilitas sekolah dengan kriteria penilaian bahasa yang sama.</label><label class="option"><input type="radio" name="q5" value="3"> Menghapus penilaian untuk semua siswa.</label></div><div class="feedback"></div>
+    </div>
+    <div class="quiz-actions"><button class="primary-btn" id="gradeQuiz">Periksa jawaban</button><button class="secondary-btn" id="resetQuiz">Ulangi kuis</button><strong id="quizScore" style="align-self:center;font-size:14px"></strong></div>
+  </div>
+  <h3>Tugas refleksi desain</h3>
+  <div class="reflect-box">
+    <p><strong>Kasus:</strong> Anda mengajar kelas VIII. Siswa diminta menulis teks eksplanasi tentang Karhutla (Kebakaran Hutan dan Lahan). Sebagian siswa menyalin informasi dari internet tanpa memahami hubungan sebab-akibat. Rancang tindak lanjut asesmen yang menguji pemahaman, menjaga integritas, dan tetap memberi kesempatan revisi.</p>
+    <label for="hotReflection">Rencana asesmen Anda</label><textarea id="hotReflection" placeholder="Tuliskan bukti yang akan dikumpulkan, pertanyaan yang diajukan, rubrik, dan tindak lanjut…"></textarea>
+    <button class="primary-btn" onclick="downloadReflection()">Unduh refleksi sebagai .txt</button>
+  </div>
+</section>
+
+<section id="referensi" class="section">
+  <div class="section-head"><div class="section-num">≡</div><div><h2>Referensi dan bacaan lanjutan</h2><p>Landasan konseptual untuk pengembangan asesmen autentik dan rubrik.</p></div></div>
+  <div class="reading-wide">
+    <p>Biggs, J., &amp; Tang, C. (2011). <em>Teaching for quality learning at university</em> (4th ed.). Open University Press.</p>
+    <p>Brookhart, S. M. (2013). <em>How to create and use rubrics for formative assessment and grading</em>. ASCD.</p>
+    <p>Darling-Hammond, L., &amp; Adamson, F. (Eds.). (2014). <em>Beyond the bubble test: How performance assessments support 21st century learning</em>. Jossey-Bass.</p>
+    <p>Sadler, D. R. (1989). Formative assessment and the design of instructional systems. <em>Instructional Science, 18</em>, 119–144. <a href="https://doi.org/10.1007/BF00117714" target="_blank" rel="noopener">https://doi.org/10.1007/BF00117714</a></p>
+    <p>Sokhanvar, Z., Salehi, K., &amp; Sokhanvar, F. (2021). Advantages of authentic assessment for improving the learning experience and employability skills of higher education students: A systematic literature review. <em>Studies in Educational Evaluation, 70</em>, Article 101030. <a href="https://doi.org/10.1016/j.stueduc.2021.101030" target="_blank" rel="noopener">https://doi.org/10.1016/j.stueduc.2021.101030</a></p>
+    <p>Villarroel, V., Bloxham, S., Bruna, D., Bruna, C., &amp; Herrera-Seda, C. (2018). Authentic assessment: Creating a blueprint for course design. <em>Assessment &amp; Evaluation in Higher Education, 43</em>(5), 840–854. <a href="https://doi.org/10.1080/02602938.2017.1412396" target="_blank" rel="noopener">https://doi.org/10.1080/02602938.2017.1412396</a></p>
+    <p>Wiggins, G. (1998). <em>Educative assessment: Designing assessments to inform and improve student performance</em>. Jossey-Bass.</p>
+  </div>
+</section>
+<footer class="footer"><span>© Modul digital · Authentic Assessment dalam Pembelajaran Bahasa Indonesia</span><span>Dr. Sri Wahyuni, M.Pd · MPBI Program Pascasarjana UNISMA</span></footer>
+</div>
+</main>
+<script>
+const sidebar=document.getElementById('sidebar');
+const menuBtn=document.getElementById('menuBtn');
+menuBtn?.addEventListener('click',()=>sidebar.classList.toggle('open'));
+document.querySelectorAll('#nav a').forEach(a=>a.addEventListener('click',()=>sidebar.classList.remove('open')));
+const sections=[...document.querySelectorAll('main section[id]')];
+const navLinks=[...document.querySelectorAll('#nav a')];
+const observer=new IntersectionObserver(entries=>{
+ entries.forEach(entry=>{if(entry.isIntersecting){navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+entry.target.id));const link=navLinks.find(a=>a.getAttribute('href')==='#'+entry.target.id);document.getElementById('crumbCurrent').textContent=link?link.textContent.trim():'Modul';}});
+},{rootMargin:'-18% 0px -68% 0px'});
+sections.forEach(s=>observer.observe(s));
+function updateProgress(){const doc=document.documentElement;const max=doc.scrollHeight-doc.clientHeight;const pct=max>0?Math.round(doc.scrollTop/max*100):0;document.getElementById('progressFill').style.width=pct+'%';document.getElementById('progressText').textContent=pct+'%'}
+window.addEventListener('scroll',updateProgress);updateProgress();
+document.getElementById('themeBtn').addEventListener('click',()=>{document.body.classList.toggle('dark');document.getElementById('themeBtn').textContent=document.body.classList.contains('dark')?'☀ Terang':'◐ Tema'});
+const searchInput=document.getElementById('searchInput'), searchResults=document.getElementById('searchResults');
+searchInput.addEventListener('input',()=>{
+ const q=searchInput.value.trim().toLowerCase();searchResults.innerHTML='';
+ if(!q){searchResults.style.display='none';return}
+ const matches=sections.map(s=>({id:s.id,title:(document.querySelector('#nav a[href="#'+s.id+'"]')?.textContent||s.querySelector('h2')?.textContent||s.id),text:s.innerText.toLowerCase()})).filter(x=>x.text.includes(q)||x.title.toLowerCase().includes(q)).slice(0,8);
+ matches.forEach(m=>{const a=document.createElement('a');a.href='#'+m.id;a.textContent=m.title;a.addEventListener('click',()=>{searchResults.style.display='none';searchInput.value='';});searchResults.appendChild(a)});
+ if(!matches.length){const p=document.createElement('div');p.style.padding='10px';p.style.fontSize='13px';p.textContent='Tidak ditemukan. Coba kata kunci lain.';searchResults.appendChild(p)}
+ searchResults.style.display='block';
+});
+document.addEventListener('click',e=>{if(!e.target.closest('.search-wrap'))searchResults.style.display='none'});
+document.getElementById('gradeQuiz').addEventListener('click',()=>{
+ let score=0;const qs=[...document.querySelectorAll('.question')];
+ qs.forEach((q,i)=>{const chosen=q.querySelector('input:checked');const correct=Number(q.dataset.answer);const feedback=q.querySelector('.feedback');q.querySelectorAll('.option').forEach((o,j)=>{o.classList.remove('correct','wrong');if(j===correct)o.classList.add('correct');if(chosen&&o.contains(chosen)&&j!==correct)o.classList.add('wrong')});if(chosen&&Number(chosen.value)===correct)score++;feedback.textContent=(chosen&&Number(chosen.value)===correct?'Tepat. ':'Belum tepat. ')+q.dataset.explain;});
+ document.getElementById('quizScore').textContent='Skor: '+score+'/'+qs.length+' ('+Math.round(score/qs.length*100)+'%)';
+});
+document.getElementById('resetQuiz').addEventListener('click',()=>{document.querySelectorAll('.question').forEach(q=>{q.querySelectorAll('input').forEach(i=>i.checked=false);q.querySelectorAll('.option').forEach(o=>o.classList.remove('correct','wrong'));q.querySelector('.feedback').textContent=''});document.getElementById('quizScore').textContent=''});
+function saveReflection(){const text='Refleksi penilaian diri\n\nBagian yang perlu diperbaiki:\n'+document.getElementById('reflection1').value+'\n\nLangkah perbaikan:\n'+document.getElementById('reflection2').value;try{localStorage.setItem('authenticAssessmentReflection',text);document.getElementById('reflectStatus').textContent='Refleksi tersimpan di browser ini.'}catch(e){document.getElementById('reflectStatus').textContent='Penyimpanan tidak tersedia di browser ini.'}}
+function downloadText(filename,text){const blob=new Blob([text],{type:'text/plain;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url)}
+function downloadReflection(){const text=document.getElementById('hotReflection').value.trim();if(!text){alert('Tuliskan refleksi terlebih dahulu.');return}downloadText('refleksi-asesmen-autentik.txt','Refleksi Desain Asesmen Autentik\nAuthentic Assessment dalam Pembelajaran Bahasa Indonesia\n\n'+text)}
+</script>
+</body>
+</html>

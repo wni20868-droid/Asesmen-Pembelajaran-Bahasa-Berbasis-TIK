@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101a3a">
+<title>BAB 4 — Pemanfaatan Teknologi Digital dan AI dalam Asesmen Pembelajaran</title>
+<style>
+:root{--navy:#101a3a;--ink:#18233f;--muted:#68748e;--paper:#f5f7fc;--white:#fff;--purple:#7857ff;--cyan:#2ec9d6;--pink:#ff7b9c;--line:#e5e9f3;--soft:#eef0ff;--shadow:0 12px 35px rgba(25,35,75,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:30px}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.75 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+button,input{font:inherit}.sidebar{position:fixed;inset:0 auto 0 0;width:292px;background:var(--navy);color:#f5f6ff;padding:24px 17px 20px;display:flex;flex-direction:column;z-index:20;overflow:hidden}.brand{display:flex;align-items:center;gap:12px;padding:3px 9px 22px;border-bottom:1px solid #ffffff20}.brand-mark{height:42px;width:42px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,var(--purple),var(--cyan));font-size:21px;box-shadow:0 7px 20px #7857ff50}.brand strong{display:block;font-size:13px;letter-spacing:.08em}.brand small{display:block;color:#aeb9d7;font-size:11px;margin-top:2px}.nav-label{font-size:10px;color:#8290b7;letter-spacing:.16em;font-weight:800;padding:20px 11px 8px}.nav{overflow:auto;padding:0 2px 16px}.nav a{display:flex;gap:10px;align-items:flex-start;color:#c7cfe5;text-decoration:none;padding:9px 11px;border-radius:10px;font-size:12px;line-height:1.45;margin:2px 0;transition:.2s}.nav a .num{font-size:10px;color:#8d9abe;min-width:22px;padding-top:1px}.nav a:hover,.nav a.active{background:linear-gradient(100deg,#7857ff35,#2ec9d620);color:#fff}.nav a.active{box-shadow:inset 3px 0 var(--cyan)}.side-bottom{margin-top:auto;border-top:1px solid #ffffff20;padding:16px 10px 0;color:#aeb9d7;font-size:11px}.progress-line{height:5px;background:#ffffff20;border-radius:10px;margin:9px 0 5px;overflow:hidden}.progress-line span{display:block;width:0;height:100%;background:linear-gradient(90deg,var(--purple),var(--cyan));transition:width .2s}.main{margin-left:292px;min-height:100vh}.topbar{height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(20px,4vw,58px);background:#ffffffd9;backdrop-filter:blur(12px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}.crumb{font-size:12px;color:var(--muted)}.top-actions{display:flex;gap:8px}.icon-btn{border:1px solid var(--line);background:white;border-radius:10px;padding:7px 11px;color:var(--ink);cursor:pointer;font-size:12px}.icon-btn:hover{border-color:var(--purple)}.content{max-width:1120px;margin:auto;padding:35px clamp(18px,4vw,58px) 80px}.hero{position:relative;overflow:hidden;border-radius:28px;padding:clamp(27px,5vw,58px);color:white;background:linear-gradient(125deg,#111b40 0%,#302a73 55%,#087e9a 120%);box-shadow:0 22px 50px #17234b24;margin-bottom:30px}.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;pointer-events:none}.hero:before{width:330px;height:330px;right:-100px;top:-150px;border:1px solid #ffffff24;box-shadow:0 0 0 35px #ffffff08,0 0 0 70px #ffffff06}.hero:after{width:180px;height:180px;right:70px;bottom:-125px;background:linear-gradient(135deg,#2ec9d655,#7857ff55);filter:blur(3px)}.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid #ffffff35;border-radius:30px;padding:6px 12px;font-size:10px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;background:#ffffff10}.eyebrow i{width:7px;height:7px;border-radius:50%;background:#54f0d3;box-shadow:0 0 12px #54f0d3}.hero h1{position:relative;z-index:1;font-size:clamp(29px,4vw,49px);line-height:1.12;letter-spacing:-.04em;max-width:760px;margin:22px 0 18px}.hero p{position:relative;z-index:1;max-width:660px;color:#d9e5ff;margin:0 0 25px;font-size:15px}.byline{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:12px 24px;font-size:12px;color:#e4eaff}.byline span{display:flex;gap:7px;align-items:center}.hero-actions{position:relative;z-index:1;display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}.primary-btn,.ghost-btn{cursor:pointer;border:0;border-radius:11px;padding:11px 16px;font-weight:750;font-size:12px}.primary-btn{background:#fff;color:#24215b}.ghost-btn{background:#ffffff15;border:1px solid #ffffff3b;color:white}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0 0 35px}.stat{padding:18px 20px;background:white;border:1px solid var(--line);border-radius:17px;box-shadow:var(--shadow)}.stat strong{display:block;font-size:22px;line-height:1.3;letter-spacing:-.04em}.stat span{color:var(--muted);font-size:11px}.section-intro{color:var(--muted);margin-top:-7px}.doc-title{font-size:19px;font-weight:800}.content h2{font-size:clamp(24px,3vw,34px);line-height:1.2;letter-spacing:-.035em;margin:52px 0 16px;padding-top:18px;scroll-margin-top:90px}.content h2:before{content:"";display:block;width:44px;height:5px;border-radius:8px;background:linear-gradient(90deg,var(--purple),var(--cyan));margin-bottom:17px}.content h3{font-size:20px;line-height:1.35;margin:32px 0 12px;letter-spacing:-.02em;scroll-margin-top:90px}.content h4{font-size:16px;margin:25px 0 8px}.content p{margin:10px 0 14px}.content strong{color:#272d55}.content a{color:#5a47d8}.doc-list{padding-left:24px;margin:12px 0 20px}.doc-list li{padding:4px 0 4px 5px}.doc-list li::marker{color:var(--purple);font-weight:800}.table-wrap{overflow:auto;margin:20px 0 25px;border-radius:14px;border:1px solid var(--line);background:white;box-shadow:var(--shadow)}table{border-collapse:collapse;width:100%;min-width:550px;font-size:12px;line-height:1.6}th{background:#17234a;color:white;text-align:left;font-weight:750}td,th{padding:12px 14px;border-bottom:1px solid #e7eaf4;border-right:1px solid #e7eaf4;vertical-align:top}tr:nth-child(even) td{background:#f7f8ff}tr:last-child td{border-bottom:0}td:first-child{font-weight:650}.content h2+ p{font-size:16px}.content blockquote{border-left:4px solid var(--cyan);background:#eafcff;padding:14px 18px;border-radius:0 12px 12px 0}.callout{border:1px solid #dedbff;background:linear-gradient(120deg,#f4f1ff,#edfcff);border-radius:16px;padding:18px 20px;margin:20px 0}.callout strong{color:#4b3cbb}.quiz-card{margin-top:38px;background:white;border:1px solid var(--line);box-shadow:var(--shadow);border-radius:22px;padding:24px}.quiz-card h3{margin-top:0}.quiz-q{padding:15px 0;border-bottom:1px solid var(--line)}.quiz-q:last-child{border:0}.quiz-q p{font-weight:750}.quiz-q label{display:block;border:1px solid var(--line);padding:9px 12px;border-radius:10px;margin:7px 0;cursor:pointer;font-size:13px}.quiz-q label:hover{background:#f4f2ff;border-color:#c9c0ff}.quiz-q input{margin-right:8px;accent-color:var(--purple)}.quiz-result{margin-top:15px;padding:14px;border-radius:12px;display:none}.search-box{width:100%;border:1px solid #ffffff25;background:#ffffff0b;color:white;border-radius:10px;padding:10px 12px;font-size:12px;outline:none}.search-box::placeholder{color:#9ba8c9}.empty-search{color:#aeb9d7;padding:10px;font-size:12px}.footer{margin-top:55px;padding:25px 0;border-top:1px solid var(--line);color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.backtop{position:fixed;right:22px;bottom:22px;border:0;border-radius:50%;width:44px;height:44px;background:var(--purple);color:white;font-size:20px;box-shadow:0 8px 24px #7857ff55;cursor:pointer;display:none}.mobile-menu{display:none}.dark{--paper:#101626;--ink:#edf0ff;--muted:#a5afc8;--white:#182137;--line:#2a3550;--soft:#252547;background:var(--paper)}.dark .topbar,.dark .stat,.dark .table-wrap,.dark .quiz-card,.dark .icon-btn{background:#182137;color:var(--ink);border-color:var(--line)}.dark .content strong{color:#e7e6ff}.dark tr:nth-child(even) td{background:#202b43}.dark td{border-color:#303b54}.dark .callout{background:#202441;border-color:#3c4173}.dark .quiz-q label{border-color:var(--line)}.dark .quiz-q label:hover{background:#26294b}.dark .hero{box-shadow:none}
+@media(max-width:900px){.sidebar{width:270px;transform:translateX(-100%);transition:transform .25s}.sidebar.open{transform:translateX(0);box-shadow:20px 0 50px #0005}.main{margin-left:0}.mobile-menu{display:inline-flex}.content{padding-top:22px}.topbar{padding:0 18px}.stats{gap:9px}.stat{padding:14px}.stat strong{font-size:19px}}
+@media(max-width:520px){.stats{grid-template-columns:1fr}.hero{border-radius:20px}.hero h1{font-size:31px}.content h2{margin-top:38px}.crumb{max-width:180px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.top-actions .icon-btn{padding:7px 9px}}
+@media print{.sidebar,.topbar,.hero-actions,.backtop,.quiz-card{display:none!important}.main{margin:0}.content{max-width:none;padding:0}.hero{background:#17234a!important;print-color-adjust:exact}.content h2{break-before:page}.table-wrap{box-shadow:none;overflow:visible}table{min-width:0;font-size:9px}}
+</style>
+</head>
+<body>
+<aside class="sidebar" id="sidebar">
+  <div class="brand"><div class="brand-mark">✦</div><div><strong>MODUL DIGITAL</strong><small>MPBI · UNIVERSITAS ISLAM MALANG</small></div></div>
+  <div class="nav-label">JELAJAHI MATERI</div>
+  <input class="search-box" id="navSearch" placeholder="⌕  Cari bagian materi..." aria-label="Cari bagian materi">
+  <nav class="nav" id="nav"></nav>
+  <div class="side-bottom"><div>PROGRES MEMBACA <strong id="progressText" style="float:right;color:white">0%</strong></div><div class="progress-line"><span id="progressBar"></span></div><div>Belajar bertahap · Pahami · Praktikkan · Refleksikan</div></div>
+</aside>
+<div class="main">
+<header class="topbar"><div style="display:flex;align-items:center;gap:12px"><button class="icon-btn mobile-menu" id="menuBtn" aria-label="Buka navigasi">☰</button><div class="crumb">Mata Kuliah / Asesmen Pembelajaran Bahasa Indonesia Berbasis TIK</div></div><div class="top-actions"><button class="icon-btn" id="themeBtn" title="Ubah tema">◐ Tema</button><button class="icon-btn" onclick="window.print()" title="Cetak atau simpan PDF">⇩ Cetak</button></div></header>
+<main class="content">
+<section class="hero" id="beranda">
+  <div class="eyebrow"><i></i> BAHAN AJAR PERKULIAHAN · BAB 4</div>
+  <h1>Pemanfaatan Teknologi Digital dan Artificial Intelligence (AI) dalam Asesmen Pembelajaran</h1>
+  <p>Menjelajahi cara teknologi digital dan kecerdasan buatan mendukung asesmen Bahasa Indonesia yang bermakna, terukur, adil, dan bertanggung jawab.</p>
+  <div class="byline"><span>✍ <b>Dr. Sri Wahyuni, M.Pd.</b></span><span>⌂ MPBI · Universitas Islam Malang</span></div>
+  <div class="hero-actions"><button class="primary-btn" onclick="document.getElementById('deskripsi-bab').scrollIntoView({behavior:'smooth'})">Mulai belajar&nbsp; →</button><button class="ghost-btn" onclick="window.print()">Cetak / Simpan PDF ↗</button></div>
+</section>
+<div class="stats"><div class="stat"><strong>4 keterampilan</strong><span>Menyimak · Berbicara · Membaca · Menulis</span></div><div class="stat"><strong>Teknologi + AI</strong><span>Instrumen, analisis, dan umpan balik</span></div><div class="stat"><strong>Human-centered</strong><span>Validitas, keadilan, privasi, akuntabilitas</span></div></div>
+<div class="callout"><strong>Gagasan utama bab</strong><br>Teknologi adalah sarana untuk memperoleh bukti kompetensi, bukan tujuan asesmen itu sendiri. AI dapat membantu proses, tetapi pendidik tetap bertanggung jawab atas mutu instrumen dan keputusan asesmen.</div>
+<div id="materi">
+<p>BAHAN AJAR PERKULIAHAN</p>
+<p class="doc-title">BAB 4<br>Pemanfaatan Teknologi Digital dan Artificial Intelligence (AI) dalam Asesmen Pembelajaran</p>
+<p><strong>Mata Kuliah:</strong> Asesmen Pembelajaran Bahasa Indonesia Berbasis TIK</p>
+<p>Dr. Sri Wahyuni, M.Pd</p>
+<h2>Deskripsi Bab</h2>
+<p>Perkembangan teknologi digital dan kecerdasan buatan telah mengubah cara guru merencanakan, melaksanakan, menganalisis, dan menindaklanjuti asesmen pembelajaran. Asesmen Bahasa Indonesia tidak lagi terbatas pada tes tertulis konvensional, tetapi dapat dilakukan melalui kuis interaktif, portofolio digital, analisis tulisan, penilaian berbicara, dan umpan balik otomatis.</p>
+<p>Namun, penggunaan teknologi tidak serta-merta menjamin kualitas asesmen. Instrumen tetap harus mengukur kompetensi yang tepat, menghasilkan informasi yang dapat dipercaya, adil bagi peserta didik, serta mendukung perbaikan pembelajaran. Mahasiswa perlu mengembangkan kompetensi teknis sekaligus kemampuan pedagogis, analitis, dan etis.</p>
+<h3>Capaian Pembelajaran</h3>
+<ol class="doc-list">
+<li class="number">Menganalisis fungsi dan karakteristik teknologi digital untuk pengembangan instrumen asesmen Bahasa Indonesia.</li>
+<li class="number">Membandingkan LMS dan aplikasi tes digital berdasarkan tujuan, fitur, kelebihan, keterbatasan, dan kesesuaiannya dengan kompetensi berbahasa.</li>
+<li class="number">Merancang instrumen asesmen Bahasa Indonesia dengan bantuan AI berdasarkan capaian pembelajaran, indikator, dan kriteria penilaian yang jelas.</li>
+<li class="number">Mengevaluasi penggunaan AI untuk analisis bahasa, penilaian otomatis, penilaian tulisan, dan penilaian berbicara.</li>
+<li class="number">Menganalisis validitas, reliabilitas, keadilan, privasi, dan potensi bias dalam asesmen berbasis teknologi.</li>
+<li class="number">Mengembangkan rancangan asesmen digital yang memadukan penilaian otomatis dan pertimbangan profesional guru.</li>
+</ol>
+<h3>Peta Konsep Bab</h3>
+<div class="table-wrap"><table><tr><th>Komponen</th><th>Cakupan</th></tr><tr><td>Teknologi digital</td><td>LMS, tes digital, kuis interaktif, portofolio, dan analitik pembelajaran.</td></tr><tr><td>Artificial Intelligence</td><td>Penyusunan instrumen, analisis bahasa, penilaian tulisan, dan penilaian berbicara.</td></tr><tr><td>Pengendalian mutu</td><td>Validitas, reliabilitas, keadilan, privasi, transparansi, dan umpan balik.</td></tr><tr><td>Hasil akhir</td><td>Keputusan pembelajaran berbasis bukti: diagnosis kemampuan, perbaikan pembelajaran, dan pengembangan kompetensi berbahasa.</td></tr></table></div>
+<h2>4.1 Teknologi Digital untuk Pengembangan Instrumen Asesmen Bahasa Indonesia</h2>
+<h3>4.1.1 Konsep dan Peran Teknologi Digital dalam Asesmen</h3>
+<p>Teknologi digital dalam asesmen pembelajaran merupakan pemanfaatan perangkat, aplikasi, jaringan, dan sistem informasi untuk merancang instrumen, mengumpulkan respons peserta didik, mengolah hasil, menyajikan umpan balik, dan mendukung pengambilan keputusan pembelajaran.</p>
+<p>Dalam pembelajaran Bahasa Indonesia, teknologi digital dapat digunakan untuk mengukur empat keterampilan berbahasa—menyimak, berbicara, membaca, dan menulis—serta kompetensi pendukung, seperti tata bahasa, kosakata, literasi informasi, dan apresiasi sastra. Teknologi dapat memperluas bentuk bukti yang dikumpulkan: audio untuk menyimak, rekaman presentasi untuk berbicara, teks digital untuk membaca, serta dokumen bertahap untuk menulis.</p>
+<p><strong>Prinsip utama:</strong> teknologi adalah sarana untuk memperoleh bukti kompetensi, bukan tujuan asesmen itu sendiri.</p>
+<h4>Fungsi Teknologi Digital dalam Asesmen</h4>
+<ul class="doc-list">
+<li class="bullet">Pengembangan instrumen: menyusun kisi-kisi, soal pilihan ganda, soal uraian, rubrik, lembar observasi, dan tugas proyek.</li>
+<li class="bullet">Pelaksanaan asesmen: menyediakan tes daring, kuis interaktif, pengumpulan tugas, rekaman lisan, serta portofolio elektronik.</li>
+<li class="bullet">Pengolahan dan analisis: menghitung skor, melihat distribusi hasil, menganalisis jawaban, dan mengidentifikasi indikator yang belum dikuasai.</li>
+<li class="bullet">Umpan balik dan tindak lanjut: menyampaikan hasil lebih cepat, memberikan komentar per kriteria, dan merencanakan remediasi maupun pengayaan.</li>
+</ul>
+<h4>Bentuk Asesmen Digital</h4>
+<div class="table-wrap"><table><tr><th>Bentuk asesmen</th><th>Contoh penerapan</th><th>Bukti yang diperoleh</th></tr><tr><td>Tes objektif</td><td>Menentukan gagasan utama teks editorial</td><td>Ketepatan jawaban</td></tr><tr><td>Tes respons terbuka</td><td>Menjelaskan makna ungkapan dalam cerpen</td><td>Penalaran dan interpretasi</td></tr><tr><td>Asesmen performa</td><td>Merekam pidato persuasif</td><td>Kelancaran, struktur, artikulasi, dan isi</td></tr><tr><td>Asesmen produk</td><td>Menulis teks argumentasi digital</td><td>Kualitas tulisan berdasarkan rubrik</td></tr><tr><td>Portofolio digital</td><td>Mengumpulkan draf dan revisi esai</td><td>Perkembangan kompetensi menulis</td></tr><tr><td>Asesmen kolaboratif</td><td>Menyusun teks berita secara berkelompok</td><td>Kontribusi, kolaborasi, dan kualitas produk</td></tr></table></div>
+<p>Bentuk asesmen dipilih berdasarkan kompetensi yang ingin diukur. Kuis pilihan ganda mungkin efisien untuk mengukur pemahaman isi teks, tetapi tidak cukup untuk menyimpulkan kemampuan peserta didik menyusun argumentasi secara mandiri.</p>
+<h4>Keunggulan dan Keterbatasan</h4>
+<p>Keunggulan teknologi digital meliputi efisiensi administrasi, konsistensi penyajian soal, percepatan pengolahan skor, fleksibilitas media, serta tersedianya data untuk tindak lanjut pembelajaran.</p>
+<p>Keterbatasannya meliputi ketergantungan pada perangkat dan koneksi internet, kemungkinan gangguan teknis, masalah aksesibilitas, risiko kecurangan, perlindungan data pribadi, dan kecenderungan mengutamakan aspek yang mudah diukur secara otomatis. Guru harus memastikan bahwa pemanfaatan teknologi selaras dengan tujuan pembelajaran, kondisi peserta didik, dan kualitas bukti yang dibutuhkan.</p>
+<h3>4.1.2 Platform Learning Management System (LMS)</h3>
+<h4>A. Pengertian dan Karakteristik LMS</h4>
+<p>Learning Management System (LMS) adalah sistem digital untuk mengelola kegiatan pembelajaran, termasuk distribusi materi, pemberian tugas, pelaksanaan asesmen, pengumpulan pekerjaan, pemberian umpan balik, dan pemantauan perkembangan belajar.</p>
+<p>Dalam asesmen Bahasa Indonesia, LMS menjadi lingkungan pembelajaran terintegrasi. Guru dapat mengatur tugas membaca, mengumpulkan rekaman presentasi, menilai teks argumentasi menggunakan rubrik, serta menyimpan hasil asesmen untuk memantau perkembangan peserta didik. LMS berbeda dari aplikasi kuis yang berfokus pada tes singkat, walaupun banyak LMS juga memiliki fitur kuis dan penilaian.</p>
+<h4>B. Jenis-Jenis LMS dan Penerapannya</h4>
+<h4>1. Google Classroom</h4>
+<p>Cocok untuk pengelolaan tugas, distribusi materi, pengumpulan dokumen, pemberian komentar, dan integrasi dengan Google Forms. Guru dapat memberikan tugas menulis teks eksplanasi, meminta peserta didik mengunggah draf, kemudian memberikan komentar pada struktur dan kaidah kebahasaan.</p>
+<p><strong>Situs:</strong> https://classroom.google.com/</p>
+<h4>2. Moodle</h4>
+<p>LMS sumber terbuka yang dapat dikonfigurasi. Mendukung bank soal, kuis dengan berbagai jenis pertanyaan, pengaturan waktu, umpan balik, penilaian tugas, rubrik, serta pengelolaan aktivitas pembelajaran. Fitur bergantung pada versi, plugin, dan pengaturan institusi.</p>
+<p><strong>Contoh:</strong> dosen menyusun bank soal membaca kritis, mengacak soal untuk setiap mahasiswa, dan menganalisis jawaban untuk merencanakan pembelajaran remedial. Situs: https://moodle.org/</p>
+<h4>3. Canvas LMS</h4>
+<p>Menyediakan pengelolaan tugas, kuis, rubrik, buku nilai, dan integrasi aplikasi pembelajaran. Fitur dapat berbeda menurut konfigurasi institusi dan layanan yang digunakan.</p>
+<p><strong>Contoh:</strong> guru menggunakan rubrik digital untuk menilai teks editorial, memberikan komentar pada setiap kriteria, dan memantau perkembangan nilai. Situs: https://www.instructure.com/canvas</p>
+<h4>4. Schoology</h4>
+<p>Platform pengelolaan pembelajaran yang menggabungkan materi, tugas, asesmen, komunikasi, dan aktivitas kelas. Ketersediaan fitur serta akses pengguna bergantung pada edisi dan kebijakan penyelenggara.</p>
+<p><strong>Contoh:</strong> guru mengorganisasikan pembelajaran membaca berita, menyediakan bahan bacaan, memberikan kuis pemahaman, dan mengumpulkan refleksi peserta didik. Situs penyedia: https://www.powerschool.com/</p>
+<p><strong>Catatan:</strong> nama platform bukan jaminan bahwa semua fitur tersedia gratis. Periksa biaya, kebutuhan akun, kompatibilitas perangkat, kebijakan privasi, dan dukungan teknis sebelum memilih LMS.</p>
+<h4>C. Perbandingan LMS untuk Asesmen Bahasa Indonesia</h4>
+<div class="table-wrap"><table><tr><th>Aspek</th><th>Google Classroom</th><th>Moodle</th><th>Canvas LMS</th><th>Schoology</th></tr><tr><td>Fokus penggunaan</td><td>Pengelolaan kelas dan tugas</td><td>LMS yang dapat dikonfigurasi</td><td>Pembelajaran terintegrasi</td><td>Pengelolaan kelas dan pembelajaran</td></tr><tr><td>Kuis dan tes</td><td>Umumnya melalui Forms/integrasi</td><td>Kuis dan bank soal</td><td>Kuis sesuai konfigurasi</td><td>Sesuai fitur edisi</td></tr><tr><td>Penilaian tulisan</td><td>Tugas, komentar, rubrik sesuai fitur</td><td>Tugas, rubrik, penilaian</td><td>Tugas dan rubrik</td><td>Tugas dan penilaian</td></tr><tr><td>Analisis hasil</td><td>Bergantung integrasi dan akun</td><td>Laporan aktivitas/kuis</td><td>Buku nilai dan laporan</td><td>Bergantung edisi</td></tr><tr><td>Pertimbangan utama</td><td>Kemudahan integrasi</td><td>Fleksibilitas konfigurasi</td><td>Kesesuaian sistem institusi</td><td>Ketersediaan fitur</td></tr></table></div>
+<p>Perbandingan tersebut bersifat fungsional, bukan peringkat mutlak. Pemilihan LMS sebaiknya berdasarkan kebutuhan asesmen, bukan semata-mata popularitas aplikasi.</p>
+<h4>D. Langkah Mengembangkan Asesmen Menggunakan LMS</h4>
+<ol class="doc-list">
+<li class="number">Menetapkan kompetensi yang akan diukur, misalnya kemampuan menyusun argumentasi yang logis.</li>
+<li class="number">Menentukan bukti belajar yang dapat memperlihatkan kompetensi, seperti esai argumentatif.</li>
+<li class="number">Menyusun instrumen berupa petunjuk tugas, sumber bacaan, batas waktu, dan rubrik.</li>
+<li class="number">Mengatur aktivitas di LMS: unggah materi, buat tugas, atur tenggat, dan tentukan mekanisme pengumpulan.</li>
+<li class="number">Melaksanakan asesmen sesuai petunjuk.</li>
+<li class="number">Memberikan penilaian dan umpan balik berdasarkan kriteria yang telah ditetapkan.</li>
+<li class="number">Menganalisis hasil untuk mengidentifikasi kekuatan, kelemahan, dan kebutuhan tindak lanjut.</li>
+</ol>
+<h4>E. Contoh Penerapan: Asesmen Teks Argumentasi</h4>
+<p><strong>Kompetensi:</strong> peserta didik mampu menulis teks argumentasi berdasarkan bukti yang relevan.</p>
+<p><strong>Petunjuk tugas:</strong> tulislah teks argumentasi sepanjang 400–500 kata dengan topik “Perlukah sekolah mengurangi penggunaan plastik sekali pakai?”. Tulisan harus memuat tesis, alasan yang didukung bukti, tanggapan terhadap pendapat berbeda, dan simpulan.</p>
+<ul class="doc-list">
+<li class="bullet">Produk yang dikumpulkan: draf awal, naskah hasil revisi, catatan singkat tentang perubahan, dan sumber informasi yang digunakan.</li>
+<li class="bullet">Mekanisme asesmen: peserta didik mengunggah dokumen melalui LMS; guru menilai menggunakan rubrik analitik dan memberikan umpan balik pada setiap aspek.</li>
+</ul>
+<p>Rancangan ini lebih kuat daripada hanya meminta esai akhir karena guru memperoleh bukti mengenai produk sekaligus proses penulisan.</p>
+<h3>4.1.3 Aplikasi Pengembangan Tes Digital</h3>
+<h4>A. Jenis Aplikasi dan Karakteristiknya</h4>
+<h4>1. Google Forms</h4>
+<p>Cocok untuk kuesioner, tes objektif, pertanyaan singkat, soal uraian, dan pengumpulan respons. Fitur kuis memungkinkan penentuan kunci jawaban serta skor otomatis untuk jenis soal yang didukung.</p>
+<p><strong>Penerapan:</strong> tes diagnostik pemahaman bacaan, identifikasi struktur teks, dan survei refleksi belajar. Situs: https://forms.google.com/</p>
+<h4>2. Quizizz / Wayground</h4>
+<p>Quizizz kini dikenal sebagai Wayground. Platform ini mendukung kuis dan latihan interaktif dengan laporan hasil sesuai fitur yang tersedia. Unsur permainan dapat meningkatkan keterlibatan, tetapi kecepatan menjawab tidak boleh menjadi satu-satunya indikator penguasaan bahasa.</p>
+<p><strong>Penerapan:</strong> latihan membedakan fakta dan opini, mengenali kalimat efektif, dan memahami kosakata dalam konteks. Situs: https://wayground.com/</p>
+<h4>3. Kahoot!</h4>
+<p>Berorientasi pada kuis langsung dan kegiatan belajar berbasis permainan. Cocok untuk mengaktifkan pengetahuan awal dan memperoleh gambaran cepat tentang pemahaman kelas.</p>
+<p><strong>Penerapan:</strong> kuis pengenalan unsur intrinsik cerpen atau identifikasi gagasan utama. Situs: https://kahoot.com/</p>
+<h4>4. Wordwall</h4>
+<p>Menyediakan templat aktivitas interaktif seperti mencocokkan pasangan, mengelompokkan konsep, kuis, dan latihan berbasis permainan.</p>
+<p><strong>Penerapan:</strong> memasangkan istilah kebahasaan dengan definisi, mengelompokkan kalimat fakta dan opini, serta mengidentifikasi struktur teks. Situs: https://wordwall.net/</p>
+<h4>5. Quizlet</h4>
+<p>Berfokus pada kartu belajar digital, penguasaan istilah, kosakata, dan latihan mengingat informasi. Fitur evaluasi dapat berbeda sesuai mode dan paket layanan.</p>
+<p><strong>Penerapan:</strong> penguasaan istilah linguistik, kosakata akademik, majas, dan konsep kebahasaan. Situs: https://quizlet.com/</p>
+<h4>B. Memilih Aplikasi Berdasarkan Kompetensi</h4>
+<div class="table-wrap"><table><tr><th>Kompetensi</th><th>Aplikasi yang dapat dipertimbangkan</th><th>Bentuk instrumen</th></tr><tr><td>Membaca pemahaman</td><td>Google Forms, Quizizz/Wayground</td><td>Pilihan ganda dan respons singkat</td></tr><tr><td>Tata bahasa</td><td>Wordwall, Google Forms</td><td>Klasifikasi dan koreksi kalimat</td></tr><tr><td>Kosakata</td><td>Quizlet, Wordwall</td><td>Kartu istilah dan pencocokan</td></tr><tr><td>Pemahaman sastra</td><td>Google Forms, Kahoot!</td><td>Interpretasi kutipan dan kuis</td></tr><tr><td>Menulis argumentasi</td><td>LMS, Google Forms untuk refleksi</td><td>Esai dan rubrik analitik</td></tr><tr><td>Berbicara</td><td>LMS atau sistem pengumpulan rekaman</td><td>Presentasi lisan dan rubrik performa</td></tr></table></div>
+<p>Tidak semua aplikasi tepat untuk semua keterampilan. Kuis pilihan ganda dapat mengukur pengetahuan tentang berbicara, tetapi tidak mengukur kemampuan berbicara itu sendiri.</p>
+<h4>C. Prosedur Menyusun Tes Digital yang Berkualitas</h4>
+<ol class="doc-list">
+<li class="number">Menentukan tujuan dan kemampuan yang ingin diukur secara spesifik.</li>
+<li class="number">Menyusun kisi-kisi yang memetakan indikator, materi, bentuk soal, dan bobot skor.</li>
+<li class="number">Menulis butir soal dengan bahasa jelas, stimulus sesuai, dan pengecoh masuk akal.</li>
+<li class="number">Memasukkan soal ke aplikasi dan menetapkan kunci, skor, urutan, waktu, serta akses.</li>
+<li class="number">Melakukan uji coba pada perangkat berbeda dan memeriksa petunjuk serta fungsi butir.</li>
+<li class="number">Memeriksa tingkat kesukaran, daya pembeda, pola pengecoh, dan kemungkinan lebih dari satu jawaban benar.</li>
+<li class="number">Menggunakan data hasil untuk menentukan materi yang perlu diajarkan kembali.</li>
+</ol>
+<h4>D. Contoh Instrumen Tes Membaca Digital</h4>
+<p><strong>Bacalah teks berikut:</strong> Sekolah menerapkan program pemilahan sampah dengan menyediakan tempat sampah terpisah untuk sampah organik dan anorganik. Pada awal pelaksanaan, banyak peserta didik masih mencampurkan kedua jenis sampah tersebut. Setelah sekolah memberikan penjelasan, memasang petunjuk visual, dan melibatkan pengurus kelas untuk memantau pelaksanaan, kepatuhan peserta didik meningkat. Program tersebut tetap memerlukan evaluasi berkala agar kebiasaan memilah sampah dapat dipertahankan.</p>
+<p><strong>Pertanyaan:</strong> gagasan utama teks tersebut adalah ...</p>
+<ul class="doc-list">
+<li class="bullet">A. Sampah organik lebih sulit dikelola daripada sampah anorganik.</li>
+<li class="bullet">B. Program pemilahan sampah memerlukan sosialisasi, dukungan pelaksanaan, dan evaluasi.</li>
+<li class="bullet">C. Pengurus kelas bertanggung jawab penuh atas seluruh pengelolaan sampah sekolah.</li>
+<li class="bullet">D. Petunjuk visual merupakan satu-satunya cara meningkatkan kepatuhan peserta didik.</li>
+</ul>
+<p><strong>Kunci jawaban:</strong> B. Teks membahas pelaksanaan program pemilahan sampah, langkah yang mendukung keberhasilan, serta perlunya evaluasi. Pilihan lain terlalu sempit atau tidak didukung teks.</p>
+<h3>4.1.4 Integrasi LMS dan Aplikasi Tes Digital</h3>
+<p>LMS dan aplikasi tes digital dapat digunakan secara terpadu. LMS menjadi tempat pengelolaan aktivitas pembelajaran, sedangkan aplikasi tes menjadi salah satu alat untuk mengumpulkan bukti belajar.</p>
+<ol class="doc-list">
+<li class="number">Guru membagikan materi dan contoh teks berita melalui LMS.</li>
+<li class="number">Peserta didik mempelajari materi dan mengerjakan kuis membaca melalui Google Forms.</li>
+<li class="number">Hasil kuis digunakan untuk mengidentifikasi kesulitan memahami unsur berita.</li>
+<li class="number">Peserta didik menyusun teks berita berdasarkan observasi.</li>
+<li class="number">Guru menilai teks menggunakan rubrik di LMS.</li>
+<li class="number">Peserta didik memperbaiki tulisan berdasarkan umpan balik.</li>
+</ol>
+<p>Dengan alur ini, asesmen tidak berhenti pada skor kuis, tetapi menjadi bagian dari siklus pembelajaran, umpan balik, dan perbaikan.</p>
+<h2>4.2 Artificial Intelligence (AI) dalam Pengembangan Asesmen Bahasa Indonesia</h2>
+<h3>A. Pengertian dan Konsep Dasar AI dalam Asesmen</h3>
+<p>Artificial Intelligence (AI) atau kecerdasan buatan adalah bidang teknologi yang mengembangkan sistem untuk menjalankan tugas yang biasanya memerlukan kemampuan kognitif manusia, seperti mengenali pola, memproses bahasa, membuat prediksi, dan menghasilkan teks.</p>
+<p>Dalam asesmen Bahasa Indonesia, AI dapat membantu guru menyusun soal, membuat variasi teks stimulus, memeriksa aspek kebahasaan, memberikan umpan balik awal, mengidentifikasi pola kesalahan, dan mendukung penilaian respons tertulis maupun lisan.</p>
+<p>Salah satu bentuk AI yang relevan adalah generative AI, yaitu sistem yang dapat menghasilkan konten baru berdasarkan instruksi dan konteks. ChatGPT, Gemini, Claude, dan Microsoft Copilot termasuk contoh asisten AI generatif.</p>
+<p>UNESCO menekankan pentingnya pendekatan yang berpusat pada manusia dalam pemanfaatan AI untuk pendidikan, termasuk perlindungan privasi, pengembangan kapasitas pengguna, dan pemeriksaan kesesuaian pedagogis. Rujukan: https://www.unesco.org/en/articles/guidance-generative-ai-education-and-research</p>
+<h3>B. Perbedaan AI Generatif dan AI Analitik</h3>
+<div class="table-wrap"><table><tr><th>Aspek</th><th>AI generatif</th><th>AI analitik atau prediktif</th></tr><tr><td>Tujuan utama</td><td>Menghasilkan konten baru</td><td>Menganalisis pola dan membuat estimasi</td></tr><tr><td>Contoh tugas</td><td>Menyusun draf soal dan rubrik</td><td>Mengidentifikasi pola kesalahan</td></tr><tr><td>Masukan</td><td>Instruksi, konteks, atau dokumen</td><td>Data respons atau fitur tertentu</td></tr><tr><td>Keluaran</td><td>Teks, pertanyaan, saran, ringkasan</td><td>Klasifikasi, skor, prediksi, statistik</td></tr><tr><td>Risiko</td><td>Informasi keliru, soal ambigu, rubrik tidak tepat</td><td>Bias data, kesalahan klasifikasi, ketidakakuratan skor</td></tr></table></div>
+<p>Batas antara kedua kategori tidak selalu tegas. Sebuah sistem generatif juga dapat menganalisis teks, sedangkan sistem analitik dapat memanfaatkan model bahasa. Periksa fungsi nyata aplikasi, bukan hanya label pemasarannya.</p>
+<h3>C. Siklus Pemanfaatan AI dalam Asesmen</h3>
+<ol class="doc-list">
+<li class="number">Tujuan dan indikator: menetapkan kompetensi yang akan diukur.</li>
+<li class="number">Pembuatan draf dengan AI: menghasilkan calon soal, rubrik, atau umpan balik.</li>
+<li class="number">Validasi pendidik: memeriksa isi, bahasa, kunci jawaban, dan kesesuaian kurikulum.</li>
+<li class="number">Uji coba instrumen: memeriksa kejelasan dan kualitas respons.</li>
+<li class="number">Pelaksanaan dan analisis: mengumpulkan bukti dan menelaah hasil.</li>
+<li class="number">Keputusan dan revisi: menentukan tindak lanjut berdasarkan bukti.</li>
+</ol>
+<p>Siklus tersebut menegaskan bahwa AI menghasilkan bantuan atau rekomendasi, sedangkan pendidik bertanggung jawab memastikan instrumen dan keputusan asesmen dapat dipertanggungjawabkan.</p>
+<h3>4.2.1 AI untuk Penyusunan Instrumen Asesmen: ChatGPT, Gemini, Claude, dan Microsoft Copilot</h3>
+<h4>A. Peran AI dalam Pengembangan Instrumen</h4>
+<ul class="doc-list">
+<li class="bullet">Merumuskan indikator asesmen berdasarkan capaian pembelajaran.</li>
+<li class="bullet">Membuat kisi-kisi soal sesuai tujuan dan tingkat kognitif.</li>
+<li class="bullet">Menghasilkan variasi soal pilihan ganda, uraian, dan tugas performa.</li>
+<li class="bullet">Membuat alternatif jawaban dan pengecoh.</li>
+<li class="bullet">Menyusun rubrik analitik.</li>
+<li class="bullet">Mengembangkan umpan balik untuk berbagai jenis kesalahan.</li>
+<li class="bullet">Menyesuaikan kompleksitas teks untuk tingkat pendidikan tertentu.</li>
+<li class="bullet">Menelaah konsistensi antara indikator, soal, kunci, dan rubrik.</li>
+</ul>
+<p>Keluaran AI harus diperlakukan sebagai draf untuk diverifikasi, bukan instrumen siap pakai yang otomatis valid.</p>
+<h4>B. Karakteristik Beberapa Asisten AI</h4>
+<h4>1. ChatGPT</h4>
+<p>Dapat membantu menyusun kisi-kisi, menghasilkan soal berdasarkan indikator, membuat rubrik, menelaah kualitas bahasa, serta memberi contoh umpan balik. Kualitas keluaran bergantung pada model, instruksi, konteks, dan pemeriksaan pengguna. Situs: https://chatgpt.com/</p>
+<h4>2. Gemini</h4>
+<p>Dapat mendukung penyusunan bahan asesmen, pengembangan pertanyaan, serta pekerjaan yang memanfaatkan ekosistem Google apabila integrasi tersedia pada akun dan layanan terkait. Situs: https://gemini.google.com/</p>
+<h4>3. Claude</h4>
+<p>Dapat digunakan untuk menelaah teks panjang, membandingkan beberapa versi soal, menyusun rubrik, serta memberikan saran perbaikan berdasarkan kriteria yang ditentukan. Situs: https://claude.ai/</p>
+<h4>4. Microsoft Copilot</h4>
+<p>Dapat membantu menyusun materi dan instrumen serta mendukung pekerjaan berbasis dokumen atau aplikasi Microsoft sesuai fitur dan lisensi yang digunakan. Situs: https://copilot.microsoft.com/</p>
+<p>Tidak ada satu alat yang selalu unggul untuk semua kebutuhan asesmen. Pilihan sebaiknya ditentukan berdasarkan kualitas keluaran, perlindungan data, kemudahan penggunaan, biaya, dukungan bahasa Indonesia, dan kebutuhan integrasi.</p>
+<h4>C. Teknik Menyusun Prompt untuk Asesmen</h4>
+<p>Prompt adalah instruksi yang diberikan kepada AI untuk menghasilkan keluaran tertentu. Prompt yang baik menjelaskan konteks pembelajaran, tujuan, karakteristik peserta didik, bentuk instrumen, batasan, dan kriteria mutu.</p>
+<div class="table-wrap"><table><tr><th>Komponen prompt</th><th>Petunjuk</th></tr><tr><td>Peran</td><td>Tentukan peran AI, misalnya asisten pengembang asesmen Bahasa Indonesia.</td></tr><tr><td>Tujuan</td><td>Jelaskan kompetensi dan indikator yang hendak diukur.</td></tr><tr><td>Konteks</td><td>Sebutkan jenjang, karakteristik peserta didik, materi, dan konteks penggunaan.</td></tr><tr><td>Format</td><td>Tentukan jumlah soal, tipe respons, kunci, alasan jawaban, dan rubrik jika diperlukan.</td></tr><tr><td>Kendali mutu</td><td>Minta pemeriksaan ambiguitas, kesesuaian indikator, ketepatan bahasa, dan potensi bias.</td></tr></table></div>
+<h4>D. Contoh Prompt untuk Menyusun Instrumen</h4>
+<p>Anda bertindak sebagai asisten pengembang asesmen pembelajaran Bahasa Indonesia untuk peserta didik kelas VIII SMP.</p>
+<p><strong>Tujuan asesmen:</strong> mengukur kemampuan peserta didik dalam mengidentifikasi gagasan utama, menyimpulkan informasi, dan mengevaluasi fakta serta opini dalam teks eksplanasi.</p>
+<ol class="doc-list">
+<li class="number">Buat kisi-kisi asesmen yang memuat indikator, materi, proses kognitif, bentuk soal, dan nomor soal.</li>
+<li class="number">Susun 8 soal pilihan ganda berbasis teks eksplanasi yang relevan dengan kehidupan peserta didik.</li>
+<li class="number">Setiap soal memiliki empat opsi jawaban dengan satu jawaban terbaik.</li>
+<li class="number">Sertakan kunci jawaban dan penjelasan yang merujuk pada bukti dalam teks.</li>
+<li class="number">Variasikan tingkat kesulitan dan tuntutan penalaran.</li>
+<li class="number">Hindari soal yang hanya menguji hafalan definisi.</li>
+<li class="number">Periksa agar semua pengecoh masuk akal, tidak tumpang tindih, dan tidak memungkinkan lebih dari satu jawaban benar.</li>
+</ol>
+<p>Sajikan hasil dalam tabel. Setelah tabel, jelaskan keterbatasan instrumen yang masih memerlukan validasi guru. Jangan mengklaim bahwa soal telah tervalidasi secara empiris.</p>
+<h4>E. Contoh Prompt untuk Membuat Rubrik Menulis</h4>
+<p>Buat rubrik analitik untuk menilai teks argumentasi Bahasa Indonesia karya peserta didik kelas XI SMA.</p>
+<ul class="doc-list">
+<li class="bullet">Aspek: kejelasan tesis; kualitas dan relevansi bukti; koherensi argumentasi; struktur teks; ketepatan dan efektivitas bahasa; ejaan dan tanda baca.</li>
+<li class="bullet">Gunakan empat tingkat kinerja: 4 (sangat baik), 3 (baik), 2 (berkembang), dan 1 (perlu bimbingan).</li>
+<li class="bullet">Untuk setiap aspek dan tingkat kinerja, tuliskan deskriptor yang dapat diamati, spesifik, dan tidak tumpang tindih.</li>
+<li class="bullet">Bedakan kualitas penalaran dari ketepatan mekanis bahasa.</li>
+<li class="bullet">Jangan menilai panjang tulisan sebagai pengganti kualitas argumentasi.</li>
+<li class="bullet">Sertakan cara menghitung nilai akhir dan contoh penerapan rubrik pada satu tulisan hipotetis.</li>
+<li class="bullet">Tandai bahwa contoh skor perlu diverifikasi oleh penilai manusia.</li>
+</ul>
+<h4>F. Memeriksa Kualitas Keluaran AI</h4>
+<div class="table-wrap"><table><tr><th>Aspek</th><th>Pertanyaan pemeriksaan</th></tr><tr><td>Kesesuaian</td><td>Apakah soal benar-benar mengukur indikator yang dituju?</td></tr><tr><td>Ketepatan isi</td><td>Apakah fakta, konsep, dan informasi dapat dipertanggungjawabkan?</td></tr><tr><td>Kejelasan</td><td>Apakah peserta didik memahami pertanyaan tanpa menebak maksud pembuat soal?</td></tr><tr><td>Kunci jawaban</td><td>Apakah jawaban terbaik benar-benar didukung stimulus?</td></tr><tr><td>Pengecoh</td><td>Apakah opsi salah masuk akal, tetapi dapat dibuktikan keliru?</td></tr><tr><td>Keadilan</td><td>Apakah soal menghindari bias sosial, budaya, gender, dan latar belakang ekonomi?</td></tr><tr><td>Kesesuaian bahasa</td><td>Apakah tingkat bahasa sesuai jenjang dan tujuan pembelajaran?</td></tr><tr><td>Keamanan data</td><td>Apakah prompt menghindari data pribadi yang tidak diperlukan?</td></tr></table></div>
+<p>Kesalahan umum adalah meminta AI membuat banyak soal lalu langsung menggunakannya tanpa memeriksa kualitas setiap butir. Jumlah soal yang banyak tidak menjamin keterwakilan kompetensi atau mutu instrumen.</p>
+<h3>4.2.2 AI untuk Analisis Bahasa dan Literasi: Grammarly, QuillBot, dan LanguageTool</h3>
+<h4>A. Konsep Analisis Bahasa Berbantuan AI</h4>
+<p>Analisis bahasa berbantuan AI adalah pemanfaatan sistem komputasi untuk mendeteksi pola, mengenali kesalahan, dan memberikan saran terhadap penggunaan bahasa. Dalam asesmen Bahasa Indonesia, sistem dapat membantu menelaah ejaan, tanda baca, tata bahasa, pilihan kata, kejelasan kalimat, kohesi, dan keterbacaan.</p>
+<p>Analisis bahasa tidak identik dengan penilaian kompetensi berbahasa secara menyeluruh. Tulisan yang bebas kesalahan ejaan belum tentu memiliki argumentasi kuat, sedangkan variasi bahasa tertentu belum tentu menunjukkan kemampuan berpikir yang rendah.</p>
+<h4>B. Karakteristik Aplikasi</h4>
+<h4>1. Grammarly</h4>
+<p>Aplikasi bantuan menulis yang berfokus pada tata bahasa, ejaan, kejelasan, nada, dan penyempurnaan tulisan. Grammarly secara tradisional lebih berorientasi pada bahasa Inggris; kemampuan dan kualitas untuk bahasa Indonesia harus diuji sebelum digunakan dalam asesmen formal.</p>
+<p><strong>Penerapan:</strong> menganalisis contoh tulisan berbahasa Inggris pada tugas perbandingan bahasa atau mengevaluasi saran penyuntingan secara kritis. Situs: https://www.grammarly.com/</p>
+<h4>2. QuillBot</h4>
+<p>Menyediakan alat parafrasa, pemeriksaan tata bahasa, peringkasan, dan bantuan penulisan sesuai fitur yang tersedia. Hasil parafrasa perlu diperiksa agar tidak mengubah makna, menghilangkan informasi penting, atau menghasilkan teks yang terlalu jauh dari suara asli penulis.</p>
+<p><strong>Penerapan:</strong> membandingkan teks asli dan hasil parafrasa untuk menilai ketepatan makna, efektivitas kalimat, dan integritas akademik. Situs: https://quillbot.com/</p>
+<h4>3. LanguageTool</h4>
+<p>Alat pemeriksaan tulisan yang menawarkan deteksi kesalahan ejaan, tata bahasa, dan gaya pada bahasa yang didukung. Kualitas pemeriksaan bahasa Indonesia perlu diverifikasi melalui contoh teks dan pengujian langsung.</p>
+<p><strong>Penerapan:</strong> mengidentifikasi kesalahan mekanis dalam teks laporan atau surat resmi, kemudian meminta peserta didik menjelaskan alasan perbaikannya. Situs: https://languagetool.org/</p>
+<h4>C. Proses Analisis Tulisan Menggunakan AI</h4>
+<ol class="doc-list">
+<li class="number">Mengumpulkan teks asli: peserta didik menulis paragraf sebelum menggunakan alat bantu.</li>
+<li class="number">Menganalisis teks: aplikasi memberikan saran terhadap aspek bahasa yang didukung.</li>
+<li class="number">Membandingkan hasil: peserta didik membandingkan teks asli, saran aplikasi, dan hasil revisi.</li>
+<li class="number">Menjelaskan keputusan: peserta didik menyatakan saran mana yang diterima atau ditolak beserta alasannya.</li>
+</ol>
+<h4>D. Contoh Analisis Bahasa</h4>
+<p><strong>Teks awal:</strong> “Para siswa-siswa sedang berdiskusi mengenai tentang pentingnya menjaga kebersihan lingkungan sekolah.”</p>
+<p><strong>Kemungkinan revisi:</strong> “Para siswa sedang berdiskusi tentang pentingnya menjaga kebersihan lingkungan sekolah.”</p>
+<ul class="doc-list">
+<li class="bullet">Bentuk “para siswa-siswa” mengandung penanda jamak yang berlebihan.</li>
+<li class="bullet">Frasa “mengenai tentang” menggabungkan dua penanda yang tidak diperlukan secara bersamaan.</li>
+<li class="bullet">Hasil revisi lebih ringkas tanpa mengubah makna utama.</li>
+</ul>
+<p>Tidak semua saran aplikasi benar. Kalimat panjang, penggunaan istilah lokal, gaya sastra, dan variasi bahasa sesuai konteks dapat menghasilkan saran yang perlu dipertimbangkan kembali.</p>
+<h4>E. Aktivitas Asesmen: Literasi Digital dan Penyuntingan</h4>
+<ol class="doc-list">
+<li class="number">Pilih satu paragraf tulisan yang telah dianonimkan atau paragraf simulasi.</li>
+<li class="number">Identifikasi kesalahan secara mandiri.</li>
+<li class="number">Masukkan teks ke alat analisis bahasa yang mendukung bahasa tersebut.</li>
+<li class="number">Catat saran aplikasi yang sesuai dan tidak sesuai.</li>
+<li class="number">Buat revisi akhir dan tulis refleksi tentang keterbatasan AI.</li>
+</ol>
+<p>Penilaian tidak hanya berfokus pada teks akhir, tetapi juga ketepatan alasan revisi dan kemampuan mahasiswa mempertahankan keputusan kebahasaan.</p>
+<h3>4.2.3 Automated Scoring (Penilaian Otomatis)</h3>
+<h4>A. Pengertian Penilaian Otomatis</h4>
+<p>Automated scoring adalah proses pemberian skor terhadap respons peserta didik dengan menggunakan sistem komputasi berdasarkan aturan, model statistik, pemrosesan bahasa alami, pembelajaran mesin, atau kombinasi pendekatan tersebut.</p>
+<p>Pada bentuk sederhana, sistem memberi skor berdasarkan kunci jawaban. Pada bentuk lebih kompleks, sistem menganalisis respons terbuka seperti esai, jawaban uraian, atau tuturan lisan. Penilaian otomatis tidak sepenuhnya objektif: sistem tetap dapat menghasilkan kesalahan, bias, atau skor yang tidak sesuai dengan kompetensi sebenarnya.</p>
+<h4>B. Jenis-Jenis Penilaian Otomatis</h4>
+<div class="table-wrap"><table><tr><th>Jenis</th><th>Cara kerja</th><th>Contoh</th></tr><tr><td>Berbasis aturan</td><td>Mencocokkan respons dengan kunci atau aturan</td><td>Skor pilihan ganda</td></tr><tr><td>Pencocokan teks</td><td>Membandingkan respons dengan jawaban yang ditentukan</td><td>Jawaban singkat dengan variasi terbatas</td></tr><tr><td>Berbasis fitur bahasa</td><td>Menganalisis karakteristik linguistik</td><td>Deteksi ejaan dan struktur kalimat</td></tr><tr><td>Berbasis model statistik/ML</td><td>Memperkirakan skor dari pola data</td><td>Penilaian esai yang dikalibrasi</td></tr><tr><td>Berbasis AI generatif</td><td>Menilai respons berdasarkan rubrik melalui model AI</td><td>Umpan balik awal terhadap argumentasi</td></tr></table></div>
+<p>Pencocokan kata sederhana dapat gagal mengenali jawaban benar dengan redaksi berbeda. Sistem generatif mungkin memberi penilaian meyakinkan tetapi tidak konsisten. Metode penilaian harus disesuaikan dengan tujuan dan konsekuensi penggunaan skor.</p>
+<h4>C. Alur Kerja Penilaian Otomatis</h4>
+<ol class="doc-list">
+<li class="number">Respons peserta didik: jawaban objektif, uraian, tulisan, atau rekaman.</li>
+<li class="number">Pemrosesan data: pembersihan format, ekstraksi fitur, atau transkripsi bila diperlukan.</li>
+<li class="number">Penerapan aturan atau model: respons dicocokkan dengan kunci, rubrik, atau model skor.</li>
+<li class="number">Pemeriksaan mutu: skor ditelaah untuk mendeteksi kesalahan dan ketidakkonsistenan.</li>
+<li class="number">Pelaporan hasil: nilai dan umpan balik diberikan dengan batasan yang jelas.</li>
+</ol>
+<p>ETS menjelaskan bahwa mesin penilaian e-rater menggunakan teknologi AI dan pemrosesan bahasa alami untuk menilai aspek seperti tata bahasa, mekanika, penggunaan kata, kompleksitas, gaya, dan organisasi tulisan. Ini tidak berarti setiap chatbot atau aplikasi koreksi bahasa memiliki kemampuan dan validitas yang setara. Rujukan: https://www.ets.org/erater/about.html</p>
+<h4>D. Kelebihan dan Keterbatasan</h4>
+<p><strong>Kelebihan:</strong> mempercepat pengolahan respons dalam jumlah besar; mengurangi beban administrasi pada jenis soal yang sesuai; membantu konsistensi aturan penilaian; memungkinkan umpan balik awal; serta membantu mengidentifikasi pola kesalahan.</p>
+<p><strong>Keterbatasan:</strong> sulit menilai kualitas gagasan, kreativitas, dan konteks secara sempurna; berpotensi tidak adil bagi ragam bahasa tertentu; dapat dipengaruhi panjang tulisan atau ciri bahasa yang tidak relevan; memerlukan validasi; dan tidak selalu mampu menjelaskan alasan skor secara akurat.</p>
+<h4>E. Validitas dan Reliabilitas Penilaian Otomatis</h4>
+<p>Validitas berkaitan dengan ketepatan interpretasi dan penggunaan skor untuk tujuan tertentu. Reliabilitas berkaitan dengan konsistensi hasil penilaian. Sistem dapat konsisten tetapi secara sistematis mengukur hal yang keliru.</p>
+<ol class="doc-list">
+<li class="number">Tentukan konstruk yang hendak diukur.</li>
+<li class="number">Susun rubrik dan contoh respons dengan rentang kualitas yang beragam.</li>
+<li class="number">Minta penilai manusia terlatih memberikan skor secara independen.</li>
+<li class="number">Bandingkan skor otomatis dengan skor manusia.</li>
+<li class="number">Periksa kesesuaian skor secara keseluruhan dan pada setiap aspek.</li>
+<li class="number">Telaah respons yang menghasilkan perbedaan skor besar.</li>
+<li class="number">Uji apakah kesalahan lebih sering terjadi pada kelompok atau variasi bahasa tertentu.</li>
+</ol>
+<p>Analisis dapat mencakup korelasi, kesepakatan antarpenilai, dan ukuran galat yang sesuai. Korelasi tinggi saja tidak membuktikan bahwa dua metode memberikan skor yang benar-benar sebanding.</p>
+<h4>F. Contoh Simulasi Perbandingan Skor</h4>
+<p>Angka berikut adalah ilustrasi hipotetis untuk memahami perbedaan penilaian otomatis dan manusia, bukan hasil penelitian empiris.</p>
+<div class="table-wrap"><table><tr><th>Respons</th><th>Skor AI (0–100)</th><th>Skor guru (0–100)</th><th>Selisih absolut</th></tr><tr><td>A</td><td>85</td><td>82</td><td>3</td></tr><tr><td>B</td><td>76</td><td>78</td><td>2</td></tr><tr><td>C</td><td>90</td><td>72</td><td>18</td></tr><tr><td>D</td><td>64</td><td>67</td><td>3</td></tr><tr><td>E</td><td>80</td><td>84</td><td>4</td></tr></table></div>
+<p>Respons C memerlukan pemeriksaan karena selisih skor paling besar. Guru perlu memeriksa apakah AI terlalu menghargai panjang tulisan, kosakata akademik, atau struktur rapi meskipun argumentasi kurang kuat.</p>
+<h4>G. Kapan Penilaian Otomatis Layak Digunakan?</h4>
+<ul class="doc-list">
+<li class="bullet">Tes objektif yang kuncinya telah diperiksa.</li>
+<li class="bullet">Latihan formatif berisiko rendah.</li>
+<li class="bullet">Pemeriksaan mekanis bahasa.</li>
+<li class="bullet">Umpan balik awal berdasarkan rubrik.</li>
+<li class="bullet">Penyaringan respons yang perlu diperiksa lebih lanjut.</li>
+</ul>
+<p>Untuk keputusan berisiko tinggi seperti kelulusan, seleksi, atau penetapan tingkat kompetensi formal, sistem tidak boleh digunakan tanpa bukti validitas, reliabilitas, keadilan, dan prosedur peninjauan manusia yang memadai.</p>
+<h3>4.2.4 AI-assisted Writing Assessment</h3>
+<h4>A. Pengertian</h4>
+<p>AI-assisted writing assessment adalah asesmen menulis yang memanfaatkan AI untuk mendukung satu atau beberapa tahap penilaian, seperti diagnosis kesalahan, pemberian umpan balik, revisi, analisis perkembangan tulisan, atau estimasi skor.</p>
+<p>AI berfungsi sebagai pendamping yang memberikan masukan awal, sedangkan guru menilai kualitas pemikiran, konteks, orisinalitas, dan pencapaian tujuan pembelajaran.</p>
+<h4>B. Aspek Penilaian Menulis</h4>
+<ul class="doc-list">
+<li class="bullet">Isi dan pengembangan gagasan: relevansi isi, ketepatan informasi, kedalaman pembahasan, dan kecukupan bukti.</li>
+<li class="bullet">Organisasi dan koherensi: struktur teks, hubungan antarparagraf, alur penalaran, dan keterpaduan gagasan.</li>
+<li class="bullet">Penggunaan bahasa: ketepatan tata bahasa, diksi, efektivitas kalimat, dan kesesuaian ragam bahasa.</li>
+<li class="bullet">Mekanika penulisan: ejaan, tanda baca, kapitalisasi, dan konsistensi penulisan.</li>
+<li class="bullet">Kesadaran terhadap pembaca: kejelasan tujuan komunikasi, ketepatan nada, dan efektivitas penyampaian pesan.</li>
+<li class="bullet">Proses penulisan: perencanaan, penyusunan draf, revisi, penyuntingan, dan kemampuan menjelaskan perubahan.</li>
+</ul>
+<p>Tidak semua aspek dapat dinilai AI dengan tingkat ketepatan yang sama. Aspek mekanis relatif mudah diperiksa menggunakan alat yang sesuai, sedangkan kualitas gagasan, ketepatan argumentasi, dan orisinalitas memerlukan penilaian kontekstual.</p>
+<h4>C. Alur AI-assisted Writing Assessment</h4>
+<ol class="doc-list">
+<li class="number">Menulis draf awal tanpa koreksi AI terlebih dahulu.</li>
+<li class="number">Menerima umpan balik AI sesuai rubrik, bukan meminta AI langsung mengganti seluruh tulisan.</li>
+<li class="number">Menelaah saran dan menandai saran yang relevan, kurang tepat, atau perlu didiskusikan.</li>
+<li class="number">Merevisi tulisan berdasarkan keputusan penulis.</li>
+<li class="number">Menjelaskan revisi melalui catatan tentang perubahan dan alasannya.</li>
+<li class="number">Guru menilai tulisan berdasarkan rubrik serta bukti proses penulisan.</li>
+</ol>
+<h4>D. Contoh Prompt Umpan Balik terhadap Tulisan</h4>
+<p>Bertindaklah sebagai pendamping pembelajaran menulis teks argumentasi Bahasa Indonesia untuk peserta didik kelas XI SMA. Berikan umpan balik terhadap tulisan berdasarkan kejelasan tesis, relevansi dan kekuatan bukti, koherensi hubungan klaim-alasan-bukti, organisasi paragraf, serta ketepatan dan efektivitas bahasa.</p>
+<ul class="doc-list">
+<li class="bullet">Jangan menulis ulang seluruh teks.</li>
+<li class="bullet">Identifikasi paling banyak tiga bagian yang paling penting untuk diperbaiki.</li>
+<li class="bullet">Kutip bagian pendek dari teks yang menjadi dasar komentar.</li>
+<li class="bullet">Jelaskan mengapa bagian tersebut perlu diperbaiki.</li>
+<li class="bullet">Ajukan pertanyaan pemandu agar penulis dapat merevisi sendiri.</li>
+<li class="bullet">Bedakan kesalahan yang dapat dipastikan dari saran yang bersifat pilihan gaya.</li>
+<li class="bullet">Jangan menyimpulkan bahwa tulisan dibuat oleh AI berdasarkan gaya bahasa.</li>
+<li class="bullet">Jangan memberikan skor akhir sebelum rubrik lengkap diterapkan.</li>
+</ul>
+<p>Tujuan utama adalah membantu penulis meningkatkan kemampuan merevisi secara mandiri, bukan menggantikan proses berpikirnya.</p>
+<h4>E. Contoh Penerapan pada Teks Argumentasi</h4>
+<p><strong>Teks awal peserta didik:</strong> “Sekolah harus mengurangi plastik karena plastik buruk. Semua siswa pasti setuju karena lingkungan harus bersih. Oleh sebab itu, plastik harus dilarang sepenuhnya.”</p>
+<ul class="doc-list">
+<li class="bullet">Kejelasan klaim: gagasan utama dapat dikenali, tetapi alasan masih terlalu umum.</li>
+<li class="bullet">Kualitas bukti: pernyataan “semua siswa pasti setuju” merupakan generalisasi yang memerlukan bukti.</li>
+<li class="bullet">Pengembangan argumentasi: penulis perlu menjelaskan dampak plastik dan mempertimbangkan alternatif yang realistis.</li>
+<li class="bullet">Revisi mandiri: tambahkan bukti yang dapat diverifikasi, jelaskan relevansinya, dan pertimbangkan apakah larangan total merupakan solusi paling tepat.</li>
+</ul>
+<p><strong>Contoh revisi:</strong> “Sekolah perlu mengurangi penggunaan plastik sekali pakai karena sampah plastik yang tidak dikelola dengan baik dapat mencemari lingkungan. Sekolah dapat memulai program tersebut dengan menyediakan fasilitas isi ulang air minum, mengurangi kemasan sekali pakai di kantin, dan mengedukasi warga sekolah tentang pemilahan sampah.”</p>
+<p>Revisi ini menunjukkan alasan yang lebih spesifik dan usulan yang lebih operasional. Kualitas argumentasi tetap perlu diperiksa berdasarkan bukti, relevansi alasan, dan konteks permasalahan.</p>
+<h4>F. Rubrik Analitik Penilaian Menulis Berbantuan AI</h4>
+<div class="table-wrap"><table><tr><th>Aspek</th><th>4 — Sangat baik</th><th>3 — Baik</th><th>2 — Berkembang</th><th>1 — Perlu bimbingan</th></tr><tr><td>Isi dan bukti</td><td>Klaim jelas, bukti relevan dan memadai</td><td>Klaim jelas, bukti cukup</td><td>Klaim atau bukti kurang berkembang</td><td>Klaim tidak jelas dan bukti tidak mendukung</td></tr><tr><td>Organisasi</td><td>Alur logis dan koheren</td><td>Struktur jelas, sedikit gangguan alur</td><td>Hubungan gagasan kurang konsisten</td><td>Struktur dan alur sulit diikuti</td></tr><tr><td>Bahasa</td><td>Diksi tepat, kalimat efektif dan bervariasi</td><td>Bahasa umumnya tepat</td><td>Kesalahan mengganggu beberapa bagian</td><td>Kesalahan sering menghambat pemahaman</td></tr><tr><td>Mekanika</td><td>Ejaan dan tanda baca konsisten</td><td>Sedikit kesalahan</td><td>Kesalahan berulang</td><td>Kesalahan sering menghambat pembacaan</td></tr></table></div>
+<p><strong>Untuk contoh empat aspek dengan bobot sama:</strong> Nilai akhir = (Skor diperoleh / Skor maksimal) × 100. Jika skor yang diperoleh 13 dari maksimal 16, nilai akhir menjadi 81,25. Dalam penggunaan nyata, bobot dapat dibedakan sesuai tujuan pembelajaran.</p>
+<h4>G. Mengukur Perkembangan Menulis</h4>
+<div class="table-wrap"><table><tr><th>Bukti proses</th><th>Informasi yang dapat diperoleh</th></tr><tr><td>Draf awal</td><td>Kemampuan awal dan kesulitan penulis</td></tr><tr><td>Catatan umpan balik</td><td>Jenis masalah yang teridentifikasi</td></tr><tr><td>Riwayat revisi</td><td>Perubahan yang dilakukan</td></tr><tr><td>Refleksi penulis</td><td>Alasan menerima atau menolak saran</td></tr><tr><td>Tulisan akhir</td><td>Kualitas produk setelah revisi</td></tr></table></div>
+<p>Perubahan tulisan yang semakin baik belum tentu seluruhnya berasal dari kemampuan mandiri peserta didik. Guru dapat mengombinasikan portofolio, wawancara singkat, penjelasan lisan, dan tugas menulis terkontrol untuk memperoleh gambaran kompetensi yang lebih lengkap.</p>
+<h3>4.2.5 Automated Speech Assessment</h3>
+<h4>A. Pengertian</h4>
+<p>Automated speech assessment adalah penggunaan sistem digital dan AI untuk menganalisis tuturan lisan dan menghasilkan informasi tentang aspek tertentu dari performa berbicara.</p>
+<p>Teknologi dapat mencakup automatic speech recognition (ASR), analisis jeda dan kecepatan bicara, pemrosesan bahasa alami, serta model penilaian yang dikembangkan untuk tugas berbicara tertentu. Sistem dapat membantu menilai kelancaran, kejelasan pengucapan, ketepatan transkripsi, dan karakteristik penyampaian lisan, tetapi tidak otomatis menilai seluruh dimensi kompetensi berbicara.</p>
+<h4>B. Komponen Utama Penilaian Berbicara</h4>
+<ul class="doc-list">
+<li class="bullet">Kelancaran: keberlangsungan tuturan, pengelolaan jeda, pengulangan, dan kemampuan menyampaikan gagasan secara runtut.</li>
+<li class="bullet">Kejelasan artikulasi: keterpahaman bunyi dan kata; penilaian perlu memperhatikan variasi pengucapan yang sah.</li>
+<li class="bullet">Prosodi: pengaturan intonasi, tekanan, tempo, dan jeda untuk menyampaikan makna.</li>
+<li class="bullet">Isi dan organisasi gagasan: relevansi isi, ketepatan informasi, struktur penyampaian, dan hubungan antargagasan.</li>
+<li class="bullet">Kompetensi pragmatik dan interaksi: ketepatan berbicara sesuai situasi, respons terhadap lawan bicara, dan kesantunan.</li>
+</ul>
+<p>Sistem otomatis mungkin dapat mengukur sebagian komponen tersebut. Kompetensi pragmatik dan interaksi kompleks tetap memerlukan penilaian manusia dalam banyak konteks.</p>
+<h4>C. Teknologi yang Digunakan</h4>
+<div class="table-wrap"><table><tr><th>Teknologi</th><th>Fungsi</th><th>Keterbatasan utama</th></tr><tr><td>Automatic Speech Recognition (ASR)</td><td>Mengubah suara menjadi teks</td><td>Kesalahan transkripsi dapat memengaruhi analisis berikutnya</td></tr><tr><td>Analisis prosodi</td><td>Mengukur tempo, jeda, atau intonasi</td><td>Indikator akustik tidak selalu mencerminkan kualitas komunikasi</td></tr><tr><td>Analisis bahasa lisan</td><td>Memeriksa kosakata, struktur, dan organisasi tuturan</td><td>Model dapat gagal memahami konteks atau ragam bahasa</td></tr><tr><td>Model penilaian otomatis</td><td>Memperkirakan skor berdasarkan data dan kriteria</td><td>Memerlukan validasi dan pemeriksaan keadilan</td></tr></table></div>
+<p>Perlu dibedakan antara sistem yang sekadar mentranskripsikan suara dan sistem yang dikembangkan serta divalidasi untuk menilai kompetensi berbicara. Transkripsi akurat belum membuktikan bahwa aplikasi mampu memberikan skor berbicara yang valid.</p>
+<h4>D. Contoh Tugas Asesmen Berbicara</h4>
+<p><strong>Tugas:</strong> presentasi lisan argumentatif. Kompetensi: peserta didik mampu menyampaikan pendapat secara logis, runtut, dan santun dalam presentasi lisan.</p>
+<ul class="doc-list">
+<li class="bullet">Pilih satu persoalan lingkungan di sekolah.</li>
+<li class="bullet">Sampaikan pendapat selama 2–3 menit.</li>
+<li class="bullet">Berikan minimal dua alasan yang relevan.</li>
+<li class="bullet">Sertakan contoh atau bukti yang dapat dipertanggungjawabkan.</li>
+<li class="bullet">Akhiri dengan simpulan atau usulan tindakan.</li>
+</ul>
+<p><strong>Bukti yang dikumpulkan:</strong> rekaman audio atau video, naskah atau kerangka presentasi, serta refleksi singkat. Pemanfaatan AI dapat berupa transkripsi awal, identifikasi jeda, dan umpan balik struktur tuturan apabila didukung sistem. Guru tetap memeriksa ketepatan isi, kualitas argumentasi, keterpahaman, dan kesesuaian penyampaian.</p>
+<h4>E. Alur Asesmen Berbicara Berbantuan AI</h4>
+<ol class="doc-list">
+<li class="number">Perekaman: peserta didik menyampaikan presentasi dalam kondisi yang disepakati.</li>
+<li class="number">Pemrosesan audio: sistem memeriksa kualitas rekaman dan melakukan transkripsi jika tersedia.</li>
+<li class="number">Analisis awal: sistem memberikan indikator yang didukung, misalnya pola jeda atau hasil transkripsi.</li>
+<li class="number">Pemeriksaan guru: guru membandingkan hasil sistem dengan rekaman asli dan rubrik.</li>
+<li class="number">Umpan balik: peserta didik menerima saran dan merencanakan latihan berikutnya.</li>
+</ol>
+<h4>F. Contoh Rubrik Penilaian Berbicara</h4>
+<div class="table-wrap"><table><tr><th>Aspek</th><th>Bobot</th><th>Indikator</th></tr><tr><td>Isi dan argumentasi</td><td>30%</td><td>Ketepatan pendapat, kualitas alasan, dan relevansi bukti</td></tr><tr><td>Organisasi tuturan</td><td>25%</td><td>Pembukaan, pengembangan gagasan, dan simpulan</td></tr><tr><td>Kelancaran dan keterpahaman</td><td>20%</td><td>Tuturan mudah diikuti, jeda dikelola, pesan tersampaikan</td></tr><tr><td>Penggunaan bahasa</td><td>15%</td><td>Diksi, struktur kalimat, dan kesantunan sesuai konteks</td></tr><tr><td>Penyampaian</td><td>10%</td><td>Intonasi, tekanan, tempo, dan penekanan makna</td></tr></table></div>
+<p>Setiap aspek dapat dinilai pada skala 1–4 dengan deskriptor yang jelas. Skor akhir dihitung berdasarkan bobot masing-masing aspek. Rubrik ini adalah contoh rancangan, bukan instrumen yang sudah divalidasi.</p>
+<h4>G. Tantangan Penilaian Otomatis Berbicara dalam Bahasa Indonesia</h4>
+<ol class="doc-list">
+<li class="number">Variasi dialek dan aksen: penutur dari wilayah berbeda dapat memiliki ciri pengucapan yang sah dan dapat dipahami.</li>
+<li class="number">Campur kode: penutur mungkin menggunakan bahasa Indonesia bersama bahasa daerah atau bahasa lain.</li>
+<li class="number">Kualitas rekaman: kebisingan, mikrofon, jarak, dan kondisi ruang dapat memengaruhi hasil.</li>
+<li class="number">Kesalahan transkripsi: sistem dapat salah mengenali istilah lokal, nama, atau kata yang kurang umum.</li>
+<li class="number">Ketidaksetaraan perangkat: perangkat dan kondisi perekaman berbeda dapat menghasilkan perbedaan kualitas data.</li>
+<li class="number">Keterbatasan pengukuran: kelancaran atau kecepatan bicara tidak otomatis menunjukkan kedalaman berpikir atau kualitas argumentasi.</li>
+</ol>
+<p>Skor otomatis tidak boleh menghukum peserta didik hanya karena variasi pengucapan yang tidak menghambat komunikasi atau karena sistem gagal mengenali tuturan.</p>
+<h4>H. Asesmen Berbicara dan Etika Data</h4>
+<p>Sebelum mengumpulkan rekaman suara atau video, guru perlu menjelaskan tujuan perekaman, siapa yang dapat mengakses data, berapa lama data disimpan, dan bagaimana data digunakan. Pengumpulan serta pemrosesan data harus mengikuti kebijakan institusi dan ketentuan perlindungan data yang berlaku.</p>
+<p>Untuk peserta didik di bawah umur, prosedur persetujuan dan perlindungan harus disesuaikan dengan ketentuan yang berlaku. Rekaman tidak boleh diunggah ke layanan AI pihak ketiga tanpa memeriksa persyaratan privasi, kebijakan penggunaan data, dan otorisasi yang diperlukan.</p>
+<h2>4.3 Prinsip Validitas, Keadilan, dan Etika dalam Asesmen Berbasis AI</h2>
+<p>Pengendalian mutu harus menyertai seluruh penerapan teknologi digital dan AI.</p>
+<h3>A. Prinsip Validitas</h3>
+<p>Validitas berkaitan dengan sejauh mana bukti dan teori mendukung interpretasi serta penggunaan skor untuk tujuan tertentu. Pertanyaan kuncinya: apakah sistem benar-benar mengukur kompetensi Bahasa Indonesia yang dimaksud, atau hanya mengukur sesuatu yang mudah dihitung? Sistem yang menilai tulisan argumentasi berdasarkan jumlah kata dan kompleksitas kalimat mungkin kurang tepat jika tujuan utamanya adalah mengukur kualitas bukti dan penalaran.</p>
+<h3>B. Prinsip Reliabilitas</h3>
+<p>Reliabilitas berkaitan dengan konsistensi hasil penilaian. Guru perlu memeriksa apakah respons setara memperoleh skor sebanding dan apakah perubahan kecil yang tidak relevan menyebabkan perbedaan skor besar. Dalam penggunaan AI generatif, hasil dapat berubah karena perbedaan instruksi, konteks, model, atau waktu pemrosesan. Dokumentasikan instruksi, rubrik, versi sistem, dan prosedur penilaian jika skor digunakan secara sistematis.</p>
+<h3>C. Prinsip Keadilan</h3>
+<p>Keadilan berarti peserta didik memperoleh kesempatan wajar untuk menunjukkan kompetensinya dan tidak dirugikan oleh faktor yang tidak relevan dengan konstruk yang diukur.</p>
+<ul class="doc-list">
+<li class="bullet">Apakah sistem mengenali variasi bahasa Indonesia yang digunakan peserta didik?</li>
+<li class="bullet">Apakah peserta didik memiliki akses perangkat dan koneksi yang memadai?</li>
+<li class="bullet">Apakah instrumen dapat digunakan oleh peserta didik dengan kebutuhan aksesibilitas berbeda?</li>
+<li class="bullet">Apakah model terlalu menghargai gaya bahasa tertentu?</li>
+<li class="bullet">Apakah kesalahan sistem lebih sering terjadi pada kelompok tertentu?</li>
+</ul>
+<h3>D. Prinsip Transparansi dan Akuntabilitas</h3>
+<p>Peserta didik perlu mengetahui kapan AI digunakan, aspek apa yang dinilai, dan bagaimana hasil penilaian ditafsirkan. Guru harus memiliki prosedur untuk meninjau skor yang dipersoalkan dan memperbaiki kesalahan. AI tidak boleh menjadi alasan untuk menghindari tanggung jawab profesional.</p>
+<h3>E. Prinsip Privasi dan Integritas Akademik</h3>
+<p>Hindari memasukkan nama lengkap, nomor identitas, rekam akademik, informasi kesehatan, atau data pribadi lain yang tidak diperlukan. Gunakan data simulasi atau data yang telah dianonimkan jika tujuan pembelajaran dapat dicapai tanpa identitas asli. Peserta didik juga perlu memahami perbedaan antara menggunakan AI untuk belajar dan menyerahkan hasil AI sebagai karya pribadi tanpa mengikuti ketentuan tugas.</p>
+<h3>F. Matriks Risiko dan Mitigasi</h3>
+<div class="table-wrap"><table><tr><th>Risiko</th><th>Dampak terhadap asesmen</th><th>Strategi mitigasi</th></tr><tr><td>Kunci jawaban salah</td><td>Skor tidak akurat</td><td>Verifikasi setiap kunci</td></tr><tr><td>Rubrik AI terlalu umum</td><td>Penilaian tidak konsisten</td><td>Perjelas indikator dan deskriptor</td></tr><tr><td>Bias ragam bahasa</td><td>Peserta didik dirugikan</td><td>Uji respons dari variasi bahasa relevan</td></tr><tr><td>Gangguan internet</td><td>Kesempatan asesmen tidak setara</td><td>Siapkan alternatif pelaksanaan</td></tr><tr><td>Data pribadi terpapar</td><td>Risiko privasi</td><td>Minimalkan data dan periksa kebijakan layanan</td></tr><tr><td>Ketergantungan pada AI</td><td>Kemampuan mandiri sulit diketahui</td><td>Kombinasikan tugas proses, produk, dan refleksi</td></tr><tr><td>Kesalahan skor otomatis</td><td>Keputusan tidak tepat</td><td>Sediakan peninjauan dan koreksi manusia</td></tr></table></div>
+<h2>4.4 Praktikum Terpadu: Merancang Asesmen Bahasa Indonesia Berbasis TIK dan AI</h2>
+<h3>A. Skenario Praktikum</h3>
+<p><strong>Proyek:</strong> Asesmen Digital Teks Editorial. Kerja kelompok menghasilkan paket asesmen digital yang mengukur pemahaman membaca dan kemampuan menulis argumentatif dengan dukungan AI pada tahap pengembangan serta pemberian umpan balik.</p>
+<ul class="doc-list">
+<li class="bullet">Kisi-kisi instrumen.</li>
+<li class="bullet">Lima soal membaca pemahaman.</li>
+<li class="bullet">Satu tugas menulis teks editorial.</li>
+<li class="bullet">Rubrik analitik penilaian tulisan.</li>
+<li class="bullet">Instrumen digital menggunakan LMS atau aplikasi tes.</li>
+<li class="bullet">Catatan pemeriksaan kualitas keluaran AI.</li>
+<li class="bullet">Rencana tindak lanjut berdasarkan hasil asesmen.</li>
+</ul>
+<h3>B. Tahapan Pelaksanaan Praktikum</h3>
+<ol class="doc-list">
+<li class="number">Analisis capaian pembelajaran: tentukan kompetensi, indikator, dan bukti belajar.</li>
+<li class="number">Penyusunan kisi-kisi: petakan indikator membaca dan menulis ke bentuk soal atau tugas.</li>
+<li class="number">Pengembangan instrumen berbantuan AI: gunakan ChatGPT, Gemini, Claude, atau Copilot untuk membuat draf.</li>
+<li class="number">Validasi isi: periksa ketepatan stimulus, kunci, pengecoh, deskriptor rubrik, dan kesesuaian indikator.</li>
+<li class="number">Implementasi digital: masukkan soal ke Google Forms atau LMS, atur instruksi, skor, dan pengumpulan.</li>
+<li class="number">Simulasi asesmen: uji instrumen menggunakan respons simulasi dan periksa gangguan teknis.</li>
+<li class="number">Evaluasi dan revisi: catat masalah, revisi instrumen, dan jelaskan alasan perubahan berdasarkan bukti.</li>
+</ol>
+<h3>C. Lembar Kerja Praktikum</h3>
+<p>Mahasiswa mengisi rancangan awal dengan menentukan jenjang pendidikan, kompetensi, bentuk asesmen, platform digital, asisten AI, dan risiko yang harus diperiksa.</p>
+<h3>D. Contoh Rubrik Penilaian Proyek Mahasiswa</h3>
+<div class="table-wrap"><table><tr><th>Komponen proyek</th><th>Bobot</th></tr><tr><td>Kesesuaian indikator dan instrumen</td><td>20%</td></tr><tr><td>Kualitas butir soal dan stimulus</td><td>20%</td></tr><tr><td>Kualitas rubrik dan umpan balik</td><td>20%</td></tr><tr><td>Ketepatan implementasi teknologi</td><td>15%</td></tr><tr><td>Validasi, etika, dan mitigasi risiko</td><td>15%</td></tr><tr><td>Refleksi dan tindak lanjut pembelajaran</td><td>10%</td></tr><tr><td>Total</td><td>100%</td></tr></table></div>
+<p>Mahasiswa tidak cukup hanya menunjukkan bahwa aplikasi berfungsi; mereka juga harus membuktikan bahwa instrumen mengukur kompetensi yang tepat dan hasilnya dapat digunakan untuk memperbaiki pembelajaran.</p>
+<h2>4.5 Evaluasi Pembelajaran</h2>
+<h3>A. Soal Pemahaman Konseptual</h3>
+<p>1. Fungsi utama LMS dalam asesmen pembelajaran adalah ...</p>
+<p>A. Menggantikan seluruh peran guru</p>
+<p>B. Mengelola materi, tugas, asesmen, dan pemantauan belajar</p>
+<p>C. Menilai kreativitas otomatis tanpa rubrik</p>
+<p>D. Mengubah semua tugas menjadi pilihan ganda</p>
+<p>2. Guru ingin mengukur kemampuan peserta didik menyusun argumentasi yang logis. Instrumen paling tepat adalah ...</p>
+<p>A. Kuis hafalan istilah</p>
+<p>B. Tes kecepatan membaca saja</p>
+<p>C. Tugas menulis argumentasi dengan rubrik analitik</p>
+<p>D. Permainan mencocokkan kosakata saja</p>
+<p>3. Apa langkah paling penting setelah AI menghasilkan butir soal?</p>
+<p>A. Langsung menerbitkan soal</p>
+<p>B. Memeriksa kesesuaian indikator, stimulus, kunci, dan pengecoh</p>
+<p>C. Menambah jumlah soal tanpa pemeriksaan</p>
+<p>D. Menganggap soal valid karena ditulis AI</p>
+<p>4. Mengapa koreksi tata bahasa otomatis tidak cukup untuk menilai esai secara keseluruhan?</p>
+<p>A. Tata bahasa tidak pernah penting</p>
+<p>B. Semua aplikasi hanya menghitung kata</p>
+<p>C. Kualitas esai juga mencakup gagasan, bukti, penalaran, dan organisasi</p>
+<p>D. Tulisan digital tidak dapat dinilai</p>
+<p>5. Dalam penilaian otomatis, reliabilitas mengacu pada ...</p>
+<p>A. Kemenarikan antarmuka aplikasi</p>
+<p>B. Konsistensi hasil penilaian</p>
+<p>C. Kecepatan mengetik peserta didik</p>
+<p>D. Banyaknya fitur AI</p>
+<p>6. Sistem AI memberikan skor tinggi pada esai panjang meskipun bukti argumentasinya lemah. Masalah yang paling relevan adalah ...</p>
+<p>A. Ketepatan warna tampilan</p>
+<p>B. Ketidakcocokan indikator skor dengan konstruk yang diukur</p>
+<p>C. Jumlah peserta didik terlalu banyak</p>
+<p>D. Koneksi internet terlalu cepat</p>
+<p>7. Apa penggunaan paling tepat untuk hasil transkripsi otomatis dalam asesmen berbicara?</p>
+<p>A. Menganggap transkripsi sebagai skor berbicara lengkap</p>
+<p>B. Menggunakannya sebagai salah satu bukti yang diperiksa bersama rekaman dan rubrik</p>
+<p>C. Menghapus semua jeda dari rekaman</p>
+<p>D. Mengganti penilaian isi dengan jumlah kata</p>
+<p>8. Manakah praktik yang paling sesuai dengan prinsip perlindungan data?</p>
+<p>A. Mengunggah identitas lengkap semua peserta didik ke layanan publik</p>
+<p>B. Menggunakan rekaman tanpa menjelaskan tujuan</p>
+<p>C. Meminimalkan data pribadi dan memeriksa kebijakan layanan sebelum mengunggah</p>
+<p>D. Menyimpan semua rekaman tanpa batas waktu</p>
+<h4>Kunci Jawaban dan Pembahasan</h4>
+<p>B — LMS mengintegrasikan pengelolaan pembelajaran dan asesmen; LMS tidak menggantikan pertimbangan profesional guru.</p>
+<p>C — Tugas menulis dengan rubrik memungkinkan guru mengamati klaim, bukti, penalaran, dan organisasi tulisan.</p>
+<p>B — Keluaran AI merupakan draf yang harus diverifikasi sebelum digunakan.</p>
+<p>C — Kompetensi menulis multidimensi; aspek mekanis hanya sebagian dari keseluruhan kemampuan.</p>
+<p>B — Reliabilitas berkenaan dengan konsistensi pengukuran, sedangkan validitas berkaitan dengan interpretasi dan penggunaan skor.</p>
+<p>B — Panjang tulisan menjadi proksi yang tidak memadai apabila tujuan penilaian adalah kualitas argumentasi.</p>
+<p>B — Transkripsi dapat membantu analisis, tetapi tidak mengukur semua dimensi kemampuan berbicara.</p>
+<p>C — Pengumpulan data harus relevan, terbatas, transparan, dan mengikuti ketentuan yang berlaku.</p>
+<h3>B. Tugas Analisis Kritis</h3>
+<ol class="doc-list">
+<li class="number">Jelaskan perbedaan fungsi LMS dan aplikasi tes digital dalam pembelajaran Bahasa Indonesia.</li>
+<li class="number">Analisis tiga manfaat dan tiga keterbatasan penggunaan AI generatif untuk menyusun instrumen asesmen.</li>
+<li class="number">Mengapa skor otomatis terhadap esai perlu dibandingkan dengan penilaian manusia?</li>
+<li class="number">Rancang prosedur penggunaan AI untuk membantu peserta didik merevisi teks argumentasi tanpa menghilangkan kemandirian penulis.</li>
+<li class="number">Analisis tantangan penggunaan pengenalan suara otomatis untuk menilai kemampuan berbicara peserta didik dengan variasi dialek.</li>
+<li class="number">Buat rancangan perlindungan data untuk asesmen yang mengumpulkan tulisan, rekaman suara, atau video peserta didik.</li>
+</ol>
+<h3>C. Tugas Proyek Akhir Bab</h3>
+<p>Mahasiswa secara berkelompok menyusun satu paket asesmen Bahasa Indonesia berbasis TIK dan AI. Paket harus mencakup tujuan, kisi-kisi, instrumen, rubrik, platform yang digunakan, contoh hasil analisis, serta prosedur validasi dan mitigasi risiko. Produk dinilai berdasarkan kualitas instrumen, kesesuaian teknologi dengan kompetensi, ketepatan analisis, dan kemampuan menjelaskan keterbatasan sistem.</p>
+<h2>4.6 Rangkuman Bab</h2>
+<ol class="doc-list">
+<li class="number">Teknologi digital memperluas cara guru merancang, melaksanakan, mengolah, dan menindaklanjuti asesmen pembelajaran Bahasa Indonesia.</li>
+<li class="number">LMS seperti Google Classroom, Moodle, Canvas, dan Schoology membantu mengelola aktivitas pembelajaran dan asesmen, sedangkan Google Forms, Quizizz/Wayground, Kahoot!, Wordwall, dan Quizlet mendukung berbagai bentuk tes serta latihan.</li>
+<li class="number">AI generatif seperti ChatGPT, Gemini, Claude, dan Microsoft Copilot dapat membantu menyusun kisi-kisi, soal, rubrik, dan umpan balik. Semua keluaran tetap harus diperiksa pendidik.</li>
+<li class="number">Alat analisis bahasa seperti Grammarly, QuillBot, dan LanguageTool dapat membantu penyuntingan, tetapi dukungan dan kualitas bahasa Indonesia perlu diperiksa.</li>
+<li class="number">Automated scoring dapat meningkatkan efisiensi dan konsistensi untuk tugas yang sesuai, tetapi validitas, reliabilitas, dan keadilannya perlu dibuktikan.</li>
+<li class="number">AI-assisted writing assessment dapat mendukung umpan balik dan revisi tulisan, terutama jika peserta didik diminta menjelaskan keputusan revisinya.</li>
+<li class="number">Automated speech assessment dapat memberikan informasi tentang sebagian karakteristik tuturan, tetapi tidak otomatis mengukur seluruh kompetensi berbicara.</li>
+<li class="number">Penggunaan teknologi harus disertai perlindungan data, transparansi, akses yang adil, dokumentasi, dan peninjauan manusia.</li>
+<li class="number">Keberhasilan asesmen digital tidak ditentukan oleh kecanggihan aplikasi, melainkan oleh kesesuaian instrumen dengan tujuan, mutu bukti belajar, dan ketepatan tindak lanjut pembelajaran.</li>
+</ol>
+<h2>Daftar Pustaka dan Sumber Rujukan</h2>
+<ol class="doc-list">
+<li class="number">Educational Testing Service. (2014). ETS standards for quality and fairness. ETS. https://www.ets.org/pdfs/about/standards-quality-fairness.pdf</li>
+<li class="number">Educational Testing Service. (n.d.). About the e-rater scoring engine. https://www.ets.org/erater/about.html</li>
+<li class="number">Educational Testing Service. (n.d.). How the e-rater engine works. https://www.ets.org/erater/how.html</li>
+<li class="number">McCaffrey, D. F., Casabianca, J. M., Ricker-Pedley, K., Lawless, R., &amp; Wendler, C. (2022). Best practices for constructed-response scoring. ETS Research Report Series. https://doi.org/10.1002/ets2.12358</li>
+<li class="number">UNESCO. (2023). Guidance for generative AI in education and research. UNESCO. https://www.unesco.org/en/articles/guidance-generative-ai-education-and-research</li>
+<li class="number">Google for Education. (n.d.). Google Classroom. https://edu.google.co.id/workspace-for-education/products/classroom/</li>
+<li class="number">Google. (n.d.). Create a quiz assignment. Google Classroom Help. https://support.google.com/edu/classroom/answer/9095575?hl=en</li>
+<li class="number">ETS. (2022). Guidelines for developing fair tests and communications. https://www.ets.org/pdfs/about/fair-tests-and-communications.pdf</li>
+<li class="number">Moodle. (n.d.). Moodle learning management system. https://moodle.org/</li>
+<li class="number">Instructure. (n.d.). Canvas LMS. https://www.instructure.com/canvas</li>
+<li class="number">Microsoft. (n.d.). Microsoft Copilot. https://copilot.microsoft.com/</li>
+<li class="number">OpenAI. (n.d.). ChatGPT. https://chatgpt.com/</li>
+<li class="number">Google. (n.d.). Gemini. https://gemini.google.com/</li>
+<li class="number">Anthropic. (n.d.). Claude. https://claude.ai/</li>
+</ol>
+</div>
+<section class="quiz-card" id="cek-pemahaman">
+<h3>✦ Cek Pemahaman</h3>
+<p>Uji pemahaman Anda atas prinsip-prinsip utama bab ini. Pilih satu jawaban untuk setiap pertanyaan, lalu periksa hasilnya.</p>
+<form id="quizForm">
+<div class="quiz-q"><p>1. Apa prinsip utama pemanfaatan teknologi digital dalam asesmen?</p>
+<label><input type="radio" name="q1" value="a"> Teknologi menjadi tujuan akhir pembelajaran.</label>
+<label><input type="radio" name="q1" value="b"> Teknologi menjadi sarana untuk memperoleh bukti kompetensi.</label>
+<label><input type="radio" name="q1" value="c"> Semua asesmen harus berupa pilihan ganda.</label></div>
+<div class="quiz-q"><p>2. Bagaimana sebaiknya keluaran AI untuk membuat instrumen diperlakukan?</p>
+<label><input type="radio" name="q2" value="a"> Langsung digunakan karena AI selalu objektif.</label>
+<label><input type="radio" name="q2" value="b"> Dijadikan nilai akhir tanpa pemeriksaan.</label>
+<label><input type="radio" name="q2" value="c"> Sebagai draf yang harus diverifikasi pendidik.</label></div>
+<div class="quiz-q"><p>3. Apa perbedaan validitas dan reliabilitas?</p>
+<label><input type="radio" name="q3" value="a"> Validitas terkait ketepatan interpretasi; reliabilitas terkait konsistensi hasil.</label>
+<label><input type="radio" name="q3" value="b"> Keduanya hanya mengukur kecepatan pengerjaan.</label>
+<label><input type="radio" name="q3" value="c"> Reliabilitas selalu menjamin bahwa skor mengukur hal yang benar.</label></div>
+<div class="quiz-q"><p>4. Mengapa penilaian berbicara otomatis perlu ditinjau guru?</p>
+<label><input type="radio" name="q4" value="a"> Karena rekaman tidak dapat dianalisis dengan teknologi apa pun.</label>
+<label><input type="radio" name="q4" value="b"> Karena dialek, kualitas rekaman, transkripsi, dan konteks dapat memengaruhi hasil.</label>
+<label><input type="radio" name="q4" value="c"> Karena kelancaran bicara selalu tidak relevan.</label></div>
+<div class="quiz-q"><p>5. Praktik yang tepat untuk menjaga privasi peserta didik adalah…</p>
+<label><input type="radio" name="q5" value="a"> Mengunggah semua data pribadi ke layanan AI.</label>
+<label><input type="radio" name="q5" value="b"> Menggunakan identitas lengkap agar analisis lebih akurat.</label>
+<label><input type="radio" name="q5" value="c"> Meminimalkan data dan memeriksa kebijakan layanan serta otorisasi.</label></div>
+<button class="primary-btn" type="submit">Periksa jawaban</button> <button class="icon-btn" type="reset" id="resetQuiz">Ulangi</button>
+<div class="quiz-result" id="quizResult" role="status"></div>
+</form>
+</section>
+<div class="footer"><span>Dr. Sri Wahyuni, M.Pd. · MPBI Universitas Islam Malang</span><span>BAB 4 · Asesmen Pembelajaran Bahasa Indonesia Berbasis TIK</span></div>
+</main>
+</div>
+<button class="backtop" id="backtop" aria-label="Kembali ke atas">↑</button>
+<script>
+(function(){
+ const nav=document.getElementById('nav'), headings=[...document.querySelectorAll('#materi h2, #materi h3')];
+ const used={};
+ headings.forEach((h,i)=>{let base=(h.textContent||'bagian').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')||('bagian-'+i);used[base]=(used[base]||0)+1;h.id=base+(used[base]>1?'-'+used[base]:'');});
+ const all=[{id:'beranda',text:'Pengantar modul',level:0},...headings.map(h=>({id:h.id,text:h.textContent,level:h.tagName==='H3'?1:0})) ,{id:'cek-pemahaman',text:'Cek Pemahaman',level:0}];
+ function renderNav(filter=''){nav.innerHTML='';let matches=all.filter(x=>x.text.toLowerCase().includes(filter.toLowerCase()));if(!matches.length){nav.innerHTML='<div class="empty-search">Bagian tidak ditemukan.</div>';return;}matches.forEach((x,i)=>{let a=document.createElement('a');a.href='#'+x.id;a.dataset.target=x.id;a.style.paddingLeft=x.level?'28px':'11px';a.innerHTML='<span class="num">'+(x.level?'↳':String(i+1).padStart(2,'0'))+'</span><span>'+x.text.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</span>';a.addEventListener('click',()=>{if(innerWidth<=900)document.getElementById('sidebar').classList.remove('open')});nav.appendChild(a);});}
+ renderNav();document.getElementById('navSearch').addEventListener('input',e=>renderNav(e.target.value));
+ const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){document.querySelectorAll('.nav a').forEach(a=>a.classList.toggle('active',a.dataset.target===e.target.id));}})},{rootMargin:'-15% 0px -70% 0px'});all.forEach(x=>{let el=document.getElementById(x.id);if(el)observer.observe(el)});
+ function progress(){let max=document.documentElement.scrollHeight-innerHeight;let n=max>0?Math.round(scrollY/max*100):100;document.getElementById('progressBar').style.width=n+'%';document.getElementById('progressText').textContent=n+'%';document.getElementById('backtop').style.display=scrollY>500?'block':'none';}
+ addEventListener('scroll',progress);progress();document.getElementById('backtop').onclick=()=>scrollTo({top:0,behavior:'smooth'});
+ document.getElementById('menuBtn').onclick=()=>document.getElementById('sidebar').classList.toggle('open');
+ document.getElementById('themeBtn').onclick=()=>{document.body.classList.toggle('dark');document.getElementById('themeBtn').textContent=document.body.classList.contains('dark')?'☀ Terang':'◐ Tema';};
+ const answers={q1:'b',q2:'c',q3:'a',q4:'b',q5:'c'};
+ document.getElementById('quizForm').addEventListener('submit',e=>{e.preventDefault();let score=0,total=Object.keys(answers).length;for(let k in answers){let chosen=document.querySelector('input[name="'+k+'"]:checked');if(chosen&&chosen.value===answers[k])score++;}let r=document.getElementById('quizResult');r.style.display='block';r.style.background=score>=4?'#e5fbf2':'#fff3df';r.style.color=score>=4?'#116344':'#81500b';r.innerHTML='<strong>Skor Anda: '+score+'/'+total+'</strong><br>'+(score===total?'Sangat baik! Anda memahami prinsip utama asesmen digital dan AI.':score>=4?'Bagus. Tinjau kembali bagian yang belum tepat untuk memperkuat pemahaman.':'Terus belajar. Baca kembali materi tentang fungsi teknologi, validasi AI, serta etika dan mutu asesmen.');r.scrollIntoView({behavior:'smooth',block:'nearest'});});
+ document.getElementById('quizForm').addEventListener('reset',()=>setTimeout(()=>{let r=document.getElementById('quizResult');r.style.display='none';r.innerHTML='';},0));
+})();
+</script>
+</body>
+</html>
