@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ICT-Based Language Learning Assessment | MPBI UNISMA</title>
+<style>
+:root{--navy:#173653;--blue:#2d6798;--gold:#d5b16f;--ink:#243447;--muted:#66788a;--bg:#f5f8fb;--line:#e3eaf0}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.6}
+header{background:linear-gradient(120deg,#132e49,#28577d);color:white;padding:42px 22px}.wrap{max-width:1050px;margin:auto}.eyebrow{font-size:11px;letter-spacing:2px;color:#e4c88f;font-weight:bold}
+h1{font-size:clamp(27px,4vw,42px);line-height:1.15;margin:12px 0}header p{margin:6px 0;color:#e4edf5}
+main{max-width:1050px;margin:32px auto;padding:0 20px}.intro{display:flex;justify-content:space-between;gap:20px;align-items:end;flex-wrap:wrap;margin-bottom:22px}
+h2{color:var(--navy);margin:0;font-size:25px}.intro p{color:var(--muted);margin:5px 0 0}
+input{width:min(100%,360px);padding:13px 15px;border:1px solid var(--line);border-radius:9px;font-size:14px;background:white}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}.card{background:white;border:1px solid var(--line);border-radius:13px;padding:21px;display:flex;flex-direction:column;min-height:190px;box-shadow:0 5px 18px #17365308}
+.num{font-size:11px;font-weight:bold;letter-spacing:1px;color:var(--blue);background:#edf4f9;border-radius:20px;padding:5px 10px;align-self:flex-start}
+h3{font-size:17px;line-height:1.35;color:var(--navy);margin:16px 0 8px}.card p{font-size:13px;color:var(--muted);margin:0 0 18px}
+a.button{margin-top:auto;display:inline-block;background:var(--navy);color:white;text-decoration:none;text-align:center;padding:10px 13px;border-radius:8px;font-size:13px;font-weight:bold}
+a.button:hover{background:var(--blue)}.empty{display:none;padding:25px;text-align:center;color:var(--muted)}
+footer{max-width:1050px;margin:40px auto 0;padding:22px 20px 35px;color:var(--muted);font-size:12px;border-top:1px solid var(--line)}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:520px){header{padding:32px 20px}.grid{grid-template-columns:1fr}main{margin-top:25px}.intro{align-items:stretch}input{width:100%}}
+</style></head><body>
+<header><div class="wrap"><div class="eyebrow">PROGRAM MAGISTER PENDIDIKAN BAHASA INDONESIA · PASCASARJANA</div>
+<h1>ICT-Based Language<br>Learning Assessment</h1><p><strong>Dr. Sri Wahyuni, M.Pd.</strong></p><p>Universitas Islam Malang</p></div></header>
+<main><section class="intro"><div><h2>Modul Pembelajaran</h2><p>Pilih bab untuk membuka materi pembelajaran dalam format HTML.</p></div>
+<input id="search" type="search" placeholder="Cari modul atau topik..." aria-label="Cari modul"></section>
+<section class="grid" id="modules">
+<article class="card"><span class="num">BAB 01</span><h3>Rekonstruksi Evaluasi Pembelajaran Bahasa di Era Digital</h3><p>Modul 1 · Evaluasi pembelajaran bahasa.</p><a class="button" href="BAB%201_Rekonstruksi%20Evaluasi%20Pembelajaran%20Bahasa%20di%20Era%20Digital.html">Buka Modul →</a></article>
+<article class="card"><span class="num">BAB 02</span><h3>Konsep dan Evolusi Asesmen Pembelajaran Bahasa</h3><p>Modul 2 · Konsep dasar dan perkembangan asesmen.</p><a class="button" href="Bab%202_Konsep%20dan%20Evolusi%20Asesmen%20Pembelajaran%20Bahasa.html">Buka Modul →</a></article>
+<article class="card"><span class="num">BAB 03</span><h3>Authentic Assessment Bahasa Indonesia</h3><p>Modul 3 · Asesmen autentik dalam pembelajaran bahasa.</p><a class="button" href="Bab%203_Authentic_Assessment_Bahasa_Indonesia.html">Buka Modul →</a></article>
+<article class="card"><span class="num">BAB 04</span><h3>Teknologi Digital dan AI dalam Asesmen</h3><p>Modul 4 · Pemanfaatan teknologi digital dan kecerdasan artifisial.</p><a class="button" href="BAB%204_Teknologi_Digital_AI_Asesmen.html">Buka Modul →</a></article>
+<article class="card"><span class="num">BAB 05</span><h3>Mendesain Sistem Asesmen Pembelajaran</h3><p>Modul 5 · Perancangan sistem asesmen pembelajaran.</p><a class="button" href="Bab%205_Mendesain_Sistem_Asesmen_Pembelajaran.html">Buka Modul →</a></article>
+<article class="card"><span class="num">BAB 06</span><h3>Pengembangan Instrumen Asesmen Digital Bahasa Indonesia</h3><p>Modul 6 · Pengembangan instrumen asesmen digital.</p><a class="button" href="Bab%206_Pengembangan_Instrumen_Asesmen_Digital_Bahasa_Indonesia.html">Buka Modul →</a></article>
+</section><p class="empty" id="empty">Modul tidak ditemukan. Coba kata kunci lain.</p></main>
+<footer><strong>ICT-Based Language Learning Assessment</strong><br>MPBI · Program Pascasarjana · Universitas Islam Malang<br>Pengampu: Dr. Sri Wahyuni, M.Pd.</footer>
+<script>const s=document.getElementById('search');s.addEventListener('input',()=>{let q=s.value.toLowerCase(),n=0;document.querySelectorAll('.card').forEach(c=>{let ok=c.innerText.toLowerCase().includes(q);c.style.display=ok?'flex':'none';if(ok)n++});document.getElementById('empty').style.display=n?'none':'block'});</script>
+</body></html>
